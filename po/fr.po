@@ -1,0 +1,38 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: The Rust Programming Language\n"
+"POT-Creation-Date: 2026-04-22T00:26:08+02:00\n"
+"PO-Revision-Date: 2026-04-21\n"
+"Last-Translator: Timothée Girard\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: src/SUMMARY.md:7 src/ch01-00-getting-started.md:1
+msgid "Getting Started"
+msgstr "Mise en route"
+
+#: src/ch01-00-getting-started.md:3
+msgid ""
+"Let’s start your Rust journey! There’s a lot to learn, but every journey "
+"starts somewhere. In this chapter, we’ll discuss:"
+msgstr ""
+"Commençons votre aventure avec Rust ! Il y a beaucoup à apprendre, mais "
+"chaque voyage commence quelque part. Dans ce chapitre, nous aborderons :"
+
+#: src/ch01-00-getting-started.md:6
+msgid "Installing Rust on Linux, macOS, and Windows"
+msgstr "L’installation de Rust sur Linux, macOS et Windows"
+
+#: src/ch01-00-getting-started.md:7
+msgid "Writing a program that prints `Hello, world!`"
+msgstr "L’écriture d’un programme qui affiche `Hello, world!`"
+
+#: src/ch01-00-getting-started.md:8
+msgid "Using `cargo`, Rust’s package manager and build system"
+msgstr ""
+"L’utilisation de `cargo`, le gestionnaire de paquets et système de "
+"compilation de Rust"

@@ -37,13 +37,21 @@ use-boolean-and = true
 "ch20-02-multithreaded.html" = "ch21-02-multithreaded.html"
 "ch20-03-graceful-shutdown-and-cleanup.html" = "ch21-03-graceful-shutdown-and-cleanup.html"
 
+# Translate the source markdown using po/{language}.po before any other
+# preprocessor sees it. Set MDBOOK_BOOK__LANGUAGE=fr at build time to select
+# the French translation; leaving it unset builds the original English book.
+[preprocessor.gettext]
+after = ["links"]
+
 # Do not sync this preprocessor; it is for the HTML renderer only.
 [preprocessor.trpl-note]
 command = "cargo run --manifest-path packages/mdbook-trpl/Cargo.toml --bin mdbook-trpl-note"
+after = ["gettext"]
 
 [preprocessor.trpl-listing]
 command = "cargo run --manifest-path packages/mdbook-trpl/Cargo.toml --bin mdbook-trpl-listing"
 output-mode = "default"
+after = ["gettext"]
 
 [rust]
 edition = "2024"
