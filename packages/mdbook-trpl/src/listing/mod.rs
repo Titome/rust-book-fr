@@ -86,45 +86,56 @@ impl Preprocessor for TrplListing {
 
 fn rewrite_listing(src: &str, mode: Mode) -> Result<String, String> {
     // The gettext preprocessor (used for translations) lowercases HTML tag
-    // names and can collapse blank-line separators around block-level custom
-    // elements. Restore both so `<Listing>` / `</Listing>` parse as block HTML
-    // consistently with the untranslated English build.
-    let mut rebuilt = String::with_capacity(src.len() + 32);
-    for line in src.lines() {
-        let trimmed = line.trim_start();
-        let leading_ws = &line[..line.len() - trimmed.len()];
-        let restored = if let Some(rest) = trimmed.strip_prefix("<listing") {
-            format!("{leading_ws}<Listing{rest}")
-        } else if trimmed.starts_with("</listing>") {
-            let rest = &trimmed["</listing>".len()..];
-            format!("{leading_ws}</Listing>{rest}")
-        } else {
-            line.to_string()
-        };
-        // If this line BEGINS with `<Listing` or `</Listing>`, ensure the
-        // previous line is blank (so pulldown_cmark sees it as a block).
-        if (restored.trim_start().starts_with("<Listing")
-            || restored.trim_start().starts_with("</Listing>"))
-            && !rebuilt.is_empty()
-            && !rebuilt.ends_with("\n\n")
-        {
-            if !rebuilt.ends_with('\n') {
+    // names and may collapse blank-line separators around block-level custom
+    // elements. This pre-pass restores both — but ONLY on input where the
+    // lowercased `<listing>` form appears, to keep the English/original path
+    // a byte-perfect no-op (matching existing test expectations).
+    let needs_restore = src.contains("<listing") || src.contains("</listing>");
+    let owned;
+    let src: &str = if needs_restore {
+        let mut rebuilt = String::with_capacity(src.len() + 32);
+        for line in src.lines() {
+            let trimmed = line.trim_start();
+            let leading_ws = &line[..line.len() - trimmed.len()];
+            let restored = if let Some(rest) = trimmed.strip_prefix("<listing") {
+                format!("{leading_ws}<Listing{rest}")
+            } else if trimmed.starts_with("</listing>") {
+                let rest = &trimmed["</listing>".len()..];
+                format!("{leading_ws}</Listing>{rest}")
+            } else {
+                line.to_string()
+            };
+            // Ensure blank line BEFORE a `<Listing>` / `</Listing>` tag so
+            // pulldown_cmark parses it as block HTML (gettext substitution
+            // can drop the blank line separating prose from the next block).
+            let is_tag = restored.trim_start().starts_with("<Listing")
+                || restored.trim_start().starts_with("</Listing>");
+            if is_tag && !rebuilt.is_empty() && !rebuilt.ends_with("\n\n") {
+                if !rebuilt.ends_with('\n') {
+                    rebuilt.push('\n');
+                }
                 rebuilt.push('\n');
             }
+            rebuilt.push_str(&restored);
             rebuilt.push('\n');
+            // And a blank line AFTER, for the same reason.
+            let tr = restored.trim_end();
+            if tr.ends_with("</Listing>")
+                || (tr.starts_with("<Listing") && tr.ends_with(">"))
+            {
+                rebuilt.push('\n');
+            }
         }
-        rebuilt.push_str(&restored);
-        rebuilt.push('\n');
-        // If this line ENDS with `</Listing>` or an opening `<Listing ...>`,
-        // ensure a blank line follows so the next block is parsed separately.
-        let tr = restored.trim_end();
-        if tr.ends_with("</Listing>")
-            || (tr.starts_with("<Listing") && tr.ends_with(">"))
-        {
-            rebuilt.push('\n');
+        // Preserve the original src's trailing-newline presence so downstream
+        // `src.ends_with('\n')` checks behave the same way.
+        if !src.ends_with('\n') && rebuilt.ends_with('\n') {
+            rebuilt.pop();
         }
-    }
-    let src = &rebuilt;
+        owned = rebuilt;
+        &owned
+    } else {
+        src
+    };
     match mode {
         Mode::Default => {
             let final_state = crate::parser(src).try_fold(
