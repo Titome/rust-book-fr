@@ -40,6 +40,14 @@ jobs:
             | tar -xz --directory=bin
           echo "$(pwd)/bin" >> "$GITHUB_PATH"
 
+      # Fournit le préprocesseur `mdbook-gettext` requis pour substituer
+      # les msgstrs de `po/fr.po` lors du build FR. Non nécessaire en EN —
+      # c'est pourquoi `[preprocessor.gettext]` est marqué `optional = true`
+      # dans book.toml, ce qui permet au CI upstream de builder EN sans
+      # cette dépendance.
+      - name: Install mdbook-i18n-helpers
+        run: cargo install mdbook-i18n-helpers --locked
+
       - name: Report versions
         run: |
           rustup --version

@@ -40,8 +40,15 @@ use-boolean-and = true
 # Translate the source markdown using po/{language}.po before any other
 # preprocessor sees it. Set MDBOOK_BOOK__LANGUAGE=fr at build time to select
 # the French translation; leaving it unset builds the original English book.
+#
+# `optional = true` means: if `mdbook-gettext` isn't installed, skip this
+# preprocessor silently. Needed so that the upstream CI workflow
+# (.github/workflows/main.yml, inherited from the fork) can build the
+# English version without having to install mdbook-i18n-helpers. The FR
+# deploy workflow (.github/workflows/deploy.yml) installs it explicitly.
 [preprocessor.gettext]
 after = ["links"]
+optional = true
 
 # Do not sync this preprocessor; it is for the HTML renderer only.
 [preprocessor.trpl-note]
