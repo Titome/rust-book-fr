@@ -4,34 +4,39 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository purpose
 
-**This repo is a personal in-progress French translation of _The Rust Programming Language_**, built on top of a fork of upstream `rust-lang/book` (the `origin` remote still points at upstream). The user is the translator; the default language for working with them is French.
+**This repo is a personal French translation of _The Rust Programming Language_**, built on top of a fork of upstream `rust-lang/book` (the `origin` remote still points at upstream). The user is the translator; the default language for working with them is French.
 
-The translation lives in `src/*.md`. The convention is **dual-prose**: every original English block is preserved verbatim inside an HTML comment, followed by the French translation as live prose. Example:
+The translation is stored in **`po/fr.po`** (gettext PO format) — `src/*.md` stays pristine-upstream, and the French rendering is produced at build time by the `mdbook-i18n-helpers` gettext preprocessor. To build the French book:
 
-```md
-<!--
-# Getting Started
--->
-
-# Mise en route
-
-<!--
-Let's start your Rust journey!
--->
-
-Commençons votre aventure avec Rust !
+```sh
+MDBOOK_BOOK__LANGUAGE=fr mdbook build
 ```
 
-Keep that shape when touching prose:
+Omitting the env var builds the upstream English book (no gettext substitution).
 
-- Do not delete the `<!-- ... -->` English blocks. They are how upstream merges stay tractable — when `rust-lang/book` edits a paragraph, the English inside the comment is what `git` diffs against, which is how we detect that the surrounding French translation needs updating.
-- When a new upstream paragraph arrives without a French counterpart, translate it and add the French block below the `<!-- ... -->`. Do not leave English prose rendered into the book.
-- When upstream edits an existing English block, update the French translation to match.
-- Because both languages are present, the 80-column wrap applies to the French as well.
+### Workflow when upstream changes
 
-The widespread `M src/*.md` in `git status` is expected — it is the translation-in-progress against the upstream baseline, not dirty state to clean up.
+1. `git fetch origin && git merge origin/main` to pull upstream edits into `src/*.md`.
+2. Regenerate the POT:
+   ```sh
+   MDBOOK_OUTPUT__XGETTEXT__POT_FILE=messages.pot mdbook build -d /tmp/po-extract
+   mv /tmp/po-extract/xgettext/messages.pot po/messages.pot
+   rm -rf /tmp/po-extract
+   ```
+3. `msgmerge --update po/fr.po po/messages.pot` — this marks edited entries `fuzzy` and leaves them in place next to the new msgid. New msgids appear with an empty msgstr.
+4. Open `po/fr.po` in your editor, translate the new entries, and remove the `, fuzzy` flag from edited ones after updating the msgstr.
+5. `MDBOOK_BOOK__LANGUAGE=fr mdbook build` to verify; `MDBOOK_BOOK__LANGUAGE=fr mdbook test --library-path packages/trpl/target/debug/deps` to make sure code examples still compile in the French rendering.
+
+### What NOT to touch
+
+- **`src/*.md`** is pristine upstream — do not edit these files. `git status` in a clean tree should show no modifications under `src/`.
+- **`nostarch/`**, **`first-edition/`**, **`second-edition/`**, **`2018-edition/`**, and **`redirects/`** are frozen archives or touched only by upstream's `tools/` scripts.
 
 Runnable example code lives as full Cargo projects under `listings/` and is spliced into the prose via `mdbook` include directives. Code itself stays in English (identifiers, stdlib calls); only comments and user-facing strings get translated when the prose relies on them.
+
+### Historical note
+
+Prior to the 2026-04-22 po4a migration, the translation lived inline in `src/*.md` using a bilingual convention (English in `<!-- … -->` HTML comments + French prose below). That format is preserved on the `main` branch up to commit `5ec20efa` for reference, but the active branch is `migrate-to-po4a` and it uses the PO workflow described above. If you see `<!-- … -->` English blocks in the working tree, you are on the wrong branch.
 
 The `nostarch/` directory contains snapshots sent to the print publisher of the English book. **Never edit files under `nostarch/`** — they are only touched by upstream's scripts in `tools/` when pushing a new round of edits, and are irrelevant to the translation. The `first-edition/`, `second-edition/`, `2018-edition/`, and `redirects/` directories are frozen archives.
 
@@ -99,7 +104,8 @@ Listing directory naming is load-bearing and consumed by the tooling:
 ### mdbook preprocessors (what they do to your markdown)
 
 - `mdbook-trpl-note` transforms block-quotes starting with `> Note:` / `> Tip:` into semantic `<section class="note">` aside elements (styled by `theme/semantic-notes.css`).
-- `mdbook-trpl-listing` converts a custom `<Listing>...</Listing>` element wrapping a code block into the numbered-caption HTML figure rendered in the book (styled by `theme/listing.css`).
+- `mdbook-trpl-listing` converts a custom `<Listing>...</Listing>` element wrapping a code block into the numbered-caption HTML figure rendered in the book (styled by `theme/listing.css`). **Patched** to match `<Listing>` tags case-insensitively and re-insert blank-line separators, because the `gettext` preprocessor used for translation lowercases HTML tag names and can collapse blank lines around custom block elements.
+- `gettext` (from `mdbook-i18n-helpers`) is wired in by `book.toml` with `after = ["links"]`, and both `trpl-note` / `trpl-listing` run with `after = ["gettext"]`. This order means the French translation is substituted into the markdown before the custom-element preprocessors transform it. The POT file (`po/messages.pot`) is generated by the same preprocessor running under the `xgettext` renderer.
 
 When you write new prose, use these elements — they are part of the authoring vocabulary, not incidental HTML.
 
@@ -109,17 +115,15 @@ When you write new prose, use these elements — they are part of the authoring 
 
 ## Conventions when editing
 
-`style-guide.md` describes the upstream English conventions. The English inside the `<!-- ... -->` blocks should not be restyled (it is upstream's prose), but a few of its rules transfer naturally to the French:
+`style-guide.md` describes the upstream English conventions. For `po/fr.po` msgstrs:
 
-- Hard-wrap prose at 80 columns (French too).
-- When referring to a method in prose, omit parens: `read_line`, not `read_line()`.
-- Put a filename label above a code block when it represents an actual project file.
-- Intra-book and stdlib API links should be relative so the book works both offline and on docs.rust-lang.org.
+- **Do not hard-wrap msgstr content** at 80 columns — gettext wraps long strings automatically using its own line-continuation format (`msgstr ""` then `"..."` continuations). Hard newlines in msgid/msgstr are for actual paragraph breaks (rare).
+- Match the msgid's inline markdown structure exactly: if msgid has `[foo](url)` (inline link), the msgstr should also use the inline form with the same URL. Do not use reference-style `[foo][ref]` links — the link reference definitions at the end of the pristine source are not available at substitution time.
+- Preserve backtick-code spans (`read_line`), code blocks (```` ``` ````), and custom elements (`<Listing>`, `<section class="note">`) as-is.
 
 For the French translation specifically:
 
 - Respect French orthography fully: accents (é, è, ê, à, ù, ç…), typographic conventions, no ASCII substitutions.
-- French typographic spacing (non-breaking space before `?`, `!`, `:`, `;`, inside `«  »`) is the standard for published French prose — follow what the surrounding already-translated text does rather than mixing styles.
+- **Typographic apostrophes** `'` (not ASCII `'`) and **guillemets** `« … »` with non-breaking spaces (U+00A0) for quoted terms. NBSP before `? ! : ;`.
 - Rust keywords, API names, crate names, and code identifiers stay in English.
-
-The upstream `ci/spellcheck.sh` is built for English against `ci/dictionary.txt` — it will flag essentially every French word. Do not attempt to "fix" the spellcheck output by massaging the French; it is effectively disabled for translation work, and running it is only useful on the English blocks. The upstream CI lints (`lfp`, `validate.sh`, link-checker) still apply and are worth running before committing.
+- Accept that the `ci/spellcheck.sh` lint is for English only and will flag every French word; it is effectively disabled for translation work. The upstream CI lints (`lfp`, `validate.sh`, link-checker) still apply and are worth running before committing.
