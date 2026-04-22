@@ -1,0 +1,141 @@
+# Traductions françaises des `<figcaption>` et attributs `alt=` des balises
+# `<img>` qui ne sont pas extraits comme msgids par `mdbook-i18n-helpers`.
+#
+# Appliqué par le préprocesseur `mdbook-trpl-figures-i18n` quand
+# `MDBOOK_BOOK__LANGUAGE=fr` (via `book.language = "fr"` en env).
+#
+# Chaque entrée fait une substitution chaîne-à-chaîne simple : le texte
+# anglais doit être unique dans le livre et correspondre exactement
+# (espaces, casse, ponctuation).
+
+# ======================================================================
+# Chapitre 17 — programmation asynchrone
+# ======================================================================
+
+# --- ch17-00-async-await.md ---
+
+[[sub]]
+en = "A diagram with stacked boxes labeled Task A and Task B, with diamonds in them representing subtasks. Arrows point from A1 to B1, B1 to A2, A2 to B2, B2 to A3, A3 to A4, and A4 to B3. The arrows between the subtasks cross the boxes between Task A and Task B."
+fr = "Un diagramme avec des boîtes empilées étiquetées Tâche A et Tâche B, contenant des losanges qui représentent les sous-tâches. Des flèches vont de A1 vers B1, B1 vers A2, A2 vers B2, B2 vers A3, A3 vers A4 et A4 vers B3. Les flèches entre les sous-tâches traversent les boîtes entre la Tâche A et la Tâche B."
+
+[[sub]]
+en = "Figure 17-1: A concurrent workflow, switching between Task A and Task B"
+fr = "Figure 17-1 : Un flux de travail concurrent, alternant entre la Tâche A et la Tâche B"
+
+[[sub]]
+en = "A diagram with stacked boxes labeled Task A and Task B, with diamonds in them representing subtasks. Arrows point from A1 to A2, A2 to A3, A3 to A4, B1 to B2, and B2 to B3. No arrows cross between the boxes for Task A and Task B."
+fr = "Un diagramme avec des boîtes empilées étiquetées Tâche A et Tâche B, contenant des losanges qui représentent les sous-tâches. Des flèches vont de A1 vers A2, A2 vers A3, A3 vers A4, B1 vers B2 et B2 vers B3. Aucune flèche ne traverse entre les boîtes de la Tâche A et de la Tâche B."
+
+[[sub]]
+en = "Figure 17-2: A parallel workflow, where work happens on Task A and Task B independently"
+fr = "Figure 17-2 : Un flux de travail parallèle, où le travail avance sur la Tâche A et la Tâche B indépendamment"
+
+[[sub]]
+en = "A diagram with stacked boxes labeled Task A and Task B, with diamonds in them representing subtasks. In Task A, arrows point from A1 to A2, from A2 to a pair of thick vertical lines like a “pause” symbol, and from that symbol to A3. In task B, arrows point from B1 to B2, from B2 to B3, from B3 to A3, and from B3 to B4."
+fr = "Un diagramme avec des boîtes empilées étiquetées Tâche A et Tâche B, contenant des losanges qui représentent les sous-tâches. Dans la Tâche A, des flèches vont de A1 vers A2, de A2 vers une paire de lignes verticales épaisses ressemblant à un symbole de « pause », et de ce symbole vers A3. Dans la Tâche B, des flèches vont de B1 vers B2, de B2 vers B3, de B3 vers A3, et de B3 vers B4."
+
+[[sub]]
+en = "Figure 17-3: A partially parallel workflow, where work happens on Task A and Task B independently until Task A3 is blocked on the results of Task B3."
+fr = "Figure 17-3 : Un flux de travail partiellement parallèle, où le travail avance sur la Tâche A et la Tâche B indépendamment jusqu’à ce que la Tâche A3 soit bloquée par les résultats de la Tâche B3."
+
+# --- ch17-05-traits-for-async.md ---
+
+[[sub]]
+en = "A single-column, three-row table representing a future, fut1, which has data values 0 and 1 in the first two rows and an arrow pointing from the third row back to the second row, representing an internal reference within the future."
+fr = "Un tableau à une colonne et trois lignes représentant une future, fut1, qui contient les valeurs 0 et 1 dans les deux premières lignes et une flèche pointant de la troisième ligne vers la deuxième ligne, représentant une référence interne à la future."
+
+[[sub]]
+en = "Figure 17-4: A self-referential data type"
+fr = "Figure 17-4 : Un type de données auto-référentiel"
+
+[[sub]]
+en = "Two tables, depicting two futures, fut1 and fut2, each of which has one column and three rows, representing the result of having moved a future out of fut1 into fut2. The first, fut1, is grayed out, with a question mark in each index, representing unknown memory. The second, fut2, has 0 and 1 in the first and second rows and an arrow pointing from its third row back to the second row of fut1, representing a pointer that is referencing the old location in memory of the future before it was moved."
+fr = "Deux tableaux, représentant deux futures, fut1 et fut2, chacun ayant une colonne et trois lignes, représentant le résultat du déplacement d’une future de fut1 vers fut2. Le premier, fut1, est grisé, avec un point d’interrogation dans chaque case, représentant une mémoire inconnue. Le second, fut2, contient 0 et 1 dans les première et deuxième lignes et une flèche pointant de sa troisième ligne vers la deuxième ligne de fut1, représentant un pointeur qui référence l’ancien emplacement mémoire de la future avant son déplacement."
+
+[[sub]]
+en = "Figure 17-5: The unsafe result of moving a self-referential data type"
+fr = "Figure 17-5 : Le résultat non sûr du déplacement d’un type de données auto-référentiel"
+
+[[sub]]
+en = "Three boxes laid out side by side. The first is labeled “Pin”, the second “b1”, and the third “pinned”. Within “pinned” is a table labeled “fut”, with a single column; it represents a future with cells for each part of the data structure. Its first cell has the value “0”, its second cell has an arrow coming out of it and pointing to the fourth and final cell, which has the value “1” in it, and the third cell has dashed lines and an ellipsis to indicate there may be other parts to the data structure. All together, the “fut” table represents a future which is self-referential. An arrow leaves the box labeled “Pin”, goes through the box labeled “b1” and terminates inside the “pinned” box at the “fut” table."
+fr = "Trois boîtes disposées côte à côte. La première est étiquetée « Pin », la deuxième « b1 », et la troisième « pinned ». À l’intérieur de « pinned » se trouve un tableau étiqueté « fut », à une seule colonne ; il représente une future avec des cellules pour chaque partie de la structure de données. Sa première cellule contient la valeur « 0 », sa deuxième cellule a une flèche qui en sort et pointe vers la quatrième et dernière cellule, qui contient la valeur « 1 », et la troisième cellule a des lignes en pointillés et des points de suspension pour indiquer qu’il peut y avoir d’autres parties à la structure de données. Dans son ensemble, le tableau « fut » représente une future auto-référentielle. Une flèche part de la boîte étiquetée « Pin », traverse la boîte étiquetée « b1 » et se termine à l’intérieur de la boîte « pinned » au niveau du tableau « fut »."
+
+[[sub]]
+en = "Figure 17-6: Pinning a `Box` that points to a self-referential future type"
+fr = "Figure 17-6 : Épingler une `Box` qui pointe vers un type future auto-référentiel"
+
+[[sub]]
+en = "Four boxes laid out in three rough columns, identical to the previous diagram with a change to the second column. Now there are two boxes in the second column, labeled “b1” and “b2”, “b1” is grayed out, and the arrow from “Pin” goes through “b2” instead of “b1”, indicating that the pointer has moved from “b1” to “b2”, but the data in “pinned” has not moved."
+fr = "Quatre boîtes disposées en trois colonnes approximatives, identiques au diagramme précédent avec un changement dans la deuxième colonne. Il y a maintenant deux boîtes dans la deuxième colonne, étiquetées « b1 » et « b2 » ; « b1 » est grisée, et la flèche depuis « Pin » passe par « b2 » au lieu de « b1 », indiquant que le pointeur a été déplacé de « b1 » vers « b2 », mais que les données dans « pinned » n’ont pas bougé."
+
+[[sub]]
+en = "Figure 17-7: Moving a `Box` which points to a self-referential future type"
+fr = "Figure 17-7 : Déplacer une `Box` qui pointe vers un type future auto-référentiel"
+
+[[sub]]
+en = "A box labeled “Pin” on the left with an arrow going from it to a box labeled “String” on the right. The “String” box contains the data 5usize, representing the length of the string, and the letters “h”, “e”, “l”, “l”, and “o” representing the characters of the string “hello” stored in this String instance. A dotted rectangle surrounds the “String” box and its label, but not the “Pin” box."
+fr = "Une boîte étiquetée « Pin » à gauche avec une flèche qui en part vers une boîte étiquetée « String » à droite. La boîte « String » contient la donnée 5usize, représentant la longueur de la chaîne, et les lettres « h », « e », « l », « l » et « o » représentant les caractères de la chaîne « hello » stockée dans cette instance de String. Un rectangle en pointillés entoure la boîte « String » et son étiquette, mais pas la boîte « Pin »."
+
+[[sub]]
+en = "Figure 17-8: Pinning a `String`; the dotted line indicates that the `String` implements the `Unpin` trait and thus is not pinned"
+fr = "Figure 17-8 : Épingler une `String` ; la ligne en pointillés indique que `String` implémente le trait `Unpin` et n’est donc pas épinglée"
+
+[[sub]]
+en = "The same “hello” string data from the previous example, now labeled “s1” and grayed out. The “Pin” box from the previous example now points to a different String instance, one that is labeled “s2”, is valid, has a length of 7usize, and contains the characters of the string “goodbye”. s2 is surrounded by a dotted rectangle because it, too, implements the Unpin trait."
+fr = "Les mêmes données de chaîne « hello » de l’exemple précédent, maintenant étiquetées « s1 » et grisées. La boîte « Pin » de l’exemple précédent pointe maintenant vers une instance de String différente, étiquetée « s2 », qui est valide, a une longueur de 7usize et contient les caractères de la chaîne « goodbye ». s2 est entourée d’un rectangle en pointillés parce qu’elle implémente également le trait Unpin."
+
+[[sub]]
+en = "Figure 17-9: Replacing the `String` with an entirely different `String` in memory"
+fr = "Figure 17-9 : Remplacer la `String` par une `String` entièrement différente en mémoire"
+
+# ======================================================================
+# Chapitre 14 — documentation rendue par rustdoc
+# ======================================================================
+
+[[sub]]
+en = "Rendered HTML documentation for the `add_one` function of `my_crate`"
+fr = "Documentation HTML générée pour la fonction `add_one` de `my_crate`"
+
+[[sub]]
+en = "Rendered HTML documentation with a comment for the crate as a whole"
+fr = "Documentation HTML générée avec un commentaire pour l’ensemble de la crate"
+
+[[sub]]
+en = "Rendered documentation for the `art` crate that lists the `kinds` and `utils` modules"
+fr = "Documentation générée pour la crate `art` qui liste les modules `kinds` et `utils`"
+
+[[sub]]
+en = "Rendered documentation for the `art` crate with the re-exports on the front page"
+fr = "Documentation générée pour la crate `art` avec les ré-exports en première page"
+
+# ======================================================================
+# Chapitre 15 — pointeurs intelligents
+# ======================================================================
+
+# ch15-01-box.md
+[[sub]]
+en = "An infinite Cons list: a rectangle labeled 'Cons' split into two smaller rectangles. The first smaller rectangle holds the label 'i32', and the second smaller rectangle holds the label 'Cons' and a smaller version of the outer 'Cons' rectangle. The 'Cons' rectangles continue to hold smaller and smaller versions of themselves until the smallest comfortably sized rectangle holds an infinity symbol, indicating that this repetition goes on forever."
+fr = "Une liste Cons infinie : un rectangle étiqueté « Cons » divisé en deux plus petits rectangles. Le premier petit rectangle contient l’étiquette « i32 », et le second petit rectangle contient l’étiquette « Cons » ainsi qu’une version réduite du rectangle « Cons » extérieur. Les rectangles « Cons » continuent de contenir des versions de plus en plus petites d’eux-mêmes jusqu’à ce que le plus petit rectangle d’une taille raisonnable contienne un symbole d’infini, indiquant que cette répétition continue indéfiniment."
+
+[[sub]]
+en = "A rectangle labeled 'Cons' split into two smaller rectangles. The first smaller rectangle holds the label 'i32', and the second smaller rectangle holds the label 'Box' with one inner rectangle that contains the label 'usize', representing the finite size of the box's pointer."
+fr = "Un rectangle étiqueté « Cons » divisé en deux plus petits rectangles. Le premier petit rectangle contient l’étiquette « i32 », et le second petit rectangle contient l’étiquette « Box » avec un rectangle intérieur contenant l’étiquette « usize », représentant la taille finie du pointeur de la box."
+
+# ch15-04-rc.md — copie de l'alt déjà en pot mais rendu en EN à cause d'une
+# msgstr polluée ; la substitution via ce preprocessor fait foi.
+[[sub]]
+en = "A linked list with the label 'a' pointing to three elements. The first element contains the integer 5 and points to the second element. The second element contains the integer 10 and points to the third element. The third element contains the value 'Nil' that signifies the end of the list; it does not point anywhere. A linked list with the label 'b' points to an element that contains the integer 3 and points to the first element of list 'a'. A linked list with the label 'c' points to an element that contains the integer 4 and also points to the first element of list 'a' so that lists 'b' and 'c' are two lists that share ownership of list 'a'."
+fr = "Une liste chaînée étiquetée « a » pointant vers trois éléments. Le premier élément contient l’entier 5 et pointe vers le deuxième élément. Le deuxième élément contient l’entier 10 et pointe vers le troisième élément. Le troisième élément contient la valeur « Nil » qui signale la fin de la liste ; il ne pointe vers rien. Une liste chaînée étiquetée « b » pointe vers un élément qui contient l’entier 3 et pointe vers le premier élément de la liste « a ». Une liste chaînée étiquetée « c » pointe vers un élément qui contient l’entier 4 et pointe également vers le premier élément de la liste « a », de sorte que les listes « b » et « c » sont deux listes qui partagent la possession de la liste « a »."
+
+# ch15-06-reference-cycles.md
+[[sub]]
+en = "A rectangle labeled 'a' that points to a rectangle containing the integer 5. A rectangle labeled 'b' that points to a rectangle containing the integer 10. The rectangle containing 5 points to the rectangle containing 10, and the rectangle containing 10 points back to the rectangle containing 5, creating a cycle."
+fr = "Un rectangle étiqueté « a » qui pointe vers un rectangle contenant l’entier 5. Un rectangle étiqueté « b » qui pointe vers un rectangle contenant l’entier 10. Le rectangle contenant 5 pointe vers le rectangle contenant 10, et le rectangle contenant 10 pointe à son tour vers le rectangle contenant 5, créant ainsi un cycle."
+
+# ======================================================================
+# Chapitre 21 — projet final serveur web
+# ======================================================================
+
+[[sub]]
+en = 'Screenshot of a web browser visiting the address 127.0.0.1:8080 displaying a webpage with the text content “Hello! Hi from Rust”'
+fr = "Capture d’écran d’un navigateur web visitant l’adresse 127.0.0.1:8080 et affichant une page avec le contenu textuel « Hello! Hi from Rust »"

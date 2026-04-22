@@ -318,6 +318,7 @@ dependencies = [
  "mdbook-preprocessor",
  "pulldown-cmark",
  "pulldown-cmark-to-cmark",
+ "regex",
  "serde",
  "serde_json",
  "thiserror",

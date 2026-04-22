@@ -19,6 +19,10 @@ path = "src/bin/heading.rs"
 name = "mdbook-trpl-figure"
 path = "src/bin/figure.rs"
 
+[[bin]]
+name = "mdbook-trpl-figures-i18n"
+path = "src/bin/figures-i18n.rs"
+
 [dependencies]
 anyhow = "1"
 clap = { version = "4", features = ["derive"] }
@@ -26,6 +30,7 @@ html_parser = "0.7.0"
 mdbook-preprocessor = "0.5.1"
 pulldown-cmark = { version = "0.12", features = ["simd"] }
 pulldown-cmark-to-cmark = "19"
+regex = "1"
 serde = { version = "1.0.228", features = ["serde_derive"] }
 serde_json = "1"
 thiserror = "1.0.60"

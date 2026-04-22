@@ -1,11 +1,13 @@
 mod config;
 mod figure;
+mod figures_i18n;
 mod heading;
 mod listing;
 mod note;
 
 pub use config::Mode;
 pub use figure::TrplFigure as Figure;
+pub use figures_i18n::TrplFiguresI18n as FiguresI18n;
 pub use heading::TrplHeading as Heading;
 pub use listing::TrplListing as Listing;
 pub use note::TrplNote as Note;

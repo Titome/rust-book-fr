@@ -53,6 +53,16 @@ command = "cargo run --manifest-path packages/mdbook-trpl/Cargo.toml --bin mdboo
 output-mode = "default"
 after = ["gettext"]
 
+# Translates `<figcaption>` and `<img alt="...">` content into the selected
+# language. A no-op when the book's language doesn't match the `language` key
+# below, so the English build is untouched. See po/figures-fr.toml for the
+# substitution data.
+[preprocessor.trpl-figures-i18n]
+command = "cargo run --manifest-path packages/mdbook-trpl/Cargo.toml --bin mdbook-trpl-figures-i18n"
+file = "po/figures-fr.toml"
+language = "fr"
+after = ["gettext"]
+
 [rust]
 edition = "2024"
 
