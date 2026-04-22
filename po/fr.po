@@ -31973,7 +31973,8 @@ msgstr ""
 
 #: src/ch13-01-closures.md:665
 msgid "\"{list:#?}, sorted in {num_sort_operations} operations\""
-msgstr "\"{list:#?}, sorted in {num_sort_operations} operations\""
+msgstr "\"{list:#?}, sorted in {num_sort_operations} opérations\""
+
 
 #: src/ch13-01-closures.md:671
 msgid ""
@@ -32100,7 +32101,8 @@ msgstr ""
 
 #: src/ch13-02-iterators.md:75
 msgid "// methods with default implementations elided\n"
-msgstr "// methods with default implementations elided\n"
+msgstr "// methods with default implémentations elided\\n"
+
 
 #: src/ch13-02-iterators.md:79
 msgid ""
@@ -46532,7 +46534,8 @@ msgstr "// methods go here\n"
 
 #: src/ch20-01-unsafe-rust.md:611
 msgid "// method implementations go here\n"
-msgstr "// method implementations go here\n"
+msgstr "// method implémentations go here\\n"
+
 
 #: src/ch20-01-unsafe-rust.md:619
 msgid ""
@@ -49490,12 +49493,14 @@ msgid ""
 "// Construct a representation of Rust code as a syntax tree\n"
 "    // that we can manipulate.\n"
 msgstr ""
-"// Construct a representation of Rust code as a syntax tree\n"
-"    // that we can manipulate.\n"
+"// Construct a représentation of Rust code as a syntax tree\\n    // that we "
+"can manipulate.\\n"
+
 
 #: src/ch20-05-macros.md:347
 msgid "// Build the trait implementation.\n"
-msgstr "// Build the trait implementation.\n"
+msgstr "// Build the trait implémentation.\\n"
+
 
 #: src/ch20-05-macros.md:354
 msgid ""
@@ -49644,7 +49649,8 @@ msgstr ""
 
 #: src/ch20-05-macros.md:444
 msgid "// Construct a representation of Rust code as a syntax tree\n"
-msgstr "// Construct a representation of Rust code as a syntax tree\n"
+msgstr "// Construct a représentation of Rust code as a syntax tree\\n"
+
 
 #: src/ch20-05-macros.md:445
 msgid "// that we can manipulate\n"
@@ -49652,7 +49658,8 @@ msgstr "// that we can manipulate\n"
 
 #: src/ch20-05-macros.md:448
 msgid "// Build the trait implementation\n"
-msgstr "// Build the trait implementation\n"
+msgstr "// Build the trait implémentation\\n"
+
 
 #: src/ch20-05-macros.md:457
 msgid "\"Hello, Macro! My name is {}!\""
@@ -52374,15 +52381,18 @@ msgstr ""
 
 #: src/ch10-03-lifetime-syntax.md:255
 msgid "// a reference\n"
-msgstr "// a reference\n"
+msgstr "// a référence\\n"
+
 
 #: src/ch10-03-lifetime-syntax.md:256
 msgid "// a reference with an explicit lifetime\n"
-msgstr "// a reference with an explicit lifetime\n"
+msgstr "// a référence with an explicit lifetime\\n"
+
 
 #: src/ch10-03-lifetime-syntax.md:257
 msgid "// a mutable reference with an explicit lifetime\n"
-msgstr "// a mutable reference with an explicit lifetime\n"
+msgstr "// a mutable référence with an explicit lifetime\\n"
+
 
 #: src/ch10-03-lifetime-syntax.md:260
 msgid ""
@@ -55700,7 +55710,8 @@ msgstr "L’encart 17-19 montre cette déclaration."
 
 #: src/ch17-03-more-futures.md:359
 msgid "// Here is where our implementation will go!\n"
-msgstr "// Here is where our implementation will go!\n"
+msgstr "// Here is where our implémentation will go!\\n"
+
 
 #: src/ch17-03-more-futures.md:365
 msgid ""
@@ -57777,30 +57788,19 @@ msgid ""
 "]\n"
 "```"
 msgstr ""
-"```console\n"
-"$ cargo run\n"
-"   Compiling hello v0.1.0 (file:///projects/hello)\n"
-"    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.42s\n"
-"     Running `target/debug/hello`\n"
-"Request: [\n"
-"    \"GET / HTTP/1.1\",\n"
-"    \"Host: 127.0.0.1:7878\",\n"
-"    \"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:99.0) "
-"Gecko/20100101 Firefox/99.0\",\n"
-"    \"Accept: "
-"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\",\n"
-"    \"Accept-Language: en-US,en;q=0.5\",\n"
-"    \"Accept-Encoding: gzip, deflate, br\",\n"
-"    \"DNT: 1\",\n"
-"    \"Connection: keep-alive\",\n"
-"    \"Upgrade-Insecure-Requests: 1\",\n"
-"    \"Sec-Fetch-Dest: document\",\n"
-"    \"Sec-Fetch-Mode: navigate\",\n"
-"    \"Sec-Fetch-Site: none\",\n"
-"    \"Sec-Fetch-User: ?1\",\n"
-"    \"Cache-Control: max-age=0\",\n"
-"]\n"
-"```"
+"```console\\n$ cargo run\\n   Compiling hello v0.1.0 "
+"(file:///projects/hello)\\n    Finished `dev` profile [unoptimized + "
+"debuginfo] target(s) in 0.42s\\n     Running `target/debug/hello`\\nRequest: "
+"[\\n    \"GET / HTTP/1.1\",\\n    \"Host: 127.0.0.1:7878\",\\n    "
+"\"User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:99.0) "
+"Gecko/20100101 Firefox/99.0\",\\n    \"Accept: "
+"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8\",\\n "
+"   \"Accept-Language: en-US,en;q=0.5\",\\n    \"Accept-Encoding: gzip, "
+"deflate, br\",\\n    \"DNT: 1\",\\n    \"Connection: keep-alive\",\\n    "
+"\"Upgrade-Insecure-Requests: 1\",\\n    \"Sec-Fetch-Dest: document\",\\n    "
+"\"Sec-Fetch-Mode: navigate\",\\n    \"Sec-Fetch-Site: none\",\\n    "
+"\"Sec-Fetch-User: ?1\",\\n    \"Cache-Control: max-age=0\",\\n]\\n```"
+
 
 #: src/ch21-01-single-threaded.md:240
 msgid ""
