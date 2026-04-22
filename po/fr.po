@@ -749,8 +749,9 @@ msgid ""
 "The `rustfmt` formatting tool ensures a consistent coding style across "
 "developers."
 msgstr ""
-"L’outil de formatage `rustfmt` assure un style de code cohérent entre les "
+"L’outil de formatage `rustfmt` assuré un style de code cohérent entre les "
 "développeurs."
+
 
 #: src/ch00-00-introduction.md:41
 msgid ""
@@ -1105,8 +1106,9 @@ msgstr ""
 "exemple au hasard, il pourrait ne pas compiler ! Assurez-vous de lire le "
 "texte environnant pour voir si l’exemple que vous essayez d’exécuter est "
 "censé produire une erreur. Dans la plupart des situations, nous vous "
-"guiderons vers la version correcte de tout code qui ne compile pas. Ferris "
+"guiderons vers la version correcte de tout code qui ne compilé pas. Ferris "
 "vous aidera également à distinguer le code qui n’est pas censé fonctionner :"
+
 
 #: src/ch00-00-introduction.md:193
 msgid ""
@@ -1114,7 +1116,8 @@ msgid ""
 "doesn’t compile."
 msgstr ""
 "Dans la plupart des situations, nous vous guiderons vers la version correcte "
-"de tout code qui ne compile pas."
+"de tout code qui ne compilé pas."
+
 
 #: src/ch00-00-introduction.md:196
 msgid "Source Code"
@@ -1127,10 +1130,11 @@ msgid ""
 "available in print and ebook format from [No Starch "
 "Press](https://nostarch.com/)."
 msgstr ""
-"Note : cette édition du livre est identique à [The Rust Programming "
+"Note : cette édition du livre est identique à [The Rust Programming "
 "Language](https://nostarch.com/rust-programming-language-3rd-edition) "
 "disponible en format papier et numérique chez [No Starch "
 "Press](https://nostarch.com/)."
+
 
 #: src/ch00-00-introduction.md:177
 msgid "<span id=\"ferris\"></span>"
@@ -1154,7 +1158,8 @@ msgstr ""
 
 #: src/ch00-00-introduction.md:189
 msgid "This code does not compile!"
-msgstr "Ce code ne compile pas !"
+msgstr "Ce code ne compilé pas !"
+
 
 #: src/ch00-00-introduction.md:190
 msgid ""
@@ -1166,7 +1171,8 @@ msgstr ""
 
 #: src/ch00-00-introduction.md:190
 msgid "This code panics!"
-msgstr "Ce code panique !"
+msgstr "Ce code panique !"
+
 
 #: src/ch00-00-introduction.md:191
 msgid ""
@@ -1212,7 +1218,8 @@ msgstr ""
 
 #: src/appendix-01-keywords.md:19
 msgid "**`async`**: Return a `Future` instead of blocking the current thread."
-msgstr "**`async`** : retourne un `Future` plutôt que de bloquer la tâche en cours."
+msgstr "**`async`** : retourné un `Future` plutôt que de bloquer la tâche en cours."
+
 
 #: src/appendix-01-keywords.md:20
 msgid "**`await`**: Suspend execution until the result of a `Future` is ready."
@@ -1332,7 +1339,8 @@ msgstr "**`ref`** : lie une valeur par référence."
 
 #: src/appendix-01-keywords.md:45
 msgid "**`return`**: Return from function."
-msgstr "**`return`** : retourne une valeur depuis une fonction."
+msgstr "**`return`** : retourné une valeur depuis une fonction."
+
 
 #: src/appendix-01-keywords.md:46
 msgid "**`Self`**: A type alias for the type we are defining or implementing."
@@ -1390,7 +1398,8 @@ msgstr "**`where`** : indique des conditions pour contraindre un type."
 msgid "**`while`**: Loop conditionally based on the result of an expression."
 msgstr ""
 "**`while`** : crée une boucle en fonction du résultat d’une expression. "
-"[union]: ../reference/items/unions.html"
+"[union]: ../référence/items/unions.html"
+
 
 #: src/appendix-01-keywords.md:64
 msgid "Keywords Reserved for Future Use"
@@ -1532,21 +1541,23 @@ msgstr ""
 "Les listes suivantes contiennent des mots-clés réservés qui sont "
 "actuellement utilisés dans le langage Rust ou qui pourraient l’être à "
 "l’avenir. De ce fait, ils ne peuvent pas être utilisés comme identificateurs "
-"(sauf comme identificateurs bruts, ce que nous allons voir dans la section « "
-"[les identificateurs bruts](#les-identificateurs-bruts)<!-- ignore --> »). "
+"(sauf comme identificateurs bruts, ce que nous allons voir dans la section "
+"« [les identificateurs bruts](#les-identificateurs-bruts)<!-- ignore --> »). "
 "Les _identificateurs_ sont les noms de fonctions, de variables, de "
 "paramètres, de champs de structures, de modules, de crates, de constantes, "
 "de macros, de valeurs statiques, d’attributs, de types, de traits ou de "
 "durées de vie."
+
 
 #: src/appendix-01-keywords.md:55
 msgid ""
 "**`union`**: Define a [union](../reference/items/unions.html)<!-- ignore "
 "-->; is a keyword only when used in a union declaration."
 msgstr ""
-"**`union`** : définit une [union](../reference/items/unions.html)<!-- ignore "
-"--> ; n’est un mot-clé que lorsqu’il est utilisé dans la déclaration d’une "
+"**`union`** : définit une [union](../reference/items/unions.html)<!-- ignore "
+"--> ; n’est un mot-clé que lorsqu’il est utilisé dans la déclaration d’une "
 "union."
+
 
 #: src/appendix-01-keywords.md:129
 msgid ""
@@ -1745,7 +1756,8 @@ msgstr "Explication"
 
 #: src/appendix-02-operators.md:16
 msgid "Overloadable?"
-msgstr "Surchargeable ?"
+msgstr "Surchargeable ?"
+
 
 #: src/appendix-02-operators.md:18 src/appendix-02-operators.md:19
 #: src/appendix-02-operators.md:96
@@ -1778,7 +1790,8 @@ msgstr "`!=`"
 
 #: src/appendix-02-operators.md:20
 msgid "`expr != expr`"
-msgstr "`expr != expr`"
+msgstr "`expr != expr`"
+
 
 #: src/appendix-02-operators.md:20
 msgid "Nonequality comparison"
@@ -2124,7 +2137,10 @@ msgstr "`expr...expr`"
 
 #: src/appendix-02-operators.md:47
 msgid "(Deprecated, use `..=` instead) In a pattern: inclusive range pattern"
-msgstr "(Déprécié, utilisez `..=` à la place) Dans un motif : motif d’intervalle inclusif"
+msgstr ""
+"(Déprécié, utilisez `..=` à la place) Dans un motif : motif d’intervalle "
+"inclusif"
+
 
 #: src/appendix-02-operators.md:48
 msgid "`/`"
@@ -2377,7 +2393,8 @@ msgstr "`expr ^ expr`"
 
 #: src/appendix-02-operators.md:67
 msgid "Bitwise exclusive OR"
-msgstr "OU exclusif binaire"
+msgstr "Ou exclusif binaire"
+
 
 #: src/appendix-02-operators.md:67
 msgid "`BitXor`"
@@ -2393,7 +2410,8 @@ msgstr "`var ^= expr`"
 
 #: src/appendix-02-operators.md:68
 msgid "Bitwise exclusive OR and assignment"
-msgstr "OU exclusif binaire et assignation"
+msgstr "Ou exclusif binaire et assignation"
+
 
 #: src/appendix-02-operators.md:68
 msgid "`BitXorAssign`"
@@ -2405,7 +2423,8 @@ msgstr "Alternatives de motif"
 
 #: src/appendix-02-operators.md:70
 msgid "Bitwise OR"
-msgstr "OU binaire"
+msgstr "Ou binaire"
+
 
 #: src/appendix-02-operators.md:70
 msgid "`BitOr`"
@@ -2413,7 +2432,8 @@ msgstr "`BitOr`"
 
 #: src/appendix-02-operators.md:71
 msgid "Bitwise OR and assignment"
-msgstr "OU binaire et assignation"
+msgstr "Ou binaire et assignation"
+
 
 #: src/appendix-02-operators.md:71
 msgid "`BitOrAssign`"
@@ -2421,7 +2441,8 @@ msgstr "`BitOrAssign`"
 
 #: src/appendix-02-operators.md:72
 msgid "Short-circuiting logical OR"
-msgstr "OU logique avec court-circuit"
+msgstr "Ou logique avec court-circuit"
+
 
 #: src/appendix-02-operators.md:73
 msgid "`?`"
@@ -2472,7 +2493,8 @@ msgstr "`r\"...\"`, `r#\"...\"#`, `r##\"...\"##`, et ainsi de suite"
 
 #: src/appendix-02-operators.md:90
 msgid "Raw string literal; escape characters not processed"
-msgstr "Littéral de chaîne brute ; les caractères d’échappement ne sont pas traités"
+msgstr "Littéral de chaîne brute ; les caractères d’échappement ne sont pas traités"
+
 
 #: src/appendix-02-operators.md:91
 msgid "`b\"...\"`"
@@ -2480,7 +2502,10 @@ msgstr "`b\"...\"`"
 
 #: src/appendix-02-operators.md:91
 msgid "Byte string literal; constructs an array of bytes instead of a string"
-msgstr "Littéral de chaîne d’octets ; construit un tableau d’octets plutôt qu’une chaîne"
+msgstr ""
+"Littéral de chaîne d’octets ; construit un tableau d’octets plutôt qu’une "
+"chaîne"
+
 
 #: src/appendix-02-operators.md:92
 msgid "`br\"...\"`, `br#\"...\"#`, `br##\"...\"##`, and so on"
@@ -2488,7 +2513,8 @@ msgstr "`br\"...\"`, `br#\"...\"#`, `br##\"...\"##`, et ainsi de suite"
 
 #: src/appendix-02-operators.md:92
 msgid "Raw byte string literal; combination of raw and byte string literal"
-msgstr "Littéral de chaîne d’octets brute ; combinaison de chaîne brute et d’octets"
+msgstr "Littéral de chaîne d’octets brute ; combinaison de chaîne brute et d’octets"
+
 
 #: src/appendix-02-operators.md:93
 msgid "`'...'`"
@@ -2520,7 +2546,8 @@ msgstr "`_`"
 
 #: src/appendix-02-operators.md:97
 msgid "“Ignored” pattern binding; also used to make integer literals readable"
-msgstr "Motif \"ignoré\" ; utilisé aussi pour rendre les littéraux entiers lisibles"
+msgstr "Motif \"ignoré\" ; utilisé aussi pour rendre les littéraux entiers lisibles"
+
 
 #: src/appendix-02-operators.md:106
 msgid "`ident::ident`"
@@ -2614,7 +2641,11 @@ msgid ""
 "Specifies parameters to a generic type, function, or method in an "
 "expression; often referred to as _turbofish_ (for example, "
 "`\"42\".parse::<i32>()`)"
-msgstr "Renseigne les paramètres d’un type, d’une fonction ou d’une méthode générique dans une expression ; souvent appelé *turbofish* (par exemple, `\"42\".parse::<i32>()`)"
+msgstr ""
+"Renseigne les paramètres d’un type, d’une fonction ou d’une méthode "
+"générique dans une expression ; souvent appelé *turbofish* (par exemple, "
+"`\"42\".parse::<i32>()`)"
+
 
 #: src/appendix-02-operators.md:125
 msgid "`fn ident<...> ...`"
@@ -2664,7 +2695,10 @@ msgstr "`type<ident=type>`"
 msgid ""
 "A generic type where one or more associated types have specific assignments "
 "(for example, `Iterator<Item=T>`)"
-msgstr "Un type générique où un ou plusieurs types associés ont des assignations spécifiques (par exemple, `Iterator<Item=T>`)"
+msgstr ""
+"Un type générique où un où plusieurs types associés ont des assignations "
+"spécifiques (par exemple, `Iterator<Item=T>`)"
+
 
 #: src/appendix-02-operators.md:139
 msgid "`T: U`"
@@ -2703,7 +2737,8 @@ msgstr "La durée de vie générique `'b` doit vivre au moins aussi longtemps qu
 
 #: src/appendix-02-operators.md:143
 msgid "`T: ?Sized`"
-msgstr "`T: ?Sized`"
+msgstr "`T: ?Sized`"
+
 
 #: src/appendix-02-operators.md:143
 msgid "Allow generic type parameter to be a dynamically sized type"
@@ -2861,7 +2896,10 @@ msgstr "`expr(expr, ...)`"
 msgid ""
 "Function call expression; also used to initialize tuple `struct`s and tuple "
 "`enum` variants"
-msgstr "Appel de fonction ; utilisé aussi pour initialiser les `struct` tuples et les variantes d’`enum` tuples"
+msgstr ""
+"Appel de fonction ; utilisé aussi pour initialiser les `struct` tuples et "
+"les variantes d’`enum` tuples"
+
 
 #: src/appendix-02-operators.md:191 src/appendix-02-operators.md:200
 msgid "Context"
@@ -2913,7 +2951,8 @@ msgstr "`expr[expr]`"
 
 #: src/appendix-02-operators.md:205
 msgid "Collection indexing; overloadable (`Index`, `IndexMut`)"
-msgstr "Indexation de collection ; surchargeable (`Index`, `IndexMut`)"
+msgstr "Indexation de collection ; surchargeable (`Index`, `IndexMut`)"
+
 
 #: src/appendix-02-operators.md:206
 msgid "`expr[..]`, `expr[a..]`, `expr[..b]`, `expr[a..b]`"
@@ -3046,9 +3085,10 @@ msgid ""
 "The `Debug` trait enables debug formatting in format strings, which you "
 "indicate by adding `:?` within `{}` placeholders."
 msgstr ""
-"Le trait `Debug` active le formatage de débogage dans les chaînes de "
+"Le trait `Debug` activé le formatage de débogage dans les chaînes de "
 "formatage, que vous indiquez en ajoutant `:?` à l’intérieur des espaces "
 "réservés `{}`."
+
 
 #: src/appendix-03-derivable-traits.md:44
 msgid ""
@@ -3083,7 +3123,8 @@ msgid ""
 "equality and enables use of the `==` and `!=` operators."
 msgstr ""
 "Le trait `PartialEq` vous permet de comparer des instances d’un type pour "
-"vérifier l’égalité et active l’utilisation des opérateurs `==` et `!=`."
+"vérifier l’égalité et activé l’utilisation des opérateurs `==` et `!=`."
+
 
 #: src/appendix-03-derivable-traits.md:58
 msgid ""
@@ -3160,13 +3201,14 @@ msgid ""
 "value. Calling `partial_cmp` with any floating-point number and the `NaN` "
 "floating-point value will return `None`."
 msgstr ""
-"Dériver `PartialOrd` implémente la méthode `partial_cmp`, qui retourne un "
+"Dériver `PartialOrd` implémente la méthode `partial_cmp`, qui retourné un "
 "`Option<Ordering>` qui sera `None` lorsque les valeurs fournies ne "
 "produisent pas d’ordre. Un exemple de valeur qui ne produit pas d’ordre, "
 "même si la plupart des valeurs de ce type peuvent être comparées, est la "
 "valeur à virgule flottante `NaN`. Appeler `partial_cmp` avec n’importe quel "
 "nombre à virgule flottante et la valeur à virgule flottante `NaN` retournera "
 "`None`."
+
 
 #: src/appendix-03-derivable-traits.md:91
 msgid ""
@@ -3205,12 +3247,13 @@ msgid ""
 msgstr ""
 "Le trait `Ord` vous permet de savoir que pour deux valeurs quelconques du "
 "type annoté, un ordre valide existera. Le trait `Ord` implémente la méthode "
-"`cmp`, qui retourne un `Ordering` plutôt qu’un `Option<Ordering>` car un "
+"`cmp`, qui retourné un `Ordering` plutôt qu’un `Option<Ordering>` car un "
 "ordre valide sera toujours possible. Vous ne pouvez appliquer le trait `Ord` "
 "qu’aux types qui implémentent également `PartialOrd` et `Eq` (et `Eq` "
 "nécessite `PartialEq`). Lorsqu'il est dérivé sur des structures et des "
 "énumérations, `cmp` se comporte de la même manière que l’implémentation "
 "dérivée de `partial_cmp` avec `PartialOrd`."
+
 
 #: src/appendix-03-derivable-traits.md:108
 msgid ""
@@ -3219,8 +3262,9 @@ msgid ""
 "the values."
 msgstr ""
 "Un exemple où `Ord` est requis est lors du stockage de valeurs dans un "
-"`BTreeSet<T>`, une structure de données qui stocke les données en fonction "
+"`BTreeSet<T>`, une structure de données qui stocké les données en fonction "
 "de l’ordre de tri des valeurs."
+
 
 #: src/appendix-03-derivable-traits.md:111
 msgid "`Clone` and `Copy` for Duplicating Values"
@@ -3249,8 +3293,9 @@ msgid ""
 msgstr ""
 "Vous pouvez dériver `Copy` sur tout type dont toutes les parties "
 "implémentent `Copy`. Un type qui implémente `Copy` doit également "
-"implémenter `Clone` car un type qui implémente `Copy` a une implémentation "
+"implémenter `Clone` car un type qui implémente `Copy` à une implémentation "
 "triviale de `Clone` qui effectue la même tâche que `Copy`."
+
 
 #: src/appendix-03-derivable-traits.md:143
 msgid ""
@@ -3339,12 +3384,13 @@ msgid ""
 "Chapter 20."
 msgstr ""
 "La liste des traits dérivables fournie dans cette annexe n’est pas "
-"exhaustive : les bibliothèques peuvent implémenter `derive` pour leurs "
+"exhaustive : les bibliothèques peuvent implémenter `derive` pour leurs "
 "propres traits, ce qui rend la liste des traits utilisables avec `derive` "
 "véritablement ouverte. L’implémentation de `derive` implique l’utilisation "
-"d’une macro procédurale, qui est traitée dans la section [« Les macros "
-"`derive` personnalisées »](ch20-05-macros.html#custom-derive-macros)<!-- "
+"d’une macro procédurale, qui est traitée dans la section [« Les macros "
+"`derive` personnalisées »](ch20-05-macros.html#custom-derive-macros)<!-- "
 "ignore --> du chapitre 20."
+
 
 #: src/appendix-03-derivable-traits.md:39
 msgid "`Debug` for Programmer Output"
@@ -3360,10 +3406,11 @@ msgid ""
 msgstr ""
 "Le trait `Clone` vous permet de créer explicitement une copie en profondeur "
 "d’une valeur, et le processus de duplication peut impliquer l’exécution de "
-"code arbitraire et la copie de données du tas. Consultez la section [« Les "
-"variables et les données interagissant avec Clone "
-"»](ch04-01-what-is-ownership.html#variables-and-data-interacting-with-clone)<!-- "
+"code arbitraire et la copie de données du tas. Consultez la section [« Les "
+"variables et les données interagissant avec "
+"Clone »](ch04-01-what-is-ownership.html#variables-and-data-interacting-with-clone)<!-- "
 "ignore --> du chapitre 4 pour plus d’informations sur `Clone`."
+
 
 #: src/appendix-03-derivable-traits.md:119
 msgid ""
@@ -3385,10 +3432,11 @@ msgid ""
 "section in Chapter 4 for more information on `Copy`."
 msgstr ""
 "Le trait `Copy` vous permet de dupliquer une valeur en copiant uniquement "
-"les bits stockés sur la pile ; aucun code arbitraire n’est nécessaire. "
-"Consultez la section [« Les données uniquement sur la pile : Copy "
-"»](ch04-01-what-is-ownership.html#stack-only-data-copy)<!-- ignore --> du "
-"chapitre 4 pour plus d’informations sur `Copy`."
+"les bits stockés sur la pile ; aucun code arbitraire n’est nécessaire. "
+"Consultez la section [« Les données uniquement sur la pile : "
+"Copy »](ch04-01-what-is-ownership.html#stack-only-data-copy)<!-- ignore --> "
+"du chapitre 4 pour plus d’informations sur `Copy`."
+
 
 #: src/appendix-03-derivable-traits.md:133
 msgid ""
@@ -3413,13 +3461,13 @@ msgid ""
 "`..Default::default()`."
 msgstr ""
 "La fonction `Default::default` est couramment utilisée en combinaison avec "
-"la syntaxe de mise à jour de structure abordée dans la section [« Créer des "
+"la syntaxe de mise à jour de structure abordée dans la section [« Créer des "
 "instances à partir d’autres instances avec la syntaxe de mise à jour de "
-"structure "
-"»](ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax)<!-- "
+"structure »](ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax)<!-- "
 "ignore --> du chapitre 5. Vous pouvez personnaliser quelques champs d’une "
 "structure puis définir et utiliser une valeur par défaut pour le reste des "
 "champs en utilisant `..Default::default()`."
+
 
 #: src/appendix-03-derivable-traits.md:177
 msgid ""
@@ -3583,7 +3631,7 @@ msgid ""
 msgstr ""
 "Par exemple, imaginons que vous écrivez un programme qui utilise une "
 "approximation d’une constante mathematique, comme pi, comme le fait ce "
-"programme : <Listing file-name=\"src/main.rs\">"
+"programme :"
 
 #: src/appendix-04-useful-development-tools.md:116
 msgid "Running `cargo clippy` on this project results in this error:"
@@ -3593,7 +3641,7 @@ msgstr "L’exécution de `cargo clippy` sur ce projet produit cette erreur :"
 msgid "The following code doesn’t result in any errors or warnings from Clippy:"
 msgstr ""
 "Le code suivant ne produit aucune erreur ni avertissement de la part de "
-"Clippy : <Listing file-name=\"src/main.rs\">"
+"Clippy :"
 
 #: src/appendix-04-useful-development-tools.md:150
 msgid "IDE Integration Using `rust-analyzer`"
@@ -3614,7 +3662,7 @@ msgstr ""
 #: src/appendix-04-useful-development-tools.md:39
 #: src/appendix-04-useful-development-tools.md:79
 msgid "\"{x}\""
-msgstr "\\\"{x}\\\""
+msgstr "\"{x}\""
 
 #: src/appendix-04-useful-development-tools.md:46
 msgid ""
@@ -3654,7 +3702,8 @@ msgid ""
 msgstr ""
 "L’avertissement suggère de supprimer le mot-clé `mut`. Nous pouvons "
 "appliquer automatiquement cette suggestion en utilisant l’outil `rustfix` en "
-"exécutant la commande `cargo fix` :"
+"exécutant la commande `cargo fix` :"
+
 
 #: src/appendix-04-useful-development-tools.md:85
 msgid ""
@@ -3674,7 +3723,7 @@ msgstr "Plus de lints avec Clippy"
 #: src/appendix-04-useful-development-tools.md:110
 #: src/appendix-04-useful-development-tools.md:142
 msgid "\"the area of the circle is {}\""
-msgstr "\\\"the area of the circle is {}\\\""
+msgstr "\"the area of the circle is {}\""
 
 #: src/appendix-04-useful-development-tools.md:118
 msgid ""
@@ -3766,9 +3815,10 @@ msgid ""
 "_Cargo.toml_ file about an edition. This appendix talks about what that "
 "means!"
 msgstr ""
-"Au chapitre 1, vous avez vu que `cargo new` ajoute un peu de métadonnées à "
+"Au chapitre 1, vous avez vu que `cargo new` ajouté un peu de métadonnées à "
 "votre fichier _Cargo.toml_ concernant une édition. Cette annexe explique ce "
 "que cela signifie !"
+
 
 #: src/appendix-05-editions.md:6
 msgid ""
@@ -3782,11 +3832,12 @@ msgstr ""
 "Le langage Rust et son compilateur ont un cycle de publication de six "
 "semaines, ce qui signifie que les utilisateurs reçoivent un flux constant de "
 "nouvelles fonctionnalités. D’autres langages de programmation publient des "
-"changements plus importants moins souvent ; Rust publie des mises à jour "
+"changements plus importants moins souvent ; Rust publié des mises à jour "
 "plus petites plus fréquemment. Au bout d’un moment, tous ces petits "
 "changements s’accumulent. Mais d’une version à l’autre, il peut être "
 "difficile de prendre du recul et de dire : \"Wow, entre Rust 1.10 et Rust "
 "1.31, Rust a beaucoup changé !\""
+
 
 #: src/appendix-05-editions.md:13
 msgid ""
@@ -3873,7 +3924,8 @@ msgstr ""
 
 #: src/appendix-05-editions.md:29
 msgid "Editions serve different purposes for different people:"
-msgstr "Les éditions servent des objectifs différents selon les personnes :"
+msgstr "Les éditions servent des objectifs différents selon les personnes :"
+
 
 #: src/appendix-05-editions.md:31
 msgid ""
@@ -4039,13 +4091,15 @@ msgid ""
 "to help or let us know about a new translation!"
 msgstr ""
 "Pour des ressources dans des langues autres que l’anglais. La plupart sont "
-"encore en cours ; consultez [le label "
+"encore en cours ; consultez [le label "
 "Translations](https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations) "
-"pour nous aider ou nous signaler une nouvelle traduction !"
+"pour nous aider ou nous signaler une nouvelle traduction !"
+
 
 #: src/appendix-07-nightly-rust.md:1
 msgid "Appendix G - How Rust is Made and “Nightly Rust”"
-msgstr "Annexe G - Comment Rust est conçu et « Rust Nightly »"
+msgstr "Annexe G - Comment Rust est conçu et « Rust Nightly »"
+
 
 #: src/appendix-07-nightly-rust.md:3
 msgid ""
@@ -4199,7 +4253,7 @@ msgid ""
 "helps reduce pressure to sneak possibly unpolished features in close to the "
 "release deadline."
 msgstr ""
-"Rust publie une nouvelle version toutes les six semaines, comme une horloge. "
+"Rust publié une nouvelle version toutes les six semaines, comme une horloge. "
 "Si vous connaissez la date d’une publication de Rust, vous pouvez connaître "
 "la date de la suivante : c’est six semaines plus tard. Un avantage agréable "
 "d’avoir des publications programmées toutes les six semaines est que le "
@@ -4207,6 +4261,7 @@ msgstr ""
 "particulière, il n’y a pas lieu de s’inquiéter : une autre arrivera dans peu "
 "de temps ! Cela aide à réduire la pression pour glisser des fonctionnalités "
 "potentiellement non finalisées juste avant la date limite de publication."
+
 
 #: src/appendix-07-nightly-rust.md:111
 msgid ""
@@ -4252,7 +4307,7 @@ msgid ""
 "you must be using a nightly release of Rust and annotate your source code "
 "with the appropriate flag to opt in."
 msgstr ""
-"Il y a un autre aspect important de ce modèle de publication : les "
+"Il y à un autre aspect important de ce modèle de publication : les "
 "fonctionnalités instables. Rust utilise une technique appelée \"feature "
 "flags\" pour déterminer quelles fonctionnalités sont activées dans une "
 "publication donnée. Si une nouvelle fonctionnalité est en cours de "
@@ -4261,6 +4316,7 @@ msgstr ""
 "souhaitez essayer la fonctionnalité en cours de développement, vous le "
 "pouvez, mais vous devez utiliser une version nightly de Rust et annoter "
 "votre code source avec le flag approprié pour l’activer."
+
 
 #: src/appendix-07-nightly-rust.md:133
 msgid ""
@@ -4373,13 +4429,14 @@ msgid ""
 msgstr ""
 "N’importe qui peut écrire des RFC pour améliorer Rust, et les propositions "
 "sont examinées et discutées par l’équipe Rust, qui est composée de "
-"nombreuses sous-équipes thématiques. Il y a une liste complète des équipes "
+"nombreuses sous-équipes thématiques. Il y à une liste complète des équipes "
 "[sur le site web de Rust](https://www.rust-lang.org/governance), qui inclut "
 "des équipes pour chaque domaine du projet : conception du langage, "
 "implémentation du compilateur, infrastructure, documentation, et plus "
 "encore. L’équipe appropriée lit la proposition et les commentaires, rédige "
 "ses propres commentaires, et finalement, un consensus est atteint pour "
 "accepter ou rejeter la fonctionnalité."
+
 
 #: src/appendix-07-nightly-rust.md:201
 msgid ""
@@ -4409,7 +4466,8 @@ msgstr ""
 "C’est-à-dire que tout le développement est effectué dans la branche "
 "principale du dépôt Rust. Les publications suivent un modèle de train de "
 "publication logiciel, qui a été utilisé par Cisco IOS et d’autres projets "
-"logiciels. Il existe trois _canaux de publication_ pour Rust :"
+"logiciels. Il existe trois _canaux de publication_ pour Rust :"
+
 
 #: src/appendix-07-nightly-rust.md:26
 msgid "Nightly"
@@ -4434,7 +4492,1260 @@ msgid ""
 msgstr ""
 "Si la fonctionnalité est acceptée, une issue est ouverte sur le dépôt Rust, "
 "et quelqu’un peut l’implémenter. La personne qui l’implémente peut très bien "
-"ne pas être celle qui a proposé la fonctionnalité en premier lieu ! Lorsque "
+"ne pas être celle qui a proposé la fonctionnalité en premier lieu ! Lorsque "
 "l’implémentation est prête, elle arrive sur la branche principale derrière "
-"un feature gate, comme nous l’avons discuté dans la section [« Les "
-"fonctionnalités instables »](#les-fonctionnalites-instables)<!-- ignore -->."
+"un feature gate, comme nous l’avons discuté dans la section [« Les "
+"fonctionnalités instables »](#les-fonctionnalites-instables)<!-- ignore -->."
+
+
+#: src/ch01-01-installation.md:3
+msgid ""
+"The first step is to install Rust. We’ll download Rust through `rustup`, a "
+"command line tool for managing Rust versions and associated tools. You’ll "
+"need an internet connection for the download."
+msgstr ""
+"La première étape est d’installer Rust. Nous telechargerons Rust via "
+"`rustup`, un outil en ligne de commande permettant de gérer les versions de "
+"Rust et les outils associes. Vous aurez besoin d’une connexion internet pour "
+"le téléchargement."
+
+
+#: src/ch01-01-installation.md:10
+msgid ""
+"The following steps install the latest stable version of the Rust compiler. "
+"Rust’s stability guarantees ensure that all the examples in the book that "
+"compile will continue to compile with newer Rust versions. The output might "
+"differ slightly between versions because Rust often improves error messages "
+"and warnings. In other words, any newer, stable version of Rust you install "
+"using these steps should work as expected with the content of this book."
+msgstr ""
+"Les étapes suivantes installent la derniere version stable du compilateur "
+"Rust. Les garanties de stabilite de Rust assurent que tous les exemples du "
+"livre qui compilent continueront a compiler avec les versions plus récentes "
+"de Rust. La sortie peut varier legerement d’une version à l’autre, car Rust "
+"ameliore souvent les messages d’erreur et les avertissements. Autrement dit, "
+"toute version stable plus récente de Rust que vous installez en suivant ces "
+"étapes devrait fonctionner comme prevu avec le contenu de ce livre."
+
+
+#: src/ch01-01-installation.md:26
+msgid "Installing `rustup` on Linux or macOS"
+msgstr "Installer `rustup` sur Linux ou macOS"
+
+#: src/ch01-01-installation.md:28
+msgid ""
+"If you’re using Linux or macOS, open a terminal and enter the following "
+"command:"
+msgstr ""
+"Si vous utilisez Linux ou macOS, ouvrez un terminal et entrez la commande "
+"suivante :"
+
+#: src/ch01-01-installation.md:30
+msgid ""
+"```console\n"
+"$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh\n"
+"```"
+msgstr ""
+"```console $ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh "
+"```"
+
+#: src/ch01-01-installation.md:34
+msgid ""
+"The command downloads a script and starts the installation of the `rustup` "
+"tool, which installs the latest stable version of Rust. You might be "
+"prompted for your password. If the install is successful, the following line "
+"will appear:"
+msgstr ""
+"La commande téléchargé un script et lance l’installation de l’outil "
+"`rustup`, qui installé la derniere version stable de Rust. Il se peut que "
+"votre mot de passe vous soit demande. Si l’installation reussit, la ligne "
+"suivante apparaîtra :"
+
+#: src/ch01-01-installation.md:42
+msgid ""
+"You will also need a _linker_, which is a program that Rust uses to join its "
+"compiled outputs into one file. It is likely you already have one. If you "
+"get linker errors, you should install a C compiler, which will typically "
+"include a linker. A C compiler is also useful because some common Rust "
+"packages depend on C code and will need a C compiler."
+msgstr ""
+"Vous aurez également besoin d’un _linker_ (éditeur de liens), qui est un "
+"programme que Rust utilise pour regrouper ses sorties compilées en un seul "
+"fichier. Il est probable que vous en ayez déjà un. Si vous obtenez des "
+"erreurs de linker, vous devriez installer un compilateur C, qui inclura "
+"généralement un éditeur de liens. Un compilateur C est également utile car "
+"certains packages Rust courants dependent de code C et nécessitent un "
+"compilateur C."
+
+#: src/ch01-01-installation.md:48
+msgid "On macOS, you can get a C compiler by running:"
+msgstr "Sur macOS, vous pouvez obtenir un compilateur C en exécutant :"
+
+#: src/ch01-01-installation.md:54
+msgid ""
+"Linux users should generally install GCC or Clang, according to their "
+"distribution’s documentation. For example, if you use Ubuntu, you can "
+"install the `build-essential` package."
+msgstr ""
+"Les utilisateurs Linux devraient généralement installer GCC ou Clang, "
+"conformement à la documentation de leur distribution. Par exemple, si vous "
+"utilisez Ubuntu, vous pouvez installer le paquet `build-essential`."
+
+#: src/ch01-01-installation.md:58
+msgid "Installing `rustup` on Windows"
+msgstr "Installer `rustup` sur Windows"
+
+#: src/ch01-01-installation.md:68
+msgid ""
+"The rest of this book uses commands that work in both _cmd.exe_ and "
+"PowerShell. If there are specific differences, we’ll explain which to use."
+msgstr ""
+"Le reste de ce livre utilise des commandes qui fonctionnent aussi bien dans "
+"_cmd.exe_ que dans PowerShell. S’il y à des differences spécifiques, nous "
+"expliquerons laquelle utiliser."
+
+
+#: src/ch01-01-installation.md:71
+msgid "Troubleshooting"
+msgstr "Resolution de problèmes"
+
+#: src/ch01-01-installation.md:73
+msgid ""
+"To check whether you have Rust installed correctly, open a shell and enter "
+"this line:"
+msgstr ""
+"Pour vérifier que Rust est correctement installé, ouvrez un terminal et "
+"entrez cette ligne :"
+
+#: src/ch01-01-installation.md:80
+msgid ""
+"You should see the version number, commit hash, and commit date for the "
+"latest stable version that has been released, in the following format:"
+msgstr ""
+"Vous devriez voir le numéro de version, le hash du commit et la date du "
+"commit pour la derniere version stable publiée, dans le format suivant :"
+
+
+#: src/ch01-01-installation.md:87
+msgid ""
+"If you see this information, you have installed Rust successfully! If you "
+"don’t see this information, check that Rust is in your `%PATH%` system "
+"variable as follows."
+msgstr ""
+"Si vous voyez cette information, vous avez installé Rust avec succès ! Si "
+"vous ne voyez pas cette information, vérifiez que Rust se trouve dans votre "
+"variable système `%PATH%` comme suit."
+
+#: src/ch01-01-installation.md:91
+msgid "In Windows CMD, use:"
+msgstr "Dans le CMD Windows, utilisez :"
+
+#: src/ch01-01-installation.md:97
+msgid "In PowerShell, use:"
+msgstr "Dans PowerShell, utilisez :"
+
+#: src/ch01-01-installation.md:103
+msgid "In Linux and macOS, use:"
+msgstr "Sous Linux et macOS, utilisez :"
+
+#: src/ch01-01-installation.md:113
+msgid "Updating and Uninstalling"
+msgstr "Mise à jour et désinstallation"
+
+#: src/ch01-01-installation.md:115
+msgid ""
+"Once Rust is installed via `rustup`, updating to a newly released version is "
+"easy. From your shell, run the following update script:"
+msgstr ""
+"Une fois Rust installé via `rustup`, la mise à jour vers une nouvelle "
+"version est simple. Depuis votre terminal, exécutez le script de mise à jour "
+"suivant :"
+
+#: src/ch01-01-installation.md:122
+msgid ""
+"To uninstall Rust and `rustup`, run the following uninstall script from your "
+"shell:"
+msgstr ""
+"Pour désinstaller Rust et `rustup`, exécutez le script de désinstallation "
+"suivant depuis votre terminal :"
+
+#: src/ch01-01-installation.md:132
+msgid "Reading the Local Documentation"
+msgstr "Lire la documentation locale"
+
+#: src/ch01-01-installation.md:134
+msgid ""
+"The installation of Rust also includes a local copy of the documentation so "
+"that you can read it offline. Run `rustup doc` to open the local "
+"documentation in your browser."
+msgstr ""
+"L’installation de Rust inclut également une copie locale de la documentation "
+"afin que vous puissiez la lire hors ligne. Exécutez `rustup doc` pour ouvrir "
+"la documentation locale dans votre navigateur."
+
+#: src/ch01-01-installation.md:138
+msgid ""
+"Any time a type or function is provided by the standard library and you’re "
+"not sure what it does or how to use it, use the application programming "
+"interface (API) documentation to find out!"
+msgstr ""
+"Chaque fois qu’un type ou une fonction est fourni par la bibliothèque "
+"standard et que vous n’etes pas sur de ce qu’il fait ou comment l’utiliser, "
+"consultez la documentation de l’interface de programmation applicative (API) "
+"pour le découvrir !"
+
+#: src/ch01-01-installation.md:145
+msgid "Using Text Editors and IDEs"
+msgstr "Utiliser des éditeurs de texte et des IDE"
+
+#: src/ch01-01-installation.md:153
+msgid "Working Offline with This Book"
+msgstr "Travailler hors ligne avec ce livre"
+
+#: src/ch01-01-installation.md:155
+msgid ""
+"In several examples, we will use Rust packages beyond the standard library. "
+"To work through those examples, you will either need to have an internet "
+"connection or to have downloaded those dependencies ahead of time. To "
+"download the dependencies ahead of time, you can run the following commands. "
+"(We’ll explain what `cargo` is and what each of these commands does in "
+"detail later.)"
+msgstr ""
+"Dans plusieurs exemples, nous utiliserons des packages Rust au-dela de la "
+"bibliothèque standard. Pour travailler sur ces exemples, vous aurez besoin "
+"soit d’une connexion internet, soit d’avoir téléchargé ces dépendances à "
+"l’avance. Pour télécharger les dépendances à l’avance, vous pouvez exécuter "
+"les commandes suivantes. (Nous expliquerons ce qu’est `cargo` et ce que fait "
+"chacune de ces commandes en détail plus tard.)"
+
+#: src/ch01-01-installation.md:167
+msgid ""
+"This will cache the downloads for these packages so you will not need to "
+"download them later. Once you have run this command, you do not need to keep "
+"the `get-dependencies` folder. If you have run this command, you can use the "
+"`--offline` flag with all `cargo` commands in the rest of the book to use "
+"these cached versions instead of attempting to use the network."
+msgstr ""
+"Cela mettra en cache les téléchargements de ces packages afin que vous "
+"n’ayez pas à les télécharger plus tard. Une fois cette commande exécutée, "
+"vous n’avez pas besoin de conserver le dossier `get-dependencies`. Si vous "
+"avez exécute cette commande, vous pouvez utiliser le drapeau `--offline` "
+"avec toutes les commandes `cargo` dans le reste du livre pour utiliser ces "
+"versions en cache au lieu de tenter d’utiliser le reseau. [otherinstall]: "
+"https://forge.rust-lang.org/infra/other-installation-methods.html [install]: "
+"https://www.rust-lang.org/tools/install [msvc]: "
+"https://rust-lang.github.io/rustup/installation/windows-msvc.html "
+"[community]: https://www.rust-lang.org/community [tools]: "
+"https://www.rust-lang.org/tools"
+
+#: src/ch01-02-hello-world.md:3
+msgid ""
+"Now that you’ve installed Rust, it’s time to write your first Rust program. "
+"It’s traditional when learning a new language to write a little program that "
+"prints the text `Hello, world!` to the screen, so we’ll do the same here!"
+msgstr ""
+"Maintenant que vous avez installé Rust, il est temps d’écrire votre premier "
+"programme Rust. C’est une tradition lorsqu’on apprend un nouveau langage "
+"d’écrire un petit programme qui affiche le texte `Hello, world!` à l’ecran, "
+"alors faisons de même !"
+
+#: src/ch01-02-hello-world.md:18
+msgid "Project Directory Setup"
+msgstr "Mise en place du repertoire du projet"
+
+#: src/ch01-02-hello-world.md:20
+msgid ""
+"You’ll start by making a directory to store your Rust code. It doesn’t "
+"matter to Rust where your code lives, but for the exercises and projects in "
+"this book, we suggest making a _projects_ directory in your home directory "
+"and keeping all your projects there."
+msgstr ""
+"Vous commencerez par créer un repertoire pour stocker votre code Rust. Peu "
+"importe pour Rust ou se trouve votre code, mais pour les exercices et "
+"projets de ce livre, nous suggerons de créer un repertoire _projects_ dans "
+"votre repertoire personnel et d’y conserver tous vos projets."
+
+#: src/ch01-02-hello-world.md:25
+msgid ""
+"Open a terminal and enter the following commands to make a _projects_ "
+"directory and a directory for the “Hello, world!” project within the "
+"_projects_ directory."
+msgstr ""
+"Ouvrez un terminal et entrez les commandes suivantes pour créer un "
+"repertoire _projects_ et un repertoire pour le projet \"Hello, world!\" à "
+"l’intérieur du repertoire _projects_."
+
+#: src/ch01-02-hello-world.md:28
+msgid "For Linux, macOS, and PowerShell on Windows, enter this:"
+msgstr "Pour Linux, macOS et PowerShell sur Windows, entrez ceci :"
+
+#: src/ch01-02-hello-world.md:37
+msgid "For Windows CMD, enter this:"
+msgstr "Pour le CMD Windows, entrez ceci :"
+
+#: src/ch01-02-hello-world.md:49
+msgid "Rust Program Basics"
+msgstr "Les bases d’un programme Rust"
+
+#: src/ch01-02-hello-world.md:51
+msgid ""
+"Next, make a new source file and call it _main.rs_. Rust files always end "
+"with the _.rs_ extension. If you’re using more than one word in your "
+"filename, the convention is to use an underscore to separate them. For "
+"example, use _hello_world.rs_ rather than _helloworld.rs_."
+msgstr ""
+"Ensuite, créez un nouveau fichier source et appelez-le _main.rs_. Les "
+"fichiers Rust se terminent toujours par l’extension _.rs_. Si vous utilisez "
+"plusieurs mots dans votre nom de fichier, la convention est d’utiliser un "
+"underscore pour les séparer. Par exemple, utilisez _hello_world.rs_ plutot "
+"que _helloworld.rs_."
+
+#: src/ch01-02-hello-world.md:56
+msgid ""
+"Now open the _main.rs_ file you just created and enter the code in Listing "
+"1-1."
+msgstr ""
+"Maintenant, ouvrez le fichier _main.rs_ que vous venez de créer et entrez le "
+"code de l’Encadre 1-1."
+
+#: src/ch01-02-hello-world.md:68
+msgid ""
+"Save the file and go back to your terminal window in the "
+"_~/projects/hello_world_ directory. On Linux or macOS, enter the following "
+"commands to compile and run the file:"
+msgstr ""
+"Sauvegardez le fichier et retournez à votre fenêtre de terminal dans le "
+"repertoire _~/projects/hello_world_. Sous Linux ou macOS, entrez les "
+"commandes suivantes pour compiler et exécuter le fichier :"
+
+#: src/ch01-02-hello-world.md:78
+msgid "On Windows, enter the command `.\\main` instead of `./main`:"
+msgstr "Sous Windows, entrez la commande `.\\main` au lieu de `./main` :"
+
+#: src/ch01-02-hello-world.md:91
+msgid ""
+"If `Hello, world!` did print, congratulations! You’ve officially written a "
+"Rust program. That makes you a Rust programmer—welcome!"
+msgstr ""
+"Si `Hello, world!` s’est bien affiche, felicitations ! Vous avez "
+"officiellement écrit un programme Rust. Cela fait de vous un programmeur "
+"Rust -- bienvenue !"
+
+#: src/ch01-02-hello-world.md:98
+msgid "The Anatomy of a Rust Program"
+msgstr "L’anatomie d’un programme Rust"
+
+#: src/ch01-02-hello-world.md:100
+msgid ""
+"Let’s review this “Hello, world!” program in detail. Here’s the first piece "
+"of the puzzle:"
+msgstr ""
+"Examinons ce programme \"Hello, world!\" en détail. Voici le premier élément "
+"du puzzle :"
+
+#: src/ch01-02-hello-world.md:109
+msgid ""
+"These lines define a function named `main`. The `main` function is special: "
+"It is always the first code that runs in every executable Rust program. "
+"Here, the first line declares a function named `main` that has no parameters "
+"and returns nothing. If there were parameters, they would go inside the "
+"parentheses (`()`)."
+msgstr ""
+"Ces lignes définissent une fonction nommee `main`. La fonction `main` est "
+"speciale : c’est toujours le premier code qui s’exécute dans tout programme "
+"Rust exécutable. Ici, la première ligne déclaré une fonction nommee `main` "
+"qui n’a pas de paramètres et ne retourné rien. S’il y avait des paramètres, "
+"ils iraient à l’intérieur des parentheses (`()`)."
+
+#: src/ch01-02-hello-world.md:114
+msgid ""
+"The function body is wrapped in `{}`. Rust requires curly brackets around "
+"all function bodies. It’s good style to place the opening curly bracket on "
+"the same line as the function declaration, adding one space in between."
+msgstr ""
+"Le corps de la fonction est entouré par `{}`. Rust exige des accolades "
+"autour de tous les corps de fonctions. Il est de bon style de placer "
+"l’accolade ouvrante sur la même ligne que la déclaration de la fonction, en "
+"ajoutant un espace entre les deux."
+
+#: src/ch01-02-hello-world.md:125
+msgid "The body of the `main` function holds the following code:"
+msgstr "Le corps de la fonction `main` contient le code suivant :"
+
+#: src/ch01-02-hello-world.md:131
+msgid ""
+"This line does all the work in this little program: It prints text to the "
+"screen. There are three important details to notice here."
+msgstr ""
+"Cette ligne fait tout le travail dans ce petit programme : elle affiche du "
+"texte à l’ecran. Il y a trois détails importants a remarquer ici."
+
+#: src/ch01-02-hello-world.md:141
+msgid ""
+"Second, you see the `\"Hello, world!\"` string. We pass this string as an "
+"argument to `println!`, and the string is printed to the screen."
+msgstr ""
+"Deuxiemement, vous voyez la chaîne `\"Hello, world!\"`. Nous passons cette "
+"chaîne en argument a `println!`, et la chaîne est affichée à l’ecran."
+
+#: src/ch01-02-hello-world.md:144
+msgid ""
+"Third, we end the line with a semicolon (`;`), which indicates that this "
+"expression is over, and the next one is ready to begin. Most lines of Rust "
+"code end with a semicolon."
+msgstr ""
+"Troisiemement, nous terminons la ligne par un point-virgule (`;`), qui "
+"indique que cette expression est terminée et que la suivante est prête a "
+"commencer. La plupart des lignes de code Rust se terminent par un "
+"point-virgule."
+
+#: src/ch01-02-hello-world.md:151
+msgid "Compilation and Execution"
+msgstr "Compilation et exécution"
+
+#: src/ch01-02-hello-world.md:153
+msgid ""
+"You’ve just run a newly created program, so let’s examine each step in the "
+"process."
+msgstr ""
+"Vous venez d’exécuter un programme nouvellement crée, alors examinons chaque "
+"étape du processus."
+
+#: src/ch01-02-hello-world.md:156
+msgid ""
+"Before running a Rust program, you must compile it using the Rust compiler "
+"by entering the `rustc` command and passing it the name of your source file, "
+"like this:"
+msgstr ""
+"Avant d’exécuter un programme Rust, vous devez le compiler en utilisant le "
+"compilateur Rust en entrant la commande `rustc` et en lui passant le nom de "
+"votre fichier source, comme ceci :"
+
+#: src/ch01-02-hello-world.md:164
+msgid ""
+"If you have a C or C++ background, you’ll notice that this is similar to "
+"`gcc` or `clang`. After compiling successfully, Rust outputs a binary "
+"executable."
+msgstr ""
+"Si vous avez une experience en C ou C++, vous remarquerez que c’est "
+"similaire a `gcc` ou `clang`. Après une compilation reussie, Rust produit un "
+"exécutable binaire."
+
+#: src/ch01-02-hello-world.md:167
+msgid ""
+"On Linux, macOS, and PowerShell on Windows, you can see the executable by "
+"entering the `ls` command in your shell:"
+msgstr ""
+"Sous Linux, macOS et PowerShell sur Windows, vous pouvez voir l’exécutable "
+"en entrant la commande `ls` dans votre terminal :"
+
+#: src/ch01-02-hello-world.md:175
+msgid ""
+"On Linux and macOS, you’ll see two files. With PowerShell on Windows, you’ll "
+"see the same three files that you would see using CMD. With CMD on Windows, "
+"you would enter the following:"
+msgstr ""
+"Sous Linux et macOS, vous verrez deux fichiers. Avec PowerShell sur Windows, "
+"vous verrez les mêmes trois fichiers que vous verriez en utilisant CMD. Avec "
+"CMD sur Windows, vous entreriez la commande suivante :"
+
+#: src/ch01-02-hello-world.md:186
+msgid ""
+"This shows the source code file with the _.rs_ extension, the executable "
+"file (_main.exe_ on Windows, but _main_ on all other platforms), and, when "
+"using Windows, a file containing debugging information with the _.pdb_ "
+"extension. From here, you run the _main_ or _main.exe_ file, like this:"
+msgstr ""
+"Cela montre le fichier de code source avec l’extension _.rs_, le fichier "
+"exécutable (_main.exe_ sous Windows, mais _main_ sur toutes les autres "
+"plateformes), et, sous Windows, un fichier contenant des informations de "
+"debogage avec l’extension _.pdb_. A partir de la, vous exécutez le fichier "
+"_main_ ou _main.exe_, comme ceci :"
+
+#: src/ch01-02-hello-world.md:195
+msgid ""
+"If your _main.rs_ is your “Hello, world!” program, this line prints `Hello, "
+"world!` to your terminal."
+msgstr ""
+"Si votre _main.rs_ est votre programme \"Hello, world!\", cette ligne affiche "
+"`Hello, world!` dans votre terminal."
+
+#: src/ch01-02-hello-world.md:198
+msgid ""
+"If you’re more familiar with a dynamic language, such as Ruby, Python, or "
+"JavaScript, you might not be used to compiling and running a program as "
+"separate steps. Rust is an _ahead-of-time compiled_ language, meaning you "
+"can compile a program and give the executable to someone else, and they can "
+"run it even without having Rust installed. If you give someone a _.rb_, "
+"_.py_, or _.js_ file, they need to have a Ruby, Python, or JavaScript "
+"implementation installed (respectively). But in those languages, you only "
+"need one command to compile and run your program. Everything is a trade-off "
+"in language design."
+msgstr ""
+"Si vous etes plus familier avec un langage dynamique, comme Ruby, Python ou "
+"JavaScript, vous n’etes peut-etre pas habitue a compiler et exécuter un "
+"programme en deux étapes séparées. Rust est un langage _compile à l’avance_ "
+"(ahead-of-time compiled), ce qui signifie que vous pouvez compiler un "
+"programme et donner l’exécutable a quelqu'un d’autre, qui pourra l’exécuter "
+"même sans avoir Rust installé. Si vous donnez a quelqu'un un fichier _.rb_, "
+"_.py_ ou _.js_, cette personne doit avoir une implémentation de Ruby, Python "
+"ou JavaScript installée (respectivement). Mais dans ces langages, vous "
+"n’avez besoin que d’une seule commande pour compiler et exécuter votre "
+"programme. Tout est un compromis dans la conception des langages."
+
+#: src/ch01-02-hello-world.md:207
+msgid ""
+"Just compiling with `rustc` is fine for simple programs, but as your project "
+"grows, you’ll want to manage all the options and make it easy to share your "
+"code. Next, we’ll introduce you to the Cargo tool, which will help you write "
+"real-world Rust programs."
+msgstr ""
+"Compiler simplement avec `rustc` convient pour les programmes simples, mais "
+"a mesure que votre projet grandit, vous voudrez gérer toutes les options et "
+"faciliter le partage de votre code. Ensuite, nous vous présenterons l’outil "
+"Cargo, qui vous aidera a écrire des programmes Rust concrets. "
+"[troubleshooting]: ch01-01-installation.html#troubleshooting [devtools]: "
+"appendix-04-useful-development-tools.html [ch20-macros]: ch20-05-macros.html"
+
+
+#: src/ch01-03-hello-cargo.md:3
+msgid ""
+"Cargo is Rust’s build system and package manager. Most Rustaceans use this "
+"tool to manage their Rust projects because Cargo handles a lot of tasks for "
+"you, such as building your code, downloading the libraries your code depends "
+"on, and building those libraries. (We call the libraries that your code "
+"needs _dependencies_.)"
+msgstr ""
+"Cargo est le système de build et le gestionnaire de paquets de Rust. La "
+"plupart des Rustaceans utilisent cet outil pour gérer leurs projets Rust car "
+"Cargo géré de nombreuses tâches pour vous, comme compiler votre code, "
+"télécharger les bibliothèques dont votre code depend, et compiler ces "
+"bibliothèques. (Nous appelons les bibliothèques dont votre code a besoin des "
+"_dependances_.)"
+
+
+#: src/ch01-03-hello-cargo.md:9
+msgid ""
+"The simplest Rust programs, like the one we’ve written so far, don’t have "
+"any dependencies. If we had built the “Hello, world!” project with Cargo, it "
+"would only use the part of Cargo that handles building your code. As you "
+"write more complex Rust programs, you’ll add dependencies, and if you start "
+"a project using Cargo, adding dependencies will be much easier to do."
+msgstr ""
+"Les programmes Rust les plus simples, comme celui que nous avons écrit "
+"jusqu'ici, n’ont aucune dépendance. Si nous avions construit le projet "
+"\"Hello, world!\" avec Cargo, nous n’aurions utilise que la partie de Cargo "
+"qui géré la compilation de votre code. A mesure que vous écrirez des "
+"programmes Rust plus complexes, vous ajouterez des dépendances, et si vous "
+"demarrez un projet avec Cargo, l’ajout de dépendances sera beaucoup plus "
+"facile."
+
+#: src/ch01-03-hello-cargo.md:26
+msgid ""
+"If you see a version number, you have it! If you see an error, such as "
+"`command not found`, look at the documentation for your method of "
+"installation to determine how to install Cargo separately."
+msgstr ""
+"Si vous voyez un numéro de version, vous l’avez ! Si vous voyez une erreur, "
+"comme `command not found`, consultez la documentation de votre methode "
+"d’installation pour déterminer comment installer Cargo séparément."
+
+#: src/ch01-03-hello-cargo.md:30
+msgid "Creating a Project with Cargo"
+msgstr "Créer un projet avec Cargo"
+
+#: src/ch01-03-hello-cargo.md:32
+msgid ""
+"Let’s create a new project using Cargo and look at how it differs from our "
+"original “Hello, world!” project. Navigate back to your _projects_ directory "
+"(or wherever you decided to store your code). Then, on any operating system, "
+"run the following:"
+msgstr ""
+"Créons un nouveau projet en utilisant Cargo et voyons en quoi il diffère de "
+"notre projet \"Hello, world!\" original. Retournez dans votre repertoire "
+"_projects_ (ou la où vous avez decide de stocker votre code). Puis, sur "
+"n’importe quel système d’exploitation, exécutez la commande suivante :"
+
+#: src/ch01-03-hello-cargo.md:42
+msgid ""
+"The first command creates a new directory and project called _hello_cargo_. "
+"We’ve named our project _hello_cargo_, and Cargo creates its files in a "
+"directory of the same name."
+msgstr ""
+"La première commande crée un nouveau repertoire et un projet appelé "
+"_hello_cargo_. Nous avons nomme notre projet _hello_cargo_, et Cargo crée "
+"ses fichiers dans un repertoire du même nom."
+
+#: src/ch01-03-hello-cargo.md:46
+msgid ""
+"Go into the _hello_cargo_ directory and list the files. You’ll see that "
+"Cargo has generated two files and one directory for us: a _Cargo.toml_ file "
+"and a _src_ directory with a _main.rs_ file inside."
+msgstr ""
+"Entrez dans le repertoire _hello_cargo_ et listez les fichiers. Vous verrez "
+"que Cargo a généré deux fichiers et un repertoire pour nous : un fichier "
+"_Cargo.toml_ et un repertoire _src_ contenant un fichier _main.rs_."
+
+#: src/ch01-03-hello-cargo.md:50
+msgid ""
+"It has also initialized a new Git repository along with a _.gitignore_ file. "
+"Git files won’t be generated if you run `cargo new` within an existing Git "
+"repository; you can override this behavior by using `cargo new --vcs=git`."
+msgstr ""
+"Il a également initialise un nouveau dépôt Git avec un fichier _.gitignore_. "
+"Les fichiers Git ne seront pas générés si vous exécutez `cargo new` dans un "
+"dépôt Git existant ; vous pouvez forcer ce comportement en utilisant `cargo "
+"new --vcs=git`."
+
+#: src/ch01-03-hello-cargo.md:54
+msgid ""
+"Note: Git is a common version control system. You can change `cargo new` to "
+"use a different version control system or no version control system by using "
+"the `--vcs` flag. Run `cargo new --help` to see the available options."
+msgstr ""
+"Note : Git est un système de contrôle de version courant. Vous pouvez "
+"configurer `cargo new` pour utiliser un autre système de contrôle de version "
+"ou aucun système de contrôle de version en utilisant le drapeau `--vcs`. "
+"Exécutez `cargo new --help` pour voir les options disponibles."
+
+#: src/ch01-03-hello-cargo.md:58
+msgid ""
+"Open _Cargo.toml_ in your text editor of choice. It should look similar to "
+"the code in Listing 1-2."
+msgstr ""
+"Ouvrez _Cargo.toml_ dans l’éditeur de texte de votre choix. Il devrait "
+"ressembler au code de l’Encadre 1-2."
+
+#: src/ch01-03-hello-cargo.md:63
+msgid ""
+"```toml\n"
+"[package]\n"
+"name = \"hello_cargo\"\n"
+"version = \"0.1.0\"\n"
+"edition = \"2024\"\n"
+"\n"
+"[dependencies]\n"
+"```"
+msgstr ""
+"```toml [package] name = \"hello_cargo\" version = \"0.1.0\" edition = "
+"\"2024\" [dependencies] ```"
+
+#: src/ch01-03-hello-cargo.md:77
+msgid ""
+"The first line, `[package]`, is a section heading that indicates that the "
+"following statements are configuring a package. As we add more information "
+"to this file, we’ll add other sections."
+msgstr ""
+"La première ligne, `[package]`, est un en-tete de section qui indique que "
+"les instructions suivantes configurent un package. Au fur et a mesure que "
+"nous ajouterons des informations à ce fichier, nous ajouterons d’autres "
+"sections."
+
+#: src/ch01-03-hello-cargo.md:85
+msgid ""
+"The last line, `[dependencies]`, is the start of a section for you to list "
+"any of your project’s dependencies. In Rust, packages of code are referred "
+"to as _crates_. We won’t need any other crates for this project, but we will "
+"in the first project in Chapter 2, so we’ll use this dependencies section "
+"then."
+msgstr ""
+"La derniere ligne, `[dependencies]`, est le début d’une section ou vous "
+"pouvez lister les dépendances de votre projet. En Rust, les packages de code "
+"sont appelés des _crates_. Nous n’aurons besoin d’aucune autre crate pour ce "
+"projet, mais nous en aurons besoin dans le premier projet du Chapitre 2, et "
+"nous utiliserons alors cette section de dépendances."
+
+#: src/ch01-03-hello-cargo.md:90
+msgid "Now open _src/main.rs_ and take a look:"
+msgstr "Maintenant, ouvrez _src/main.rs_ et jetez-y un coup d’oeil :"
+
+#: src/ch01-03-hello-cargo.md:100
+msgid ""
+"Cargo has generated a “Hello, world!” program for you, just like the one we "
+"wrote in Listing 1-1! So far, the differences between our project and the "
+"project Cargo generated are that Cargo placed the code in the _src_ "
+"directory, and we have a _Cargo.toml_ configuration file in the top "
+"directory."
+msgstr ""
+"Cargo a généré un programme \"Hello, world!\" pour vous, exactement comme "
+"celui que nous avons écrit dans l’Encadre 1-1 ! Jusqu'ici, les differences "
+"entre notre projet et le projet généré par Cargo sont que Cargo a place le "
+"code dans le repertoire _src_, et que nous avons un fichier de configuration "
+"_Cargo.toml_ dans le repertoire racine."
+
+#: src/ch01-03-hello-cargo.md:105
+msgid ""
+"Cargo expects your source files to live inside the _src_ directory. The "
+"top-level project directory is just for README files, license information, "
+"configuration files, and anything else not related to your code. Using Cargo "
+"helps you organize your projects. There’s a place for everything, and "
+"everything is in its place."
+msgstr ""
+"Cargo s’attend à ce que vos fichiers source se trouvent dans le repertoire "
+"_src_. Le repertoire racine du projet est reserve aux fichiers README, aux "
+"informations de licence, aux fichiers de configuration et à tout ce qui "
+"n’est pas lie à votre code. Utiliser Cargo vous aide a organiser vos "
+"projets. Il y à une place pour chaque chose, et chaque chose est à sa place."
+
+#: src/ch01-03-hello-cargo.md:111
+msgid ""
+"If you started a project that doesn’t use Cargo, as we did with the “Hello, "
+"world!” project, you can convert it to a project that does use Cargo. Move "
+"the project code into the _src_ directory and create an appropriate "
+"_Cargo.toml_ file. One easy way to get that _Cargo.toml_ file is to run "
+"`cargo init`, which will create it for you automatically."
+msgstr ""
+"Si vous avez demarre un projet qui n’utilise pas Cargo, comme nous l’avons "
+"fait avec le projet \"Hello, world!\", vous pouvez le convertir en un projet "
+"qui utilise Cargo. Deplacez le code du projet dans le repertoire _src_ et "
+"créez un fichier _Cargo.toml_ appropriate. Un moyen facile d’obtenir ce "
+"fichier _Cargo.toml_ est d’exécuter `cargo init`, qui le créera "
+"automatiquement pour vous."
+
+#: src/ch01-03-hello-cargo.md:117
+msgid "Building and Running a Cargo Project"
+msgstr "Compiler et exécuter un projet Cargo"
+
+#: src/ch01-03-hello-cargo.md:119
+msgid ""
+"Now let’s look at what’s different when we build and run the “Hello, world!” "
+"program with Cargo! From your _hello_cargo_ directory, build your project by "
+"entering the following command:"
+msgstr ""
+"Voyons maintenant ce qui change lorsque nous compilons et exécutons le "
+"programme \"Hello, world!\" avec Cargo ! Depuis votre repertoire "
+"_hello_cargo_, compilez votre projet en entrant la commande suivante :"
+
+#: src/ch01-03-hello-cargo.md:123
+msgid ""
+"```console\n"
+"$ cargo build\n"
+"   Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)\n"
+"    Finished dev [unoptimized + debuginfo] target(s) in 2.85 secs\n"
+"```"
+msgstr ""
+"```console $ cargo build Compiling hello_cargo v0.1.0 "
+"(file:///projects/hello_cargo) Finished dev [unoptimized + debuginfo] "
+"target(s) in 2.85 secs ```"
+
+#: src/ch01-03-hello-cargo.md:129
+msgid ""
+"This command creates an executable file in _target/debug/hello_cargo_ (or "
+"_target\\debug\\hello_cargo.exe_ on Windows) rather than in your current "
+"directory. Because the default build is a debug build, Cargo puts the binary "
+"in a directory named _debug_. You can run the executable with this command:"
+msgstr ""
+"Cette commande crée un fichier exécutable dans _target/debug/hello_cargo_ "
+"(ou _target\\debug\\hello_cargo.exe_ sous Windows) plutot que dans votre "
+"repertoire courant. Comme la compilation par défaut est une compilation de "
+"debogage, Cargo place le binaire dans un repertoire nomme _debug_. Vous "
+"pouvez exécuter l’exécutable avec cette commande :"
+
+#: src/ch01-03-hello-cargo.md:139
+msgid ""
+"If all goes well, `Hello, world!` should print to the terminal. Running "
+"`cargo build` for the first time also causes Cargo to create a new file at "
+"the top level: _Cargo.lock_. This file keeps track of the exact versions of "
+"dependencies in your project. This project doesn’t have dependencies, so the "
+"file is a bit sparse. You won’t ever need to change this file manually; "
+"Cargo manages its contents for you."
+msgstr ""
+"Si tout se passe bien, `Hello, world!` devrait s’afficher dans le terminal. "
+"Exécuter `cargo build` pour la première fois amene également Cargo a créer "
+"un nouveau fichier à la racine : _Cargo.lock_. Ce fichier garde la trace des "
+"versions exactes des dépendances de votre projet. Ce projet n’a pas de "
+"dépendances, donc le fichier est un peu vide. Vous n’aurez jamais besoin de "
+"modifier ce fichier manuellement ; Cargo géré son contenu pour vous."
+
+#: src/ch01-03-hello-cargo.md:146
+msgid ""
+"We just built a project with `cargo build` and ran it with "
+"`./target/debug/hello_cargo`, but we can also use `cargo run` to compile the "
+"code and then run the resultant executable all in one command:"
+msgstr ""
+"Nous venons de compiler un projet avec `cargo build` et de l’exécuter avec "
+"`./target/debug/hello_cargo`, mais nous pouvons aussi utiliser `cargo run` "
+"pour compiler le code puis exécuter l’exécutable resultant, le tout en une "
+"seule commande :"
+
+#: src/ch01-03-hello-cargo.md:157
+msgid ""
+"Using `cargo run` is more convenient than having to remember to run `cargo "
+"build` and then use the whole path to the binary, so most developers use "
+"`cargo run`."
+msgstr ""
+"Utiliser `cargo run` est plus pratique que de devoir se souvenir d’exécuter "
+"`cargo build` puis d’utiliser le chemin complet vers le binaire, c’est "
+"pourquoi la plupart des développeurs utilisent `cargo run`."
+
+#: src/ch01-03-hello-cargo.md:161
+msgid ""
+"Notice that this time we didn’t see output indicating that Cargo was "
+"compiling `hello_cargo`. Cargo figured out that the files hadn’t changed, so "
+"it didn’t rebuild but just ran the binary. If you had modified your source "
+"code, Cargo would have rebuilt the project before running it, and you would "
+"have seen this output:"
+msgstr ""
+"Remarquez que cette fois, nous n’avons pas vu de sortie indiquant que Cargo "
+"compilait `hello_cargo`. Cargo a déterminé que les fichiers n’avaient pas "
+"change, donc il n’a pas recompile mais a simplement exécute le binaire. Si "
+"vous aviez modifié votre code source, Cargo aurait recompile le projet avant "
+"de l’exécuter, et vous auriez vu cette sortie :"
+
+#: src/ch01-03-hello-cargo.md:167
+msgid ""
+"```console\n"
+"$ cargo run\n"
+"   Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)\n"
+"    Finished dev [unoptimized + debuginfo] target(s) in 0.33 secs\n"
+"     Running `target/debug/hello_cargo`\n"
+"Hello, world!\n"
+"```"
+msgstr ""
+"```console $ cargo run Compiling hello_cargo v0.1.0 "
+"(file:///projects/hello_cargo) Finished dev [unoptimized + debuginfo] "
+"target(s) in 0.33 secs Running `target/debug/hello_cargo` Hello, world! ```"
+
+#: src/ch01-03-hello-cargo.md:175
+msgid ""
+"Cargo also provides a command called `cargo check`. This command quickly "
+"checks your code to make sure it compiles but doesn’t produce an executable:"
+msgstr ""
+"Cargo fournit également une commande appelée `cargo check`. Cette commande "
+"vérifie rapidement votre code pour s’assurer qu’il compilé, mais ne produit "
+"pas d’exécutable :"
+
+#: src/ch01-03-hello-cargo.md:178
+msgid ""
+"```console\n"
+"$ cargo check\n"
+"   Checking hello_cargo v0.1.0 (file:///projects/hello_cargo)\n"
+"    Finished dev [unoptimized + debuginfo] target(s) in 0.32 secs\n"
+"```"
+msgstr ""
+"```console $ cargo check Checking hello_cargo v0.1.0 "
+"(file:///projects/hello_cargo) Finished dev [unoptimized + debuginfo] "
+"target(s) in 0.32 secs ```"
+
+#: src/ch01-03-hello-cargo.md:184
+msgid ""
+"Why would you not want an executable? Often, `cargo check` is much faster "
+"than `cargo build` because it skips the step of producing an executable. If "
+"you’re continually checking your work while writing the code, using `cargo "
+"check` will speed up the process of letting you know if your project is "
+"still compiling! As such, many Rustaceans run `cargo check` periodically as "
+"they write their program to make sure it compiles. Then, they run `cargo "
+"build` when they’re ready to use the executable."
+msgstr ""
+"Pourquoi ne voudriez-vous pas d’exécutable ? Souvent, `cargo check` est "
+"beaucoup plus rapide que `cargo build` car il saute l’étape de production "
+"d’un exécutable. Si vous vérifiez continuellement votre travail pendant que "
+"vous écrivez le code, utiliser `cargo check` accelerera le processus pour "
+"savoir si votre projet compilé toujours ! C’est pourquoi de nombreux "
+"Rustaceans exécutent `cargo check` periodiquement pendant qu’ils écrivent "
+"leur programme pour s’assurer qu’il compilé. Ensuite, ils exécutent `cargo "
+"build` lorsqu’ils sont prêts à utiliser l’exécutable."
+
+#: src/ch01-03-hello-cargo.md:202
+msgid ""
+"An additional advantage of using Cargo is that the commands are the same no "
+"matter which operating system you’re working on. So, at this point, we’ll no "
+"longer provide specific instructions for Linux and macOS versus Windows."
+msgstr ""
+"Un avantage supplementaire de l’utilisation de Cargo est que les commandes "
+"sont les mêmes quel que soit le système d’exploitation sur lequel vous "
+"travaillez. Donc, à partir de maintenant, nous ne fournirons plus "
+"d’instructions spécifiques pour Linux et macOS par rapport a Windows."
+
+
+#: src/ch01-03-hello-cargo.md:206
+msgid "Building for Release"
+msgstr "Compiler pour la publication"
+
+#: src/ch01-03-hello-cargo.md:208
+msgid ""
+"When your project is finally ready for release, you can use `cargo build "
+"--release` to compile it with optimizations. This command will create an "
+"executable in _target/release_ instead of _target/debug_. The optimizations "
+"make your Rust code run faster, but turning them on lengthens the time it "
+"takes for your program to compile. This is why there are two different "
+"profiles: one for development, when you want to rebuild quickly and often, "
+"and another for building the final program you’ll give to a user that won’t "
+"be rebuilt repeatedly and that will run as fast as possible. If you’re "
+"benchmarking your code’s running time, be sure to run `cargo build "
+"--release` and benchmark with the executable in _target/release_."
+msgstr ""
+"Lorsque votre projet est enfin prêt pour la publication, vous pouvez "
+"utiliser `cargo build --release` pour le compiler avec des optimisations. "
+"Cette commande créera un exécutable dans _target/release_ au lieu de "
+"_target/debug_. Les optimisations rendent votre code Rust plus rapide, mais "
+"les activer allonge le temps de compilation de votre programme. C’est "
+"pourquoi il y a deux profils différents : un pour le développement, quand "
+"vous voulez recompiler rapidement et souvent, et un autre pour construire le "
+"programme final que vous donnerez à un utilisateur, qui ne sera pas "
+"recompile frequemment et qui s’exécutera aussi vite que possible. Si vous "
+"mesurez les performances de votre code, assurez-vous d’exécuter `cargo build "
+"--release` et de tester avec l’exécutable dans _target/release_."
+
+#: src/ch01-03-hello-cargo.md:222
+msgid "Leveraging Cargo’s Conventions"
+msgstr "Tirer parti des conventions de Cargo"
+
+#: src/ch01-03-hello-cargo.md:224
+msgid ""
+"With simple projects, Cargo doesn’t provide a lot of value over just using "
+"`rustc`, but it will prove its worth as your programs become more intricate. "
+"Once programs grow to multiple files or need a dependency, it’s much easier "
+"to let Cargo coordinate the build."
+msgstr ""
+"Pour les projets simples, Cargo n’apporte pas beaucoup de valeur ajoutée par "
+"rapport à la simple utilisation de `rustc`, mais il prouvera sa valeur a "
+"mesure que vos programmes deviendront plus complexes. Une fois que les "
+"programmes s’etendent à plusieurs fichiers ou nécessitent une dépendance, il "
+"est beaucoup plus facile de laisser Cargo coordonner la compilation."
+
+#: src/ch01-03-hello-cargo.md:229
+msgid ""
+"Even though the `hello_cargo` project is simple, it now uses much of the "
+"real tooling you’ll use in the rest of your Rust career. In fact, to work on "
+"any existing projects, you can use the following commands to check out the "
+"code using Git, change to that project’s directory, and build:"
+msgstr ""
+"Même si le projet `hello_cargo` est simple, il utilise déjà une grande "
+"partie des outils réels que vous utiliserez tout au long de votre parcours "
+"avec Rust. En fait, pour travailler sur n’importe quel projet existant, vous "
+"pouvez utiliser les commandes suivantes pour recuperer le code avec Git, "
+"accéder au repertoire du projet et compiler :"
+
+#: src/ch01-03-hello-cargo.md:242 src/ch02-00-guessing-game-tutorial.md:1313
+#: src/ch03-05-control-flow.md:554 src/ch04-03-slices.md:504
+#: src/ch05-03-method-syntax.md:387 src/ch06-03-if-let.md:348
+#: src/ch07-05-separating-modules-into-different-files.md:125
+#: src/ch08-03-hash-maps.md:295 src/ch09-03-to-panic-or-not-to-panic.md:283
+#: src/ch10-03-lifetime-syntax.md:881 src/ch11-03-test-organization.md:357
+#: src/ch12-06-writing-to-stderr-instead-of-stdout.md:161
+#: src/ch13-04-performance.md:47 src/ch14-05-extending-cargo.md:10
+#: src/ch15-06-reference-cycles.md:516
+#: src/ch16-04-extensible-concurrency-sync-and-send.md:78
+#: src/ch17-06-futures-tasks-threads.md:106
+#: src/ch18-03-oo-design-patterns.md:985 src/ch19-03-pattern-syntax.md:892
+#: src/ch20-05-macros.md:586 src/ch21-03-graceful-shutdown-and-cleanup.md:748
+msgid "Summary"
+msgstr "Resume"
+
+#: src/ch01-03-hello-cargo.md:253
+msgid ""
+"This is a great time to build a more substantial program to get used to "
+"reading and writing Rust code. So, in Chapter 2, we’ll build a guessing game "
+"program. If you would rather start by learning how common programming "
+"concepts work in Rust, see Chapter 3 and then return to Chapter 2."
+msgstr ""
+"C’est le moment ideal pour construire un programme plus consequent afin de "
+"vous habituer a lire et écrire du code Rust. Ainsi, au Chapitre 2, nous "
+"construirons un programme de jeu de devinettes. Si vous preferez commencer "
+"par apprendre comment les concepts de programmation courants fonctionnent en "
+"Rust, consultez le Chapitre 3 puis revenez au Chapitre 2. [installation]: "
+"ch01-01-installation.html#installation [toml]: https://toml.io [appendix-e]: "
+"appendix-05-éditions.html [cargo]: https://doc.rust-lang.org/cargo/"
+
+#: src/ch01-01-installation.md:7
+msgid ""
+"Note: If you prefer not to use `rustup` for some reason, please see the "
+"[Other Rust Installation Methods "
+"page](https://forge.rust-lang.org/infra/other-installation-methods.html) for "
+"more options."
+msgstr ""
+"Note : si vous préférez ne pas utiliser `rustup` pour une raison quelconque, "
+"veuillez consulter la [page des autres méthodes d’installation de "
+"Rust](https://forge.rust-lang.org/infra/other-installation-methods.html) "
+"pour plus d’options."
+
+#: src/ch01-01-installation.md:17
+msgid "Command Line Notation"
+msgstr "Notation de la ligne de commande"
+
+#: src/ch01-01-installation.md:19
+msgid ""
+"In this chapter and throughout the book, we’ll show some commands used in "
+"the terminal. Lines that you should enter in a terminal all start with `$`. "
+"You don’t need to type the `$` character; it’s the command line prompt shown "
+"to indicate the start of each command. Lines that don’t start with `$` "
+"typically show the output of the previous command. Additionally, "
+"PowerShell-specific examples will use `>` rather than `$`."
+msgstr ""
+"Dans ce chapitre et tout au long du livre, nous montrerons certaines "
+"commandes utilisées dans le terminal. Les lignes que vous devez saisir dans "
+"un terminal commencent toutes par `$`. Vous n’avez pas besoin de taper le "
+"caractère `$` ; c’est l’invite de la ligne de commande affichée pour "
+"indiquer le début de chaque commande. Les lignes qui ne commencent pas par "
+"`$` affichent généralement la sortie de la commande précédente. De plus, les "
+"exemples spécifiques à PowerShell utiliseront `>` au lieu de `$`."
+
+#: src/ch01-01-installation.md:60
+msgid ""
+"On Windows, go to "
+"[https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)<!-- "
+"ignore\n"
+"--> and follow the instructions for installing Rust. At some point in the "
+"installation, you’ll be prompted to install Visual Studio. This provides a "
+"linker and the native libraries needed to compile programs. If you need more "
+"help with this step, see "
+"[https://rust-lang.github.io/rustup/installation/windows-msvc.html](https://rust-lang.github.io/rustup/installation/windows-msvc.html)<!--\n"
+"ignore -->."
+msgstr ""
+"Sur Windows, rendez-vous sur "
+"[https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)<!-- "
+"ignore --> et suivez les instructions pour installer Rust. À un moment de "
+"l’installation, il vous sera demandé d’installer Visual Studio. Celui-ci "
+"fournit un éditeur de liens et les bibliothèques natives nécessaires pour "
+"compiler les programmes. Si vous avez besoin d’aide supplémentaire pour "
+"cette étape, consultez "
+"[https://rust-lang.github.io/rustup/installation/windows-msvc.html](https://rust-lang.github.io/rustup/installation/windows-msvc.html)<!-- "
+"ignore -->."
+
+#: src/ch01-01-installation.md:109
+msgid ""
+"If that’s all correct and Rust still isn’t working, there are a number of "
+"places you can get help. Find out how to get in touch with other Rustaceans "
+"(a silly nickname we call ourselves) on [the community "
+"page](https://www.rust-lang.org/community)."
+msgstr ""
+"Si tout est correct et que Rust ne fonctionne toujours pas, il existe "
+"plusieurs endroits où vous pouvez obtenir de l’aide. Découvrez comment "
+"entrer en contact avec d’autres Rustaceans (un surnom amusant que nous nous "
+"donnons) sur [la page de la "
+"communauté](https://www.rust-lang.org/community)."
+
+#: src/ch01-01-installation.md:130
+msgid "<a id=\"local-documentation\"></a>"
+msgstr "<a id=\"local-documentation\"></a>"
+
+#: src/ch01-01-installation.md:143
+msgid "<a id=\"text-editors-and-integrated-development-environments\"></a>"
+msgstr "<a id=\"text-editors-and-integrated-development-environments\"></a>"
+
+#: src/ch01-01-installation.md:147
+msgid ""
+"This book makes no assumptions about what tools you use to author Rust code. "
+"Just about any text editor will get the job done! However, many text editors "
+"and integrated development environments (IDEs) have built-in support for "
+"Rust. You can always find a fairly current list of many editors and IDEs on "
+"[the tools page](https://www.rust-lang.org/tools) on the Rust website."
+msgstr ""
+"Ce livre ne fait aucune hypothèse sur les outils que vous utilisez pour "
+"écrire du code Rust. Presque n’importe quel éditeur de texte fera "
+"l’affaire ! Cependant, de nombreux éditeurs de texte et environnements de "
+"développement intégrés (IDE) offrent une prise en charge intégrée de Rust. "
+"Vous pouvez toujours trouver une liste assez à jour de nombreux éditeurs et "
+"IDE sur [la page des outils](https://www.rust-lang.org/tools) du site web de "
+"Rust."
+
+#: src/ch01-02-hello-world.md:7
+msgid ""
+"Note: This book assumes basic familiarity with the command line. Rust makes "
+"no specific demands about your editing or tooling or where your code lives, "
+"so if you prefer to use an IDE instead of the command line, feel free to use "
+"your favorite IDE. Many IDEs now have some degree of Rust support; check the "
+"IDE’s documentation for details. The Rust team has been focusing on enabling "
+"great IDE support via `rust-analyzer`. See [Appendix "
+"D](appendix-04-useful-development-tools.html)<!-- ignore --> for more "
+"details."
+msgstr ""
+"Note : ce livre suppose une familiarité basique avec la ligne de commande. "
+"Rust n’impose aucune exigence particulière concernant votre éditeur, vos "
+"outils ou l’emplacement de votre code. Si vous préférez utiliser un IDE "
+"plutôt que la ligne de commande, n’hésitez pas à utiliser votre IDE préféré. "
+"De nombreux IDE offrent désormais un certain niveau de prise en charge de "
+"Rust ; consultez la documentation de l’IDE pour plus de détails. L’équipe "
+"Rust s’est concentrée sur l’activation d’une excellente prise en charge des "
+"IDE via `rust-analyzer`. Consultez l’[annexe "
+"D](appendix-04-useful-development-tools.html)<!-- ignore --> pour plus de "
+"détails."
+
+#: src/ch01-02-hello-world.md:16
+msgid "<a id=\"creating-a-project-directory\"></a>"
+msgstr "<a id=\"creating-a-project-directory\"></a>"
+
+#: src/ch01-02-hello-world.md:40 src/ch01-02-hello-world.md:41
+msgid "\"%USERPROFILE%\\projects\""
+msgstr "\"%USERPROFILE%\\\\projects\""
+
+#: src/ch01-02-hello-world.md:47
+msgid "<a id=\"writing-and-running-a-rust-program\"></a>"
+msgstr "<a id=\"writing-and-running-a-rust-program\"></a>"
+
+#: src/ch01-02-hello-world.md:62 src/ch01-02-hello-world.md:128
+#: src/ch01-03-hello-cargo.md:96 src/ch02-00-guessing-game-tutorial.md:59
+#: src/ch03-03-how-functions-work.md:16 src/ch04-03-slices.md:370
+#: src/ch20-01-unsafe-rust.md:515
+msgid "\"Hello, world!\""
+msgstr "\"Hello, world!\""
+
+#: src/ch01-02-hello-world.md:86
+msgid ""
+"Regardless of your operating system, the string `Hello, world!` should print "
+"to the terminal. If you don’t see this output, refer back to the "
+"[“Troubleshooting”](ch01-01-installation.html#troubleshooting)<!-- ignore "
+"--> part of the Installation section for ways to get help."
+msgstr ""
+"Quel que soit votre système d’exploitation, la chaîne `Hello, world!` "
+"devrait s’afficher dans le terminal. Si vous ne voyez pas cette sortie, "
+"reportez-vous à la partie [« Résolution de "
+"problèmes »](ch01-01-installation.html#troubleshooting)<!-- ignore --> de la "
+"section Installation pour obtenir de l’aide."
+
+#: src/ch01-02-hello-world.md:96
+msgid "<a id=\"anatomy-of-a-rust-program\"></a>"
+msgstr "<a id=\"anatomy-of-a-rust-program\"></a>"
+
+#: src/ch01-02-hello-world.md:118
+msgid ""
+"Note: If you want to stick to a standard style across Rust projects, you can "
+"use an automatic formatter tool called `rustfmt` to format your code in a "
+"particular style (more on `rustfmt` in [Appendix "
+"D](appendix-04-useful-development-tools.html)<!-- ignore -->). The Rust team "
+"has included this tool with the standard Rust distribution, as `rustc` is, "
+"so it should already be installed on your computer!"
+msgstr ""
+"Note : si vous souhaitez respecter un style standard dans vos projets Rust, "
+"vous pouvez utiliser un outil de formatage automatique appelé `rustfmt` pour "
+"formater votre code dans un style particulier (plus d’informations sur "
+"`rustfmt` dans l’[annexe D](appendix-04-useful-development-tools.html)<!-- "
+"ignore -->). L’équipe Rust a inclus cet outil dans la distribution standard "
+"de Rust, tout comme `rustc`, il devrait donc déjà être installé sur votre "
+"ordinateur !"
+
+#: src/ch01-02-hello-world.md:134
+msgid ""
+"First, `println!` calls a Rust macro. If it had called a function instead, "
+"it would be entered as `println` (without the `!`). Rust macros are a way to "
+"write code that generates code to extend Rust syntax, and we’ll discuss them "
+"in more detail in [Chapter 20](ch20-05-macros.html)<!-- ignore -->. For now, "
+"you just need to know that using a `!` means that you’re calling a macro "
+"instead of a normal function and that macros don’t always follow the same "
+"rules as functions."
+msgstr ""
+"Premièrement, `println!` appelle une macro Rust. Si c’était un appel de "
+"fonction, cela s’écrirait `println` (sans le `!`). Les macros Rust sont un "
+"moyen d’écrire du code qui génère du code pour étendre la syntaxe de Rust, "
+"et nous en discuterons plus en détail au [chapitre "
+"20](ch20-05-macros.html)<!-- ignore -->. Pour l’instant, vous devez "
+"simplement savoir que l’utilisation d’un `!` signifie que vous appelez une "
+"macro plutôt qu’une fonction normale, et que les macros ne suivent pas "
+"toujours les mêmes règles que les fonctions."
+
+#: src/ch01-02-hello-world.md:149
+msgid "<a id=\"compiling-and-running-are-separate-steps\"></a>"
+msgstr "<a id=\"compiling-and-running-are-separate-steps\"></a>"
+
+#: src/ch01-03-hello-cargo.md:15
+msgid ""
+"Because the vast majority of Rust projects use Cargo, the rest of this book "
+"assumes that you’re using Cargo too. Cargo comes installed with Rust if you "
+"used the official installers discussed in the "
+"[“Installation”](ch01-01-installation.html#installation)<!-- ignore --> "
+"section. If you installed Rust through some other means, check whether Cargo "
+"is installed by entering the following in your terminal:"
+msgstr ""
+"Comme la grande majorité des projets Rust utilisent Cargo, le reste de ce "
+"livre suppose que vous utilisez également Cargo. Cargo est installé avec "
+"Rust si vous avez utilisé les installateurs officiels présentés dans la "
+"section [« Installation »](ch01-01-installation.html#installation)<!-- "
+"ignore -->. Si vous avez installé Rust par un autre moyen, vérifiez si Cargo "
+"est installé en entrant la commande suivante dans votre terminal :"
+
+#: src/ch01-03-hello-cargo.md:74
+msgid ""
+"This file is in the [_TOML_](https://toml.io)<!-- ignore --> (_Tom’s "
+"Obvious, Minimal Language_) format, which is Cargo’s configuration format."
+msgstr ""
+"Ce fichier est au format [_TOML_](https://toml.io)<!-- ignore --> (_Tom’s "
+"Obvious, Minimal Language_), qui est le format de configuration de Cargo."
+
+#: src/ch01-03-hello-cargo.md:81
+msgid ""
+"The next three lines set the configuration information Cargo needs to "
+"compile your program: the name, the version, and the edition of Rust to use. "
+"We’ll talk about the `edition` key in [Appendix "
+"E](appendix-05-editions.html)<!-- ignore -->."
+msgstr ""
+"Les trois lignes suivantes définissent les informations de configuration "
+"dont Cargo a besoin pour compiler votre programme : le nom, la version et "
+"l’édition de Rust à utiliser. Nous parlerons de la clé `edition` dans "
+"l’[annexe E](appendix-05-editions.html)<!-- ignore -->."
+
+#: src/ch01-03-hello-cargo.md:192
+msgid "Let’s recap what we’ve learned so far about Cargo:"
+msgstr "Récapitulons ce que nous avons appris jusqu’ici sur Cargo :"
+
+#: src/ch01-03-hello-cargo.md:194
+msgid "We can create a project using `cargo new`."
+msgstr "Nous pouvons créer un projet en utilisant `cargo new`."
+
+#: src/ch01-03-hello-cargo.md:195
+msgid "We can build a project using `cargo build`."
+msgstr "Nous pouvons compiler un projet en utilisant `cargo build`."
+
+#: src/ch01-03-hello-cargo.md:196
+msgid "We can build and run a project in one step using `cargo run`."
+msgstr ""
+"Nous pouvons compiler et exécuter un projet en une seule étape en utilisant "
+"`cargo run`."
+
+#: src/ch01-03-hello-cargo.md:197
+msgid ""
+"We can build a project without producing a binary to check for errors using "
+"`cargo check`."
+msgstr ""
+"Nous pouvons compiler un projet sans produire de binaire pour vérifier les "
+"erreurs en utilisant `cargo check`."
+
+#: src/ch01-03-hello-cargo.md:199
+msgid ""
+"Instead of saving the result of the build in the same directory as our code, "
+"Cargo stores it in the _target/debug_ directory."
+msgstr ""
+"Au lieu de sauvegarder le résultat de la compilation dans le même répertoire "
+"que notre code, Cargo le stocké dans le répertoire _target/debug_."
+
+#: src/ch01-03-hello-cargo.md:220
+msgid "<a id=\"cargo-as-convention\"></a>"
+msgstr "<a id=\"cargo-as-convention\"></a>"
+
+#: src/ch01-03-hello-cargo.md:240
+msgid ""
+"For more information about Cargo, check out [its "
+"documentation](https://doc.rust-lang.org/cargo/)."
+msgstr ""
+"Pour plus d’informations sur Cargo, consultez [sa "
+"documentation](https://doc.rust-lang.org/cargo/)."
+
+#: src/ch01-03-hello-cargo.md:244
+msgid ""
+"You’re already off to a great start on your Rust journey! In this chapter, "
+"you learned how to:"
+msgstr ""
+"Vous avez déjà pris un excellent départ dans votre parcours Rust ! Dans ce "
+"chapitre, vous avez appris à :"
+
+#: src/ch01-03-hello-cargo.md:247
+msgid "Install the latest stable version of Rust using `rustup`."
+msgstr "Installer la dernière version stable de Rust en utilisant `rustup`."
+
+#: src/ch01-03-hello-cargo.md:248
+msgid "Update to a newer Rust version."
+msgstr "Mettre à jour vers une version plus récente de Rust."
+
+#: src/ch01-03-hello-cargo.md:249
+msgid "Open locally installed documentation."
+msgstr "Ouvrir la documentation installée localement."
+
+#: src/ch01-03-hello-cargo.md:250
+msgid "Write and run a “Hello, world!” program using `rustc` directly."
+msgstr ""
+"Écrire et exécuter un programme `Hello, world!` en utilisant directement "
+"`rustc`."
+
+#: src/ch01-03-hello-cargo.md:251
+msgid "Create and run a new project using the conventions of Cargo."
+msgstr "Créer et exécuter un nouveau projet en utilisant les conventions de Cargo."
