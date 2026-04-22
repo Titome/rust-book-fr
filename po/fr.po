@@ -1187,3 +1187,427 @@ msgid ""
 msgstr ""
 "Les fichiers sources à partir desquels ce livre est généré se trouvent sur "
 "[GitHub](https://github.com/rust-lang/book/tree/main/src)."
+
+#: src/ch01-03-hello-cargo.md:92 src/ch02-00-guessing-game-tutorial.md:55
+#: src/ch02-00-guessing-game-tutorial.md:882
+#: src/ch02-00-guessing-game-tutorial.md:1006
+#: src/ch02-00-guessing-game-tutorial.md:1105
+#: src/ch03-01-variables-and-mutability.md:18
+#: src/ch03-01-variables-and-mutability.md:80
+#: src/ch03-01-variables-and-mutability.md:168 src/ch03-02-data-types.md:152
+#: src/ch03-02-data-types.md:171 src/ch03-02-data-types.md:204
+#: src/ch03-02-data-types.md:223 src/ch03-02-data-types.md:260
+#: src/ch03-02-data-types.md:272 src/ch03-02-data-types.md:293
+#: src/ch03-02-data-types.md:325 src/ch03-02-data-types.md:384
+#: src/ch03-02-data-types.md:405 src/ch03-03-how-functions-work.md:12
+#: src/ch03-03-how-functions-work.md:66 src/ch03-03-how-functions-work.md:102
+#: src/ch03-03-how-functions-work.md:171 src/ch03-03-how-functions-work.md:223
+#: src/ch03-03-how-functions-work.md:262 src/ch03-03-how-functions-work.md:305
+#: src/ch03-03-how-functions-work.md:323 src/ch03-04-comments.md:26
+#: src/ch03-04-comments.md:37 src/ch03-05-control-flow.md:18
+#: src/ch03-05-control-flow.md:86 src/ch03-05-control-flow.md:121
+#: src/ch03-05-control-flow.md:140 src/ch03-05-control-flow.md:217
+#: src/ch03-05-control-flow.md:274 src/ch03-05-control-flow.md:541
+#: src/ch05-03-method-syntax.md:302
+#: src/ch12-03-improving-error-handling-and-modularity.md:763
+#: src/ch12-05-working-with-environment-variables.md:216
+#: src/ch13-03-improving-our-io-project.md:107
+#: src/ch15-06-reference-cycles.md:227 src/ch15-06-reference-cycles.md:314
+#: src/appendix-01-keywords.md:92 src/appendix-01-keywords.md:114
+#: src/appendix-04-useful-development-tools.md:34
+#: src/appendix-04-useful-development-tools.md:74
+msgid "<span class=\"filename\">Filename: src/main.rs</span>"
+msgstr ""
+"<span class=\"filename\">Fichier : src/main.rs</span> ```rust fn "
+"r#match(needle: &str, haystack: &str) -> bool { haystack.contains(needle) } "
+"fn main() { assert!(r#match(\"foo\", \"foobar\")); } ```"
+
+#: src/appendix-01-keywords.md:1
+msgid "Appendix A: Keywords"
+msgstr "Annexe A : les mots-clés"
+
+#: src/appendix-01-keywords.md:12
+msgid "Keywords Currently in Use"
+msgstr "Les mots-clés actuellement utilisés"
+
+#: src/appendix-01-keywords.md:14
+msgid ""
+"The following is a list of keywords currently in use, with their "
+"functionality described."
+msgstr "Les mots-clés suivants ont actuellement la fonction décrite."
+
+#: src/appendix-01-keywords.md:17
+msgid ""
+"**`as`**: Perform primitive casting, disambiguate the specific trait "
+"containing an item, or rename items in `use` statements."
+msgstr ""
+"**`as`** : effectue une transformation de type primitive, précise le trait "
+"qui contient un élément ou renomme des éléments dans les instructions `use`."
+
+#: src/appendix-01-keywords.md:19
+msgid "**`async`**: Return a `Future` instead of blocking the current thread."
+msgstr "**`async`** : retourne un `Future` plutôt que de bloquer la tâche en cours."
+
+#: src/appendix-01-keywords.md:20
+msgid "**`await`**: Suspend execution until the result of a `Future` is ready."
+msgstr ""
+"**`await`** : met en pause l’exécution jusqu'à ce que le résultat d’un "
+"`Future` soit disponible."
+
+#: src/appendix-01-keywords.md:21
+msgid "**`break`**: Exit a loop immediately."
+msgstr "**`break`** : sort immédiatement d’une boucle."
+
+#: src/appendix-01-keywords.md:22
+msgid "**`const`**: Define constant items or constant raw pointers."
+msgstr ""
+"**`const`** : définit des éléments constants ou des pointeurs bruts "
+"constants."
+
+#: src/appendix-01-keywords.md:23
+msgid "**`continue`**: Continue to the next loop iteration."
+msgstr "**`continue`** : passe directement à la prochaine itération de la boucle."
+
+#: src/appendix-01-keywords.md:24
+msgid "**`crate`**: In a module path, refers to the crate root."
+msgstr ""
+"**`crate`** : dans un chemin de module, fait référence à la racine de la "
+"crate."
+
+#: src/appendix-01-keywords.md:25
+msgid "**`dyn`**: Dynamic dispatch to a trait object."
+msgstr "**`dyn`** : utilisation dynamique d’un objet trait."
+
+#: src/appendix-01-keywords.md:26
+msgid "**`else`**: Fallback for `if` and `if let` control flow constructs."
+msgstr ""
+"**`else`** : une branche de repli pour les structures de contrôle de flux "
+"`if` et `if let`."
+
+#: src/appendix-01-keywords.md:27
+msgid "**`enum`**: Define an enumeration."
+msgstr "**`enum`** : définit une énumération."
+
+#: src/appendix-01-keywords.md:28
+msgid "**`extern`**: Link an external function or variable."
+msgstr "**`extern`** : crée un lien vers une fonction ou une variable externe."
+
+#: src/appendix-01-keywords.md:29
+msgid "**`false`**: Boolean false literal."
+msgstr "**`false`** : le littéral booléen qui vaut faux."
+
+#: src/appendix-01-keywords.md:30
+msgid "**`fn`**: Define a function or the function pointer type."
+msgstr "**`fn`** : définit une fonction ou le type pointeur de fonction."
+
+#: src/appendix-01-keywords.md:31
+msgid ""
+"**`for`**: Loop over items from an iterator, implement a trait, or specify a "
+"higher ranked lifetime."
+msgstr ""
+"**`for`** : crée une boucle sur les éléments d’un itérateur, implémente un "
+"trait ou renseigne une durée de vie de niveau supérieur."
+
+#: src/appendix-01-keywords.md:33
+msgid "**`if`**: Branch based on the result of a conditional expression."
+msgstr "**`if`** : une branche liée au résultat d’une expression conditionnelle."
+
+#: src/appendix-01-keywords.md:34
+msgid "**`impl`**: Implement inherent or trait functionality."
+msgstr ""
+"**`impl`** : implémente des fonctionnalités propres à un élément ou à un "
+"trait."
+
+#: src/appendix-01-keywords.md:35
+msgid "**`in`**: Part of `for` loop syntax."
+msgstr "**`in`** : fait partie de la syntaxe de la boucle `for`."
+
+#: src/appendix-01-keywords.md:36
+msgid "**`let`**: Bind a variable."
+msgstr "**`let`** : lie une variable."
+
+#: src/appendix-01-keywords.md:37
+msgid "**`loop`**: Loop unconditionally."
+msgstr "**`loop`** : fait une boucle sans condition (théoriquement infinie)."
+
+#: src/appendix-01-keywords.md:38
+msgid "**`match`**: Match a value to patterns."
+msgstr "**`match`** : compare une valeur à des motifs."
+
+#: src/appendix-01-keywords.md:39
+msgid "**`mod`**: Define a module."
+msgstr "**`mod`** : définit un module."
+
+#: src/appendix-01-keywords.md:40
+msgid "**`move`**: Make a closure take ownership of all its captures."
+msgstr ""
+"**`move`** : fait en sorte qu’une fermeture prenne possession de tout ce "
+"qu’elle capture."
+
+#: src/appendix-01-keywords.md:41
+msgid ""
+"**`mut`**: Denote mutability in references, raw pointers, or pattern "
+"bindings."
+msgstr ""
+"**`mut`** : autorise la mutabilité sur des références, des pointeurs bruts "
+"ou des éléments issus de motifs."
+
+#: src/appendix-01-keywords.md:42
+msgid ""
+"**`pub`**: Denote public visibility in struct fields, `impl` blocks, or "
+"modules."
+msgstr ""
+"**`pub`** : autorise la visibilité publique sur des champs de structures, "
+"des blocs `impl` ou des modules."
+
+#: src/appendix-01-keywords.md:44
+msgid "**`ref`**: Bind by reference."
+msgstr "**`ref`** : lie une valeur par référence."
+
+#: src/appendix-01-keywords.md:45
+msgid "**`return`**: Return from function."
+msgstr "**`return`** : retourne une valeur depuis une fonction."
+
+#: src/appendix-01-keywords.md:46
+msgid "**`Self`**: A type alias for the type we are defining or implementing."
+msgstr ""
+"**`Self`** : un alias de type pour le type que nous définissons ou "
+"implémentons."
+
+#: src/appendix-01-keywords.md:47
+msgid "**`self`**: Method subject or current module."
+msgstr "**`self`** : désigne le sujet d’une méthode ou le module courant."
+
+#: src/appendix-01-keywords.md:48
+msgid ""
+"**`static`**: Global variable or lifetime lasting the entire program "
+"execution."
+msgstr ""
+"**`static`** : une variable globale ou une durée de vie qui persiste tout au "
+"long de l’exécution du programme."
+
+#: src/appendix-01-keywords.md:50
+msgid "**`struct`**: Define a structure."
+msgstr "**`struct`** : définit une structure."
+
+#: src/appendix-01-keywords.md:51
+msgid "**`super`**: Parent module of the current module."
+msgstr "**`super`** : le module parent du module courant."
+
+#: src/appendix-01-keywords.md:52
+msgid "**`trait`**: Define a trait."
+msgstr "**`trait`** : définit un trait."
+
+#: src/appendix-01-keywords.md:53
+msgid "**`true`**: Boolean true literal."
+msgstr "**`true`** : le littéral booléen qui vaut vrai."
+
+#: src/appendix-01-keywords.md:54
+msgid "**`type`**: Define a type alias or associated type."
+msgstr "**`type`** : définit un alias de type ou un type associé."
+
+#: src/appendix-01-keywords.md:57
+msgid "**`unsafe`**: Denote unsafe code, functions, traits, or implementations."
+msgstr ""
+"**`unsafe`** : autorise du code, des fonctions, des traits ou des "
+"implémentations non sécurisés."
+
+#: src/appendix-01-keywords.md:58
+msgid "**`use`**: Bring symbols into scope."
+msgstr "**`use`** : importe des éléments dans la portée."
+
+#: src/appendix-01-keywords.md:59
+msgid "**`where`**: Denote clauses that constrain a type."
+msgstr "**`where`** : indique des conditions pour contraindre un type."
+
+#: src/appendix-01-keywords.md:60
+msgid "**`while`**: Loop conditionally based on the result of an expression."
+msgstr ""
+"**`while`** : crée une boucle en fonction du résultat d’une expression. "
+"[union]: ../reference/items/unions.html"
+
+#: src/appendix-01-keywords.md:64
+msgid "Keywords Reserved for Future Use"
+msgstr "Les mots-clés réservés pour une utilisation future"
+
+#: src/appendix-01-keywords.md:66
+msgid ""
+"The following keywords do not yet have any functionality but are reserved by "
+"Rust for potential future use:"
+msgstr ""
+"Les mots-clés suivants n’offrent actuellement aucune fonctionnalité mais "
+"sont réservés par Rust pour une potentielle utilisation future : - "
+"`abstract` - `become` - `box` - `do` - `final` - `gen` - `macro` - "
+"`override` - `priv` - `try` - `typeof` - `unsized` - `virtual` - `yield`"
+
+#: src/appendix-01-keywords.md:84
+msgid "Raw Identifiers"
+msgstr "Les identificateurs bruts"
+
+#: src/appendix-01-keywords.md:86
+msgid ""
+"_Raw identifiers_ are the syntax that lets you use keywords where they "
+"wouldn’t normally be allowed. You use a raw identifier by prefixing a "
+"keyword with `r#`."
+msgstr ""
+"Les _identificateurs bruts_ sont une syntaxe qui vous permet d’utiliser des "
+"mots-clés là où ils ne devraient pas pouvoir l’être. Vous pouvez utiliser un "
+"identificateur brut en faisant précéder un mot-clé par `r#`."
+
+#: src/appendix-01-keywords.md:89
+msgid ""
+"For example, `match` is a keyword. If you try to compile the following "
+"function that uses `match` as its name:"
+msgstr ""
+"Par exemple, `match` est un mot-clé. Si vous essayez de compiler la fonction "
+"suivante qui utilise `match` comme nom :"
+
+#: src/appendix-01-keywords.md:100
+msgid "you’ll get this error:"
+msgstr ""
+"… vous allez obtenir l’erreur suivante : ```text error: expected identifier, "
+"found keyword `match` --> src/main.rs:4:4 | 4 | fn match(needle: &str, "
+"haystack: &str) -> bool { | ^^^^^ expected identifier, found keyword ```"
+
+#: src/appendix-01-keywords.md:110
+msgid ""
+"The error shows that you can’t use the keyword `match` as the function "
+"identifier. To use `match` as a function name, you need to use the raw "
+"identifier syntax, like this:"
+msgstr ""
+"L’erreur montre que vous ne pouvez pas utiliser le mot-clé `match` comme "
+"identificateur de la fonction. Pour utiliser `match` comme nom de fonction, "
+"vous devez utiliser la syntaxe d’identificateur brut, comme ceci :"
+
+#: src/appendix-01-keywords.md:126
+msgid ""
+"This code will compile without any errors. Note the `r#` prefix on the "
+"function name in its definition as well as where the function is called in "
+"`main`."
+msgstr ""
+"Ce code va se compiler sans erreur. Remarquez le préfixe `r#` sur le nom de "
+"la fonction dans sa définition mais aussi lorsque cette fonction est appelée "
+"dans `main`."
+
+#: src/ch08-02-strings.md:145 src/ch08-02-strings.md:161
+#: src/appendix-01-keywords.md:122
+msgid "\"foo\""
+msgstr "\"foo\""
+
+#: src/appendix-01-keywords.md:122
+msgid "\"foobar\""
+msgstr "\"foobar\""
+
+#: src/appendix-01-keywords.md:69
+msgid "`abstract`"
+msgstr "`abstract`"
+
+#: src/appendix-01-keywords.md:70
+msgid "`become`"
+msgstr "`become`"
+
+#: src/appendix-01-keywords.md:71
+msgid "`box`"
+msgstr "`box`"
+
+#: src/appendix-01-keywords.md:72
+msgid "`do`"
+msgstr "`do`"
+
+#: src/appendix-01-keywords.md:73
+msgid "`final`"
+msgstr "`final`"
+
+#: src/appendix-01-keywords.md:74
+msgid "`gen`"
+msgstr "`gen`"
+
+#: src/appendix-01-keywords.md:75
+msgid "`macro`"
+msgstr "`macro`"
+
+#: src/appendix-01-keywords.md:76
+msgid "`override`"
+msgstr "`override`"
+
+#: src/appendix-01-keywords.md:77
+msgid "`priv`"
+msgstr "`priv`"
+
+#: src/appendix-01-keywords.md:78
+msgid "`try`"
+msgstr "`try`"
+
+#: src/appendix-01-keywords.md:79
+msgid "`typeof`"
+msgstr "`typeof`"
+
+#: src/appendix-01-keywords.md:80
+msgid "`unsized`"
+msgstr "`unsized`"
+
+#: src/appendix-01-keywords.md:81
+msgid "`virtual`"
+msgstr "`virtual`"
+
+#: src/appendix-01-keywords.md:82
+msgid "`yield`"
+msgstr "`yield`"
+
+#: src/appendix-01-keywords.md:3
+msgid ""
+"The following lists contain keywords that are reserved for current or future "
+"use by the Rust language. As such, they cannot be used as identifiers "
+"(except as raw identifiers, as we discuss in the [“Raw "
+"Identifiers”](#raw-identifiers)<!-- ignore --> section). _Identifiers_ are "
+"names of functions, variables, parameters, struct fields, modules, crates, "
+"constants, macros, static values, attributes, types, traits, or lifetimes."
+msgstr ""
+"Les listes suivantes contiennent des mots-clés réservés qui sont "
+"actuellement utilisés dans le langage Rust ou qui pourraient l’être à "
+"l’avenir. De ce fait, ils ne peuvent pas être utilisés comme identificateurs "
+"(sauf comme identificateurs bruts, ce que nous allons voir dans la section « "
+"[les identificateurs bruts](#les-identificateurs-bruts)<!-- ignore --> »). "
+"Les _identificateurs_ sont les noms de fonctions, de variables, de "
+"paramètres, de champs de structures, de modules, de crates, de constantes, "
+"de macros, de valeurs statiques, d’attributs, de types, de traits ou de "
+"durées de vie."
+
+#: src/appendix-01-keywords.md:55
+msgid ""
+"**`union`**: Define a [union](../reference/items/unions.html)<!-- ignore "
+"-->; is a keyword only when used in a union declaration."
+msgstr ""
+"**`union`** : définit une [union](../reference/items/unions.html)<!-- ignore "
+"--> ; n’est un mot-clé que lorsqu’il est utilisé dans la déclaration d’une "
+"union."
+
+#: src/appendix-01-keywords.md:129
+msgid ""
+"Raw identifiers allow you to use any word you choose as an identifier, even "
+"if that word happens to be a reserved keyword. This gives us more freedom to "
+"choose identifier names, as well as lets us integrate with programs written "
+"in a language where these words aren’t keywords. In addition, raw "
+"identifiers allow you to use libraries written in a different Rust edition "
+"than your crate uses. For example, `try` isn’t a keyword in the 2015 edition "
+"but is in the 2018, 2021, and 2024 editions. If you depend on a library that "
+"is written using the 2015 edition and has a `try` function, you’ll need to "
+"use the raw identifier syntax, `r#try` in this case, to call that function "
+"from your code on later editions. See [Appendix "
+"E](appendix-05-editions.html)<!-- ignore --> for more information on "
+"editions."
+msgstr ""
+"Les identificateurs bruts vous permettent d’utiliser n’importe quel mot de "
+"votre choix comme identificateur, même si ce mot est un mot-clé réservé. "
+"Cela nous donne plus de liberté pour choisir les noms des identificateurs, "
+"et nous permet aussi de nous intégrer avec des programmes écrits dans un "
+"langage où ces mots ne sont pas des mots-clés. De plus, les identificateurs "
+"bruts vous permettent d’utiliser des bibliothèques écrites dans des éditions "
+"de Rust différentes de celle qu’utilise votre crate. Par exemple, `try` "
+"n’est pas un mot-clé dans l’édition 2015, mais il l’est dans les éditions "
+"2018, 2021 et 2024. Si vous dépendez d’une bibliothèque qui a été écrite "
+"avec l’édition 2015 et qui possède une fonction `try`, vous allez avoir "
+"besoin d’utiliser la syntaxe d’identificateur brut `r#try` dans ce cas, pour "
+"faire appel à cette fonction à partir de votre code dans les éditions "
+"ultérieures. Voir [l’annexe E](appendix-05-editions.html)<!-- ignore --> "
+"pour plus d’informations sur les éditions."
