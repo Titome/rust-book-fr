@@ -1188,40 +1188,6 @@ msgstr ""
 "Les fichiers sources à partir desquels ce livre est généré se trouvent sur "
 "[GitHub](https://github.com/rust-lang/book/tree/main/src)."
 
-#: src/ch01-03-hello-cargo.md:92 src/ch02-00-guessing-game-tutorial.md:55
-#: src/ch02-00-guessing-game-tutorial.md:882
-#: src/ch02-00-guessing-game-tutorial.md:1006
-#: src/ch02-00-guessing-game-tutorial.md:1105
-#: src/ch03-01-variables-and-mutability.md:18
-#: src/ch03-01-variables-and-mutability.md:80
-#: src/ch03-01-variables-and-mutability.md:168 src/ch03-02-data-types.md:152
-#: src/ch03-02-data-types.md:171 src/ch03-02-data-types.md:204
-#: src/ch03-02-data-types.md:223 src/ch03-02-data-types.md:260
-#: src/ch03-02-data-types.md:272 src/ch03-02-data-types.md:293
-#: src/ch03-02-data-types.md:325 src/ch03-02-data-types.md:384
-#: src/ch03-02-data-types.md:405 src/ch03-03-how-functions-work.md:12
-#: src/ch03-03-how-functions-work.md:66 src/ch03-03-how-functions-work.md:102
-#: src/ch03-03-how-functions-work.md:171 src/ch03-03-how-functions-work.md:223
-#: src/ch03-03-how-functions-work.md:262 src/ch03-03-how-functions-work.md:305
-#: src/ch03-03-how-functions-work.md:323 src/ch03-04-comments.md:26
-#: src/ch03-04-comments.md:37 src/ch03-05-control-flow.md:18
-#: src/ch03-05-control-flow.md:86 src/ch03-05-control-flow.md:121
-#: src/ch03-05-control-flow.md:140 src/ch03-05-control-flow.md:217
-#: src/ch03-05-control-flow.md:274 src/ch03-05-control-flow.md:541
-#: src/ch05-03-method-syntax.md:302
-#: src/ch12-03-improving-error-handling-and-modularity.md:763
-#: src/ch12-05-working-with-environment-variables.md:216
-#: src/ch13-03-improving-our-io-project.md:107
-#: src/ch15-06-reference-cycles.md:227 src/ch15-06-reference-cycles.md:314
-#: src/appendix-01-keywords.md:92 src/appendix-01-keywords.md:114
-#: src/appendix-04-useful-development-tools.md:34
-#: src/appendix-04-useful-development-tools.md:74
-msgid "<span class=\"filename\">Filename: src/main.rs</span>"
-msgstr ""
-"<span class=\"filename\">Fichier : src/main.rs</span> ```rust fn "
-"r#match(needle: &str, haystack: &str) -> bool { haystack.contains(needle) } "
-"fn main() { assert!(r#match(\"foo\", \"foobar\")); } ```"
-
 #: src/appendix-01-keywords.md:1
 msgid "Appendix A: Keywords"
 msgstr "Annexe A : les mots-clés"
@@ -2994,3 +2960,798 @@ msgstr "<code>expr \\|\\| expr</code>"
 #: src/appendix-02-operators.md:95
 msgid "<code>\\|...\\| expr</code>"
 msgstr "<code>\\|...\\| expr</code>"
+
+#: src/appendix-03-derivable-traits.md:1
+msgid "Appendix C: Derivable Traits"
+msgstr "Annexe C : Les traits dérivables"
+
+#: src/appendix-03-derivable-traits.md:3
+msgid ""
+"In various places in the book, we’ve discussed the `derive` attribute, which "
+"you can apply to a struct or enum definition. The `derive` attribute "
+"generates code that will implement a trait with its own default "
+"implementation on the type you’ve annotated with the `derive` syntax."
+msgstr ""
+"À plusieurs endroits dans ce livre, nous avons abordé l’attribut `derive`, "
+"que vous pouvez appliquer à une définition de structure ou d’énumération. "
+"L’attribut `derive` génère du code qui implémente un trait avec sa propre "
+"implémentation par défaut sur le type que vous avez annoté avec la syntaxe "
+"`derive`."
+
+#: src/appendix-03-derivable-traits.md:8
+msgid ""
+"In this appendix, we provide a reference of all the traits in the standard "
+"library that you can use with `derive`. Each section covers:"
+msgstr ""
+"Dans cette annexe, nous fournissons une référence de tous les traits de la "
+"bibliothèque standard que vous pouvez utiliser avec `derive`. Chaque section "
+"couvre :"
+
+#: src/appendix-03-derivable-traits.md:11
+msgid "What operators and methods deriving this trait will enable"
+msgstr "Quels opérateurs et méthodes la dérivation de ce trait activera"
+
+#: src/appendix-03-derivable-traits.md:12
+msgid "What the implementation of the trait provided by `derive` does"
+msgstr "Ce que fait l’implémentation du trait fournie par `derive`"
+
+#: src/appendix-03-derivable-traits.md:13
+msgid "What implementing the trait signifies about the type"
+msgstr "Ce que l’implémentation du trait signifie pour le type"
+
+#: src/appendix-03-derivable-traits.md:14
+msgid ""
+"The conditions in which you’re allowed or not allowed to implement the trait"
+msgstr ""
+"Les conditions dans lesquelles vous êtes autorisé ou non à implémenter le "
+"trait"
+
+#: src/appendix-03-derivable-traits.md:15
+msgid "Examples of operations that require the trait"
+msgstr "Des exemples d’opérations qui nécessitent le trait"
+
+#: src/appendix-03-derivable-traits.md:21
+msgid ""
+"The traits listed here are the only ones defined by the standard library "
+"that can be implemented on your types using `derive`. Other traits defined "
+"in the standard library don’t have sensible default behavior, so it’s up to "
+"you to implement them in the way that makes sense for what you’re trying to "
+"accomplish."
+msgstr ""
+"Les traits listés ici sont les seuls définis par la bibliothèque standard "
+"qui peuvent être implémentés sur vos types en utilisant `derive`. Les autres "
+"traits définis dans la bibliothèque standard n’ont pas de comportement par "
+"défaut pertinent, c’est donc à vous de les implémenter de la manière qui "
+"correspond à ce que vous essayez d’accomplir."
+
+#: src/appendix-03-derivable-traits.md:26
+msgid ""
+"An example of a trait that can’t be derived is `Display`, which handles "
+"formatting for end users. You should always consider the appropriate way to "
+"display a type to an end user. What parts of the type should an end user be "
+"allowed to see? What parts would they find relevant? What format of the data "
+"would be most relevant to them? The Rust compiler doesn’t have this insight, "
+"so it can’t provide appropriate default behavior for you."
+msgstr ""
+"Un exemple de trait qui ne peut pas être dérivé est `Display`, qui gère le "
+"formatage pour les utilisateurs finaux. Vous devriez toujours réfléchir à la "
+"manière appropriée d’afficher un type pour un utilisateur final. Quelles "
+"parties du type un utilisateur final devrait-il pouvoir voir ? Quelles "
+"parties trouverait-il pertinentes ? Quel format des données serait le plus "
+"pertinent pour lui ? Le compilateur Rust n’a pas cette connaissance, il ne "
+"peut donc pas fournir un comportement par défaut approprié pour vous."
+
+#: src/appendix-03-derivable-traits.md:41
+msgid ""
+"The `Debug` trait enables debug formatting in format strings, which you "
+"indicate by adding `:?` within `{}` placeholders."
+msgstr ""
+"Le trait `Debug` active le formatage de débogage dans les chaînes de "
+"formatage, que vous indiquez en ajoutant `:?` à l’intérieur des espaces "
+"réservés `{}`."
+
+#: src/appendix-03-derivable-traits.md:44
+msgid ""
+"The `Debug` trait allows you to print instances of a type for debugging "
+"purposes, so you and other programmers using your type can inspect an "
+"instance at a particular point in a program’s execution."
+msgstr ""
+"Le trait `Debug` vous permet d’afficher des instances d’un type à des fins "
+"de débogage, afin que vous et les autres développeurs utilisant votre type "
+"puissiez inspecter une instance à un moment précis de l’exécution d’un "
+"programme."
+
+#: src/appendix-03-derivable-traits.md:48
+msgid ""
+"The `Debug` trait is required, for example, in the use of the `assert_eq!` "
+"macro. This macro prints the values of instances given as arguments if the "
+"equality assertion fails so that programmers can see why the two instances "
+"weren’t equal."
+msgstr ""
+"Le trait `Debug` est requis, par exemple, lors de l’utilisation de la macro "
+"`assert_eq!`. Cette macro affiche les valeurs des instances passées en "
+"arguments si l’assertion d’égalité échoue, afin que les développeurs "
+"puissent voir pourquoi les deux instances n’étaient pas égales."
+
+#: src/appendix-03-derivable-traits.md:53
+msgid "`PartialEq` and `Eq` for Equality Comparisons"
+msgstr "`PartialEq` et `Eq` pour les comparaisons d’égalité"
+
+#: src/appendix-03-derivable-traits.md:55
+msgid ""
+"The `PartialEq` trait allows you to compare instances of a type to check for "
+"equality and enables use of the `==` and `!=` operators."
+msgstr ""
+"Le trait `PartialEq` vous permet de comparer des instances d’un type pour "
+"vérifier l’égalité et active l’utilisation des opérateurs `==` et `!=`."
+
+#: src/appendix-03-derivable-traits.md:58
+msgid ""
+"Deriving `PartialEq` implements the `eq` method. When `PartialEq` is derived "
+"on structs, two instances are equal only if _all_ fields are equal, and the "
+"instances are not equal if _any_ fields are not equal. When derived on "
+"enums, each variant is equal to itself and not equal to the other variants."
+msgstr ""
+"Dériver `PartialEq` implémente la méthode `eq`. Lorsque `PartialEq` est "
+"dérivé sur des structures, deux instances sont égales uniquement si _tous_ "
+"les champs sont égaux, et les instances ne sont pas égales si _un "
+"quelconque_ champ n’est pas égal. Lorsqu'il est dérivé sur des énumérations, "
+"chaque variante est égale à elle-même et différente des autres variantes."
+
+#: src/appendix-03-derivable-traits.md:63
+msgid ""
+"The `PartialEq` trait is required, for example, with the use of the "
+"`assert_eq!` macro, which needs to be able to compare two instances of a "
+"type for equality."
+msgstr ""
+"Le trait `PartialEq` est requis, par exemple, lors de l’utilisation de la "
+"macro `assert_eq!`, qui doit pouvoir comparer deux instances d’un type pour "
+"vérifier l’égalité."
+
+#: src/appendix-03-derivable-traits.md:67
+msgid ""
+"The `Eq` trait has no methods. Its purpose is to signal that for every value "
+"of the annotated type, the value is equal to itself. The `Eq` trait can only "
+"be applied to types that also implement `PartialEq`, although not all types "
+"that implement `PartialEq` can implement `Eq`. One example of this is "
+"floating-point number types: The implementation of floating-point numbers "
+"states that two instances of the not-a-number (`NaN`) value are not equal to "
+"each other."
+msgstr ""
+"Le trait `Eq` n’a pas de méthodes. Son objectif est de signaler que pour "
+"chaque valeur du type annoté, la valeur est égale à elle-même. Le trait `Eq` "
+"ne peut être appliqué qu’aux types qui implémentent également `PartialEq`, "
+"bien que tous les types qui implémentent `PartialEq` ne puissent pas "
+"implémenter `Eq`. Un exemple est celui des types de nombres à virgule "
+"flottante : l’implémentation des nombres à virgule flottante stipule que "
+"deux instances de la valeur « pas un nombre » (`NaN`) ne sont pas égales "
+"entre elles."
+
+#: src/appendix-03-derivable-traits.md:74
+msgid ""
+"An example of when `Eq` is required is for keys in a `HashMap<K, V>` so that "
+"the `HashMap<K, V>` can tell whether two keys are the same."
+msgstr ""
+"Un exemple où `Eq` est requis est pour les clés d’un `HashMap<K, V>`, afin "
+"que le `HashMap<K, V>` puisse déterminer si deux clés sont identiques."
+
+#: src/appendix-03-derivable-traits.md:77
+msgid "`PartialOrd` and `Ord` for Ordering Comparisons"
+msgstr "`PartialOrd` et `Ord` pour les comparaisons d’ordre"
+
+#: src/appendix-03-derivable-traits.md:79
+msgid ""
+"The `PartialOrd` trait allows you to compare instances of a type for sorting "
+"purposes. A type that implements `PartialOrd` can be used with the `<`, `>`, "
+"`<=`, and `>=` operators. You can only apply the `PartialOrd` trait to types "
+"that also implement `PartialEq`."
+msgstr ""
+"Le trait `PartialOrd` vous permet de comparer des instances d’un type à des "
+"fins de tri. Un type qui implémente `PartialOrd` peut être utilisé avec les "
+"opérateurs `<`, `>`, `<=` et `>=`. Vous ne pouvez appliquer le trait "
+"`PartialOrd` qu’aux types qui implémentent également `PartialEq`."
+
+#: src/appendix-03-derivable-traits.md:84
+msgid ""
+"Deriving `PartialOrd` implements the `partial_cmp` method, which returns an "
+"`Option<Ordering>` that will be `None` when the values given don’t produce "
+"an ordering. An example of a value that doesn’t produce an ordering, even "
+"though most values of that type can be compared, is the `NaN` floating point "
+"value. Calling `partial_cmp` with any floating-point number and the `NaN` "
+"floating-point value will return `None`."
+msgstr ""
+"Dériver `PartialOrd` implémente la méthode `partial_cmp`, qui retourne un "
+"`Option<Ordering>` qui sera `None` lorsque les valeurs fournies ne "
+"produisent pas d’ordre. Un exemple de valeur qui ne produit pas d’ordre, "
+"même si la plupart des valeurs de ce type peuvent être comparées, est la "
+"valeur à virgule flottante `NaN`. Appeler `partial_cmp` avec n’importe quel "
+"nombre à virgule flottante et la valeur à virgule flottante `NaN` retournera "
+"`None`."
+
+#: src/appendix-03-derivable-traits.md:91
+msgid ""
+"When derived on structs, `PartialOrd` compares two instances by comparing "
+"the value in each field in the order in which the fields appear in the "
+"struct definition. When derived on enums, variants of the enum declared "
+"earlier in the enum definition are considered less than the variants listed "
+"later."
+msgstr ""
+"Lorsqu'il est dérivé sur des structures, `PartialOrd` compare deux instances "
+"en comparant la valeur de chaque champ dans l’ordre dans lequel les champs "
+"apparaissent dans la définition de la structure. Lorsqu'il est dérivé sur "
+"des énumérations, les variantes de l’énumération déclarées plus tôt dans la "
+"définition sont considérées comme inférieures aux variantes listées après."
+
+#: src/appendix-03-derivable-traits.md:96
+msgid ""
+"The `PartialOrd` trait is required, for example, for the `gen_range` method "
+"from the `rand` crate that generates a random value in the range specified "
+"by a range expression."
+msgstr ""
+"Le trait `PartialOrd` est requis, par exemple, pour la méthode `gen_range` "
+"du crate `rand` qui génère une valeur aléatoire dans l’intervalle spécifié "
+"par une expression d’intervalle."
+
+#: src/appendix-03-derivable-traits.md:100
+msgid ""
+"The `Ord` trait allows you to know that for any two values of the annotated "
+"type, a valid ordering will exist. The `Ord` trait implements the `cmp` "
+"method, which returns an `Ordering` rather than an `Option<Ordering>` "
+"because a valid ordering will always be possible. You can only apply the "
+"`Ord` trait to types that also implement `PartialOrd` and `Eq` (and `Eq` "
+"requires `PartialEq`). When derived on structs and enums, `cmp` behaves the "
+"same way as the derived implementation for `partial_cmp` does with "
+"`PartialOrd`."
+msgstr ""
+"Le trait `Ord` vous permet de savoir que pour deux valeurs quelconques du "
+"type annoté, un ordre valide existera. Le trait `Ord` implémente la méthode "
+"`cmp`, qui retourne un `Ordering` plutôt qu’un `Option<Ordering>` car un "
+"ordre valide sera toujours possible. Vous ne pouvez appliquer le trait `Ord` "
+"qu’aux types qui implémentent également `PartialOrd` et `Eq` (et `Eq` "
+"nécessite `PartialEq`). Lorsqu'il est dérivé sur des structures et des "
+"énumérations, `cmp` se comporte de la même manière que l’implémentation "
+"dérivée de `partial_cmp` avec `PartialOrd`."
+
+#: src/appendix-03-derivable-traits.md:108
+msgid ""
+"An example of when `Ord` is required is when storing values in a "
+"`BTreeSet<T>`, a data structure that stores data based on the sort order of "
+"the values."
+msgstr ""
+"Un exemple où `Ord` est requis est lors du stockage de valeurs dans un "
+"`BTreeSet<T>`, une structure de données qui stocke les données en fonction "
+"de l’ordre de tri des valeurs."
+
+#: src/appendix-03-derivable-traits.md:111
+msgid "`Clone` and `Copy` for Duplicating Values"
+msgstr "`Clone` et `Copy` pour dupliquer des valeurs"
+
+#: src/appendix-03-derivable-traits.md:123
+msgid ""
+"An example of when `Clone` is required is when calling the `to_vec` method "
+"on a slice. The slice doesn’t own the type instances it contains, but the "
+"vector returned from `to_vec` will need to own its instances, so `to_vec` "
+"calls `clone` on each item. Thus, the type stored in the slice must "
+"implement `Clone`."
+msgstr ""
+"Un exemple où `Clone` est requis est lors de l’appel de la méthode `to_vec` "
+"sur une slice. La slice ne possède pas les instances du type qu’elle "
+"contient, mais le vecteur retourné par `to_vec` devra posséder ses "
+"instances, donc `to_vec` appelle `clone` sur chaque élément. Ainsi, le type "
+"stocké dans la slice doit implémenter `Clone`."
+
+#: src/appendix-03-derivable-traits.md:138
+msgid ""
+"You can derive `Copy` on any type whose parts all implement `Copy`. A type "
+"that implements `Copy` must also implement `Clone` because a type that "
+"implements `Copy` has a trivial implementation of `Clone` that performs the "
+"same task as `Copy`."
+msgstr ""
+"Vous pouvez dériver `Copy` sur tout type dont toutes les parties "
+"implémentent `Copy`. Un type qui implémente `Copy` doit également "
+"implémenter `Clone` car un type qui implémente `Copy` a une implémentation "
+"triviale de `Clone` qui effectue la même tâche que `Copy`."
+
+#: src/appendix-03-derivable-traits.md:143
+msgid ""
+"The `Copy` trait is rarely required; types that implement `Copy` have "
+"optimizations available, meaning you don’t have to call `clone`, which makes "
+"the code more concise."
+msgstr ""
+"Le trait `Copy` est rarement requis ; les types qui implémentent `Copy` "
+"disposent d’optimisations, ce qui signifie que vous n’avez pas besoin "
+"d’appeler `clone`, ce qui rend le code plus concis."
+
+#: src/appendix-03-derivable-traits.md:147
+msgid ""
+"Everything possible with `Copy` you can also accomplish with `Clone`, but "
+"the code might be slower or have to use `clone` in places."
+msgstr ""
+"Tout ce qui est possible avec `Copy` peut également être accompli avec "
+"`Clone`, mais le code pourrait être plus lent ou devoir utiliser `clone` par "
+"endroits."
+
+#: src/appendix-03-derivable-traits.md:150
+msgid "`Hash` for Mapping a Value to a Value of Fixed Size"
+msgstr "`Hash` pour associer une valeur à une valeur de taille fixe"
+
+#: src/appendix-03-derivable-traits.md:152
+msgid ""
+"The `Hash` trait allows you to take an instance of a type of arbitrary size "
+"and map that instance to a value of fixed size using a hash function. "
+"Deriving `Hash` implements the `hash` method. The derived implementation of "
+"the `hash` method combines the result of calling `hash` on each of the parts "
+"of the type, meaning all fields or values must also implement `Hash` to "
+"derive `Hash`."
+msgstr ""
+"Le trait `Hash` vous permet de prendre une instance d’un type de taille "
+"arbitraire et d’associer cette instance à une valeur de taille fixe en "
+"utilisant une fonction de hachage. Dériver `Hash` implémente la méthode "
+"`hash`. L’implémentation dérivée de la méthode `hash` combine le résultat de "
+"l’appel de `hash` sur chacune des parties du type, ce qui signifie que tous "
+"les champs ou valeurs doivent également implémenter `Hash` pour pouvoir "
+"dériver `Hash`."
+
+#: src/appendix-03-derivable-traits.md:158
+msgid ""
+"An example of when `Hash` is required is in storing keys in a `HashMap<K, "
+"V>` to store data efficiently."
+msgstr ""
+"Un exemple où `Hash` est requis est lors du stockage des clés dans un "
+"`HashMap<K, V>` pour stocker des données efficacement."
+
+#: src/appendix-03-derivable-traits.md:161
+msgid "`Default` for Default Values"
+msgstr "`Default` pour les valeurs par défaut"
+
+#: src/appendix-03-derivable-traits.md:163
+msgid ""
+"The `Default` trait allows you to create a default value for a type. "
+"Deriving `Default` implements the `default` function. The derived "
+"implementation of the `default` function calls the `default` function on "
+"each part of the type, meaning all fields or values in the type must also "
+"implement `Default` to derive `Default`."
+msgstr ""
+"Le trait `Default` vous permet de créer une valeur par défaut pour un type. "
+"Dériver `Default` implémente la fonction `default`. L’implémentation dérivée "
+"de la fonction `default` appelle la fonction `default` sur chaque partie du "
+"type, ce qui signifie que tous les champs ou valeurs du type doivent "
+"également implémenter `Default` pour pouvoir dériver `Default`."
+
+#: src/appendix-03-derivable-traits.md:17
+msgid ""
+"If you want different behavior from that provided by the `derive` attribute, "
+"consult the [standard library documentation](../std/index.html)<!-- ignore "
+"--> for each trait for details on how to manually implement them."
+msgstr ""
+"Si vous souhaitez un comportement différent de celui fourni par l’attribut "
+"`derive`, consultez la [documentation de la bibliothèque "
+"standard](../std/index.html)<!-- ignore --> pour chaque trait afin d’obtenir "
+"des détails sur la manière de les implémenter manuellement."
+
+#: src/appendix-03-derivable-traits.md:33
+msgid ""
+"The list of derivable traits provided in this appendix is not comprehensive: "
+"Libraries can implement `derive` for their own traits, making the list of "
+"traits you can use `derive` with truly open ended. Implementing `derive` "
+"involves using a procedural macro, which is covered in the [“Custom `derive` "
+"Macros”](ch20-05-macros.html#custom-derive-macros)<!-- ignore --> section in "
+"Chapter 20."
+msgstr ""
+"La liste des traits dérivables fournie dans cette annexe n’est pas "
+"exhaustive : les bibliothèques peuvent implémenter `derive` pour leurs "
+"propres traits, ce qui rend la liste des traits utilisables avec `derive` "
+"véritablement ouverte. L’implémentation de `derive` implique l’utilisation "
+"d’une macro procédurale, qui est traitée dans la section [« Les macros "
+"`derive` personnalisées »](ch20-05-macros.html#custom-derive-macros)<!-- "
+"ignore --> du chapitre 20."
+
+#: src/appendix-03-derivable-traits.md:39
+msgid "`Debug` for Programmer Output"
+msgstr "`Debug` pour l’affichage destiné aux développeurs"
+
+#: src/appendix-03-derivable-traits.md:113
+msgid ""
+"The `Clone` trait allows you to explicitly create a deep copy of a value, "
+"and the duplication process might involve running arbitrary code and copying "
+"heap data. See the [“Variables and Data Interacting with "
+"Clone”](ch04-01-what-is-ownership.html#variables-and-data-interacting-with-clone)<!-- "
+"ignore --> section in Chapter 4 for more information on `Clone`."
+msgstr ""
+"Le trait `Clone` vous permet de créer explicitement une copie en profondeur "
+"d’une valeur, et le processus de duplication peut impliquer l’exécution de "
+"code arbitraire et la copie de données du tas. Consultez la section [« Les "
+"variables et les données interagissant avec Clone "
+"»](ch04-01-what-is-ownership.html#variables-and-data-interacting-with-clone)<!-- "
+"ignore --> du chapitre 4 pour plus d’informations sur `Clone`."
+
+#: src/appendix-03-derivable-traits.md:119
+msgid ""
+"Deriving `Clone` implements the `clone` method, which when implemented for "
+"the whole type, calls `clone` on each of the parts of the type. This means "
+"all the fields or values in the type must also implement `Clone` to derive "
+"`Clone`."
+msgstr ""
+"Dériver `Clone` implémente la méthode `clone`, qui, lorsqu’elle est "
+"implémentée pour le type entier, appelle `clone` sur chacune des parties du "
+"type. Cela signifie que tous les champs ou valeurs du type doivent également "
+"implémenter `Clone` pour pouvoir dériver `Clone`."
+
+#: src/appendix-03-derivable-traits.md:128
+msgid ""
+"The `Copy` trait allows you to duplicate a value by only copying bits stored "
+"on the stack; no arbitrary code is necessary. See the [“Stack-Only Data: "
+"Copy”](ch04-01-what-is-ownership.html#stack-only-data-copy)<!-- ignore --> "
+"section in Chapter 4 for more information on `Copy`."
+msgstr ""
+"Le trait `Copy` vous permet de dupliquer une valeur en copiant uniquement "
+"les bits stockés sur la pile ; aucun code arbitraire n’est nécessaire. "
+"Consultez la section [« Les données uniquement sur la pile : Copy "
+"»](ch04-01-what-is-ownership.html#stack-only-data-copy)<!-- ignore --> du "
+"chapitre 4 pour plus d’informations sur `Copy`."
+
+#: src/appendix-03-derivable-traits.md:133
+msgid ""
+"The `Copy` trait doesn’t define any methods to prevent programmers from "
+"overloading those methods and violating the assumption that no arbitrary "
+"code is being run. That way, all programmers can assume that copying a value "
+"will be very fast."
+msgstr ""
+"Le trait `Copy` ne définit aucune méthode afin d’empêcher les développeurs "
+"de surcharger ces méthodes et de violer l’hypothèse qu’aucun code arbitraire "
+"n’est exécuté. De cette façon, tous les développeurs peuvent supposer que la "
+"copie d’une valeur sera très rapide."
+
+#: src/appendix-03-derivable-traits.md:169
+msgid ""
+"The `Default::default` function is commonly used in combination with the "
+"struct update syntax discussed in the [“Creating Instances from Other "
+"Instances with Struct Update "
+"Syntax”](ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax)<!--\n"
+"ignore --> section in Chapter 5. You can customize a few fields of a struct "
+"and then set and use a default value for the rest of the fields by using "
+"`..Default::default()`."
+msgstr ""
+"La fonction `Default::default` est couramment utilisée en combinaison avec "
+"la syntaxe de mise à jour de structure abordée dans la section [« Créer des "
+"instances à partir d’autres instances avec la syntaxe de mise à jour de "
+"structure "
+"»](ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax)<!-- "
+"ignore --> du chapitre 5. Vous pouvez personnaliser quelques champs d’une "
+"structure puis définir et utiliser une valeur par défaut pour le reste des "
+"champs en utilisant `..Default::default()`."
+
+#: src/appendix-03-derivable-traits.md:177
+msgid ""
+"The `Default` trait is required when you use the method `unwrap_or_default` "
+"on `Option<T>` instances, for example. If the `Option<T>` is `None`, the "
+"method `unwrap_or_default` will return the result of `Default::default` for "
+"the type `T` stored in the `Option<T>`."
+msgstr ""
+"Le trait `Default` est requis lorsque vous utilisez la méthode "
+"`unwrap_or_default` sur des instances d’`Option<T>`, par exemple. Si "
+"l’`Option<T>` est `None`, la méthode `unwrap_or_default` retournera le "
+"résultat de `Default::default` pour le type `T` stocké dans l’`Option<T>`."
+
+#: src/ch01-03-hello-cargo.md:92 src/ch02-00-guessing-game-tutorial.md:55
+#: src/ch02-00-guessing-game-tutorial.md:882
+#: src/ch02-00-guessing-game-tutorial.md:1006
+#: src/ch02-00-guessing-game-tutorial.md:1105
+#: src/ch03-01-variables-and-mutability.md:18
+#: src/ch03-01-variables-and-mutability.md:80
+#: src/ch03-01-variables-and-mutability.md:168 src/ch03-02-data-types.md:152
+#: src/ch03-02-data-types.md:171 src/ch03-02-data-types.md:204
+#: src/ch03-02-data-types.md:223 src/ch03-02-data-types.md:260
+#: src/ch03-02-data-types.md:272 src/ch03-02-data-types.md:293
+#: src/ch03-02-data-types.md:325 src/ch03-02-data-types.md:384
+#: src/ch03-02-data-types.md:405 src/ch03-03-how-functions-work.md:12
+#: src/ch03-03-how-functions-work.md:66 src/ch03-03-how-functions-work.md:102
+#: src/ch03-03-how-functions-work.md:171 src/ch03-03-how-functions-work.md:223
+#: src/ch03-03-how-functions-work.md:262 src/ch03-03-how-functions-work.md:305
+#: src/ch03-03-how-functions-work.md:323 src/ch03-04-comments.md:26
+#: src/ch03-04-comments.md:37 src/ch03-05-control-flow.md:18
+#: src/ch03-05-control-flow.md:86 src/ch03-05-control-flow.md:121
+#: src/ch03-05-control-flow.md:140 src/ch03-05-control-flow.md:217
+#: src/ch03-05-control-flow.md:274 src/ch03-05-control-flow.md:541
+#: src/ch05-03-method-syntax.md:302
+#: src/ch12-03-improving-error-handling-and-modularity.md:763
+#: src/ch12-05-working-with-environment-variables.md:216
+#: src/ch13-03-improving-our-io-project.md:107
+#: src/ch15-06-reference-cycles.md:227 src/ch15-06-reference-cycles.md:314
+#: src/appendix-01-keywords.md:92 src/appendix-01-keywords.md:114
+#: src/appendix-04-useful-development-tools.md:34
+#: src/appendix-04-useful-development-tools.md:74
+msgid "<span class=\"filename\">Filename: src/main.rs</span>"
+msgstr "<span class=\"filename\">Fichier : src/main.rs</span>"
+
+#: src/appendix-04-useful-development-tools.md:1
+msgid "Appendix D: Useful Development Tools"
+msgstr "Annexe D : outils de développement utiles"
+
+#: src/appendix-04-useful-development-tools.md:3
+msgid ""
+"In this appendix, we talk about some useful development tools that the Rust "
+"project provides. We’ll look at automatic formatting, quick ways to apply "
+"warning fixes, a linter, and integrating with IDEs."
+msgstr ""
+"Dans cette annexe, nous présentons quelques outils de développement utiles "
+"fournis par le projet Rust. Nous verrons le formatage automatique, des "
+"moyens rapides d’appliquer des corrections d’avertissements, un linter, et "
+"l’intégration avec les IDE."
+
+#: src/appendix-04-useful-development-tools.md:7
+msgid "Automatic Formatting with `rustfmt`"
+msgstr "Le formatage automatique avec `rustfmt`"
+
+#: src/appendix-04-useful-development-tools.md:9
+msgid ""
+"The `rustfmt` tool reformats your code according to the community code "
+"style. Many collaborative projects use `rustfmt` to prevent arguments about "
+"which style to use when writing Rust: Everyone formats their code using the "
+"tool."
+msgstr ""
+"L’outil `rustfmt` reformate votre code selon le style de code de la "
+"communauté. De nombreux projets collaboratifs utilisent `rustfmt` pour "
+"éviter les débats sur le style à utiliser lors de l’écriture de Rust : tout "
+"le monde formate son code en utilisant cet outil."
+
+#: src/appendix-04-useful-development-tools.md:13
+msgid ""
+"Rust installations include `rustfmt` by default, so you should already have "
+"the programs `rustfmt` and `cargo-fmt` on your system. These two commands "
+"are analogous to `rustc` and `cargo` in that `rustfmt` allows finer grained "
+"control and `cargo-fmt` understands conventions of a project that uses "
+"Cargo. To format any Cargo project, enter the following:"
+msgstr ""
+"Les installations de Rust incluent `rustfmt` par défaut, vous devriez donc "
+"déjà avoir les programmes `rustfmt` et `cargo-fmt` sur votre système. Ces "
+"deux commandes sont analogues à `rustc` et `cargo` dans le sens où `rustfmt` "
+"offre un contrôle plus fin et `cargo-fmt` comprend les conventions d’un "
+"projet qui utilise Cargo. Pour formater n’importe quel projet Cargo, "
+"saisissez la commande suivante :"
+
+#: src/appendix-04-useful-development-tools.md:27
+msgid "Fix Your Code with `rustfix`"
+msgstr "Corriger votre code avec `rustfix`"
+
+#: src/appendix-04-useful-development-tools.md:29
+msgid ""
+"The `rustfix` tool is included with Rust installations and can automatically "
+"fix compiler warnings that have a clear way to correct the problem that’s "
+"likely what you want. You’ve probably seen compiler warnings before. For "
+"example, consider this code:"
+msgstr ""
+"L’outil `rustfix` est inclus avec les installations de Rust et peut "
+"automatiquement corriger les avertissements du compilateur qui ont une façon "
+"claire de résoudre le problème, ce qui est probablement ce que vous "
+"souhaitez. Vous avez probablement déjà vu des avertissements du compilateur. "
+"Par exemple, considérez ce code :"
+
+#: src/appendix-04-useful-development-tools.md:43
+msgid ""
+"Here, we’re defining the variable `x` as mutable, but we never actually "
+"mutate it. Rust warns us about that:"
+msgstr ""
+"Ici, nous définissons la variable `x` comme mutable, mais nous ne la "
+"modifions jamais en réalité. Rust nous avertit à ce sujet :"
+
+#: src/appendix-04-useful-development-tools.md:64
+msgid ""
+"```console\n"
+"$ cargo fix\n"
+"    Checking myprogram v0.1.0 (file:///projects/myprogram)\n"
+"      Fixing src/main.rs (1 fix)\n"
+"    Finished dev [unoptimized + debuginfo] target(s) in 0.59s\n"
+"```"
+msgstr ""
+"```console $ cargo fix Checking myprogram v0.1.0 "
+"(file:///projects/myprogram) Fixing src/main.rs (1 fix) Finished dev "
+"[unoptimized + debuginfo] target(s) in 0.59s ```"
+
+#: src/appendix-04-useful-development-tools.md:71
+msgid ""
+"When we look at _src/main.rs_ again, we’ll see that `cargo fix` has changed "
+"the code:"
+msgstr ""
+"Lorsque nous regardons à nouveau _src/main.rs_, nous constatons que `cargo "
+"fix` a modifié le code :"
+
+#: src/appendix-04-useful-development-tools.md:83
+msgid "The variable `x` is now immutable, and the warning no longer appears."
+msgstr "La variable `x` est maintenant immuable, et l’avertissement n’apparaît plus."
+
+#: src/appendix-04-useful-development-tools.md:91
+msgid ""
+"The Clippy tool is a collection of lints to analyze your code so that you "
+"can catch common mistakes and improve your Rust code. Clippy is included "
+"with standard Rust installations."
+msgstr ""
+"L’outil Clippy est une collection de lints qui analysent votre code afin que "
+"vous puissiez détecter les erreurs courantes et améliorer votre code Rust. "
+"Clippy est inclus avec les installations standard de Rust."
+
+#: src/appendix-04-useful-development-tools.md:95
+msgid "To run Clippy’s lints on any Cargo project, enter the following:"
+msgstr ""
+"Pour exécuter les lints de Clippy sur n’importe quel projet Cargo, saisissez "
+"la commande suivante :"
+
+#: src/appendix-04-useful-development-tools.md:101
+msgid ""
+"For example, say you write a program that uses an approximation of a "
+"mathematical constant, such as pi, as this program does:"
+msgstr ""
+"Par exemple, imaginons que vous écrivez un programme qui utilise une "
+"approximation d’une constante mathematique, comme pi, comme le fait ce "
+"programme : <Listing file-name=\"src/main.rs\">"
+
+#: src/appendix-04-useful-development-tools.md:116
+msgid "Running `cargo clippy` on this project results in this error:"
+msgstr "L’exécution de `cargo clippy` sur ce projet produit cette erreur :"
+
+#: src/appendix-04-useful-development-tools.md:134
+msgid "The following code doesn’t result in any errors or warnings from Clippy:"
+msgstr ""
+"Le code suivant ne produit aucune erreur ni avertissement de la part de "
+"Clippy : <Listing file-name=\"src/main.rs\">"
+
+#: src/appendix-04-useful-development-tools.md:150
+msgid "IDE Integration Using `rust-analyzer`"
+msgstr "Intégration avec les IDE en utilisant `rust-analyzer`"
+
+#: src/appendix-04-useful-development-tools.md:23
+msgid ""
+"Running this command reformats all the Rust code in the current crate. This "
+"should only change the code style, not the code semantics. For more "
+"information on `rustfmt`, see [its "
+"documentation](https://github.com/rust-lang/rustfmt)."
+msgstr ""
+"L’exécution de cette commande reformate tout le code Rust dans la crate "
+"actuelle. Cela ne devrait modifier que le style du code, pas sa sémantique. "
+"Pour plus d’informations sur `rustfmt`, consultez [sa "
+"documentation](https://github.com/rust-lang/rustfmt)."
+
+#: src/appendix-04-useful-development-tools.md:39
+#: src/appendix-04-useful-development-tools.md:79
+msgid "\"{x}\""
+msgstr "\\\"{x}\\\""
+
+#: src/appendix-04-useful-development-tools.md:46
+msgid ""
+"```console\n"
+"$ cargo build\n"
+"   Compiling myprogram v0.1.0 (file:///projects/myprogram)\n"
+"warning: variable does not need to be mutable\n"
+" --> src/main.rs:2:9\n"
+"  |\n"
+"2 |     let mut x = 0;\n"
+"  |         ----^\n"
+"  |         |\n"
+"  |         help: remove this `mut`\n"
+"  |\n"
+"  = note: `#[warn(unused_mut)]` on by default\n"
+"```"
+msgstr ""
+"```console\n"
+"$ cargo build\n"
+"   Compiling myprogram v0.1.0 (file:///projects/myprogram)\n"
+"warning: variable does not need to be mutable\n"
+" --> src/main.rs:2:9\n"
+"  |\n"
+"2 |     let mut x = 0;\n"
+"  |         ----^\n"
+"  |         |\n"
+"  |         help: remove this `mut`\n"
+"  |\n"
+"  = note: `#[warn(unused_mut)]` on by default\n"
+"```"
+
+#: src/appendix-04-useful-development-tools.md:60
+msgid ""
+"The warning suggests that we remove the `mut` keyword. We can automatically "
+"apply that suggestion using the `rustfix` tool by running the command `cargo "
+"fix`:"
+msgstr ""
+"L’avertissement suggère de supprimer le mot-clé `mut`. Nous pouvons "
+"appliquer automatiquement cette suggestion en utilisant l’outil `rustfix` en "
+"exécutant la commande `cargo fix` :"
+
+#: src/appendix-04-useful-development-tools.md:85
+msgid ""
+"You can also use the `cargo fix` command to transition your code between "
+"different Rust editions. Editions are covered in [Appendix "
+"E](appendix-05-editions.md)<!--\n"
+"ignore -->."
+msgstr ""
+"Vous pouvez également utiliser la commande `cargo fix` pour faire migrer "
+"votre code entre différentes éditions de Rust. Les éditions sont traitées "
+"dans l’[annexe E](appendix-05-editions.md)<!-- ignore -->."
+
+#: src/appendix-04-useful-development-tools.md:89
+msgid "More Lints with Clippy"
+msgstr "Plus de lints avec Clippy"
+
+#: src/appendix-04-useful-development-tools.md:110
+#: src/appendix-04-useful-development-tools.md:142
+msgid "\"the area of the circle is {}\""
+msgstr "\\\"the area of the circle is {}\\\""
+
+#: src/appendix-04-useful-development-tools.md:118
+msgid ""
+"```text\n"
+"error: approximate value of `f{32, 64}::consts::PI` found\n"
+" --> src/main.rs:2:13\n"
+"  |\n"
+"2 |     let x = 3.1415;\n"
+"  |             ^^^^^^\n"
+"  |\n"
+"  = note: `#[deny(clippy::approx_constant)]` on by default\n"
+"  = help: consider using the constant directly\n"
+"  = help: for further information visit "
+"https://rust-lang.github.io/rust-clippy/master/index.html#approx_constant\n"
+"```"
+msgstr ""
+"```text\n"
+"error: approximate value of `f{32, 64}::consts::PI` found\n"
+" --> src/main.rs:2:13\n"
+"  |\n"
+"2 |     let x = 3.1415;\n"
+"  |             ^^^^^^\n"
+"  |\n"
+"  = note: `#[deny(clippy::approx_constant)]` on by default\n"
+"  = help: consider using the constant directly\n"
+"  = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#approx_constant\n"
+"```"
+
+#: src/appendix-04-useful-development-tools.md:130
+msgid ""
+"This error lets you know that Rust already has a more precise `PI` constant "
+"defined, and that your program would be more correct if you used the "
+"constant instead. You would then change your code to use the `PI` constant."
+msgstr ""
+"Cette erreur vous indique que Rust dispose déjà d’une constante `PI` plus "
+"précise, et que votre programme serait plus correct si vous utilisiez cette "
+"constante à la place. Vous modifieriez alors votre code pour utiliser la "
+"constante `PI`."
+
+#: src/appendix-04-useful-development-tools.md:148
+msgid ""
+"For more information on Clippy, see [its "
+"documentation](https://github.com/rust-lang/rust-clippy)."
+msgstr ""
+"Pour plus d’informations sur Clippy, consultez [sa "
+"documentation](https://github.com/rust-lang/rust-clippy)."
+
+#: src/appendix-04-useful-development-tools.md:152
+msgid ""
+"To help with IDE integration, the Rust community recommends using "
+"[`rust-analyzer`](https://rust-analyzer.github.io)<!-- ignore -->. This tool "
+"is a set of compiler-centric utilities that speak [Language Server "
+"Protocol](http://langserver.org/)<!--\n"
+"ignore -->, which is a specification for IDEs and programming languages to "
+"communicate with each other. Different clients can use `rust-analyzer`, such "
+"as [the Rust analyzer plug-in for Visual Studio "
+"Code](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)."
+msgstr ""
+"Pour faciliter l’intégration avec les IDE, la communauté Rust recommande "
+"d’utiliser [`rust-analyzer`](https://rust-analyzer.github.io)<!-- ignore "
+"-->. Cet outil est un ensemble d’utilitaires centrés sur le compilateur qui "
+"utilisent le [Language Server Protocol](http://langserver.org/)<!-- ignore "
+"-->, une spécification permettant aux IDE et aux langages de programmation "
+"de communiquer entre eux. Différents clients peuvent utiliser "
+"`rust-analyzer`, comme [le plugin Rust analyzer pour Visual Studio "
+"Code](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)."
+
+#: src/appendix-04-useful-development-tools.md:159
+msgid ""
+"Visit the `rust-analyzer` project’s [home "
+"page](https://rust-analyzer.github.io)<!-- ignore --> for installation "
+"instructions, then install the language server support in your particular "
+"IDE. Your IDE will gain capabilities such as autocompletion, jump to "
+"definition, and inline errors."
+msgstr ""
+"Visitez la [page d’accueil](https://rust-analyzer.github.io)<!-- ignore --> "
+"du projet `rust-analyzer` pour les instructions d’installation, puis "
+"installez le support du serveur de langage dans votre IDE. Votre IDE "
+"disposera alors de fonctionnalités telles que l’autocomplétion, la "
+"navigation vers la définition, et l’affichage des erreurs en ligne."
