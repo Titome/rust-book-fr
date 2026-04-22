@@ -85,6 +85,46 @@ impl Preprocessor for TrplListing {
 }
 
 fn rewrite_listing(src: &str, mode: Mode) -> Result<String, String> {
+    // The gettext preprocessor (used for translations) lowercases HTML tag
+    // names and can collapse blank-line separators around block-level custom
+    // elements. Restore both so `<Listing>` / `</Listing>` parse as block HTML
+    // consistently with the untranslated English build.
+    let mut rebuilt = String::with_capacity(src.len() + 32);
+    for line in src.lines() {
+        let trimmed = line.trim_start();
+        let leading_ws = &line[..line.len() - trimmed.len()];
+        let restored = if let Some(rest) = trimmed.strip_prefix("<listing") {
+            format!("{leading_ws}<Listing{rest}")
+        } else if trimmed.starts_with("</listing>") {
+            let rest = &trimmed["</listing>".len()..];
+            format!("{leading_ws}</Listing>{rest}")
+        } else {
+            line.to_string()
+        };
+        // If this line BEGINS with `<Listing` or `</Listing>`, ensure the
+        // previous line is blank (so pulldown_cmark sees it as a block).
+        if (restored.trim_start().starts_with("<Listing")
+            || restored.trim_start().starts_with("</Listing>"))
+            && !rebuilt.is_empty()
+            && !rebuilt.ends_with("\n\n")
+        {
+            if !rebuilt.ends_with('\n') {
+                rebuilt.push('\n');
+            }
+            rebuilt.push('\n');
+        }
+        rebuilt.push_str(&restored);
+        rebuilt.push('\n');
+        // If this line ENDS with `</Listing>` or an opening `<Listing ...>`,
+        // ensure a blank line follows so the next block is parsed separately.
+        let tr = restored.trim_end();
+        if tr.ends_with("</Listing>")
+            || (tr.starts_with("<Listing") && tr.ends_with(">"))
+        {
+            rebuilt.push('\n');
+        }
+    }
+    let src = &rebuilt;
     match mode {
         Mode::Default => {
             let final_state = crate::parser(src).try_fold(
@@ -95,9 +135,13 @@ fn rewrite_listing(src: &str, mode: Mode) -> Result<String, String> {
                 |mut state, ev| -> Result<RewriteState, String> {
                     match ev {
                         Event::Html(tag) => {
-                            if tag.starts_with("<Listing") {
+                            // Match case-insensitively: the gettext preprocessor
+                            // used for translations lowercases HTML tag names, so
+                            // `<Listing>` may arrive here as `<listing>`.
+                            let lower = tag.to_ascii_lowercase();
+                            if lower.starts_with("<listing") {
                                 state.open_listing(tag, mode)?;
-                            } else if tag.starts_with("</Listing>") {
+                            } else if lower.starts_with("</listing>") {
                                 state.close_listing(tag);
                             } else {
                                 state.events.push(Ok(Event::Html(tag)));
@@ -136,12 +180,13 @@ fn rewrite_listing(src: &str, mode: Mode) -> Result<String, String> {
             let mut rewritten = String::with_capacity(src.len());
             let mut current_closing = None;
             for line in src.lines() {
-                if line.starts_with("<Listing") && (line.ends_with(">")) {
+                let lower = line.to_ascii_lowercase();
+                if lower.starts_with("<listing") && (line.ends_with(">")) {
                     let listing =
                         ListingBuilder::from_tag(&line)?.build(Mode::Simple);
                     rewritten.push_str(&listing.opening_text());
                     current_closing = Some(listing.closing_text("\n"));
-                } else if line == "</Listing>" {
+                } else if lower == "</listing>" {
                     let closing =
                         current_closing.as_ref().ok_or_else(|| {
                             String::from(
@@ -189,7 +234,15 @@ impl<'e> RewriteState<'e> {
 
     fn close_listing(&mut self, tag: pulldown_cmark::CowStr<'_>) {
         let trailing = if !tag.ends_with('>') {
-            tag.replace("</Listing>", "")
+            // Match both `</Listing>` and `</listing>` (gettext lowercases).
+            let idx = tag
+                .to_ascii_lowercase()
+                .find("</listing>")
+                .map(|i| i + "</listing>".len());
+            match idx {
+                Some(i) => tag[i..].to_string(),
+                None => String::new(),
+            }
         } else {
             String::from("")
         };
