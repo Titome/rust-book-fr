@@ -1388,9 +1388,8 @@ msgstr "**`where`** : indique des conditions pour contraindre un type."
 
 #: src/appendix-01-keywords.md:60
 msgid "**`while`**: Loop conditionally based on the result of an expression."
-msgstr ""
-"**`while`** : crée une boucle en fonction du résultat d’une expression. "
-"[union]: ../référence/items/unions.html"
+msgstr "**`while`** : crée une boucle en fonction du résultat d’une expression."
+
 
 
 #: src/appendix-01-keywords.md:64
@@ -4700,12 +4699,8 @@ msgstr ""
 "vous n’avez pas besoin de conserver le dossier `get-dependencies`. Si vous "
 "avez exécute cette commande, vous pouvez utiliser le drapeau `--offline` "
 "avec toutes les commandes `cargo` dans le reste du livre pour utiliser ces "
-"versions en cache au lieu de tenter d’utiliser le reseau. [otherinstall]: "
-"https://forge.rust-lang.org/infra/other-installation-methods.html [install]: "
-"https://www.rust-lang.org/tools/install [msvc]: "
-"https://rust-lang.github.io/rustup/installation/windows-msvc.html "
-"[community]: https://www.rust-lang.org/community [tools]: "
-"https://www.rust-lang.org/tools"
+"versions en cache au lieu de tenter d’utiliser le reseau."
+
 
 #: src/ch01-02-hello-world.md:3
 msgid ""
@@ -4972,9 +4967,8 @@ msgstr ""
 "Compiler simplement avec `rustc` convient pour les programmes simples, mais "
 "a mesure que votre projet grandit, vous voudrez gérer toutes les options et "
 "faciliter le partage de votre code. Ensuite, nous vous présenterons l’outil "
-"Cargo, qui vous aidera a écrire des programmes Rust concrets. "
-"[troubleshooting]: ch01-01-installation.html#troubleshooting [devtools]: "
-"appendix-04-useful-development-tools.html [ch20-macros]: ch20-05-macros.html"
+"Cargo, qui vous aidera a écrire des programmes Rust concrets."
+
 
 
 #: src/ch01-03-hello-cargo.md:3
@@ -5417,9 +5411,8 @@ msgstr ""
 "vous habituer a lire et écrire du code Rust. Ainsi, au Chapitre 2, nous "
 "construirons un programme de jeu de devinettes. Si vous preferez commencer "
 "par apprendre comment les concepts de programmation courants fonctionnent en "
-"Rust, consultez le Chapitre 3 puis revenez au Chapitre 2. [installation]: "
-"ch01-01-installation.html#installation [toml]: https://toml.io [appendix-e]: "
-"appendix-05-éditions.html [cargo]: https://doc.rust-lang.org/cargo/"
+"Rust, consultez le Chapitre 3 puis revenez au Chapitre 2."
+
 
 #: src/ch01-01-installation.md:7
 msgid ""
@@ -7097,22 +7090,8 @@ msgstr ""
 "chapitre 4 explore la possession (ownership), une fonctionnalité qui "
 "distingue Rust des autres langages. Le chapitre 5 traite des structures "
 "(structs) et de la syntaxe des méthodes, et le chapitre 6 explique le "
-"fonctionnement des enums. [prelude]: ../std/prelude/index.html "
-"[variables-and-mutability]: "
-"ch03-01-variables-and-mutability.html#variables-and-mutability [comments]: "
-"ch03-04-comments.html [string]: ../std/string/struct.String.html [iostdin]: "
-"../std/io/struct.Stdin.html [read_line]: "
-"../std/io/struct.Stdin.html#method.read_line [result]: "
-"../std/result/enum.Result.html [enums]: ch06-00-enums.html [expect]: "
-"../std/result/enum.Result.html#method.expect [recover]: "
-"ch09-02-recoverable-errors-with-result.html [randcrate]: "
-"https://crates.io/crates/rand [semver]: http://semver.org [cratesio]: "
-"https://crates.io/ [doccargo]: https://doc.rust-lang.org/cargo/ "
-"[doccratesio]: https://doc.rust-lang.org/cargo/référence/publishing.html "
-"[match]: ch06-02-match.html [shadowing]: "
-"ch03-01-variables-and-mutability.html#shadowing [parse]: "
-"../std/primitive.str.html#method.parse [integers]: "
-"ch03-02-data-types.html#integer-types"
+"fonctionnement des enums."
+
 
 #: src/ch02-00-guessing-game-tutorial.md:41
 #: src/ch02-00-guessing-game-tutorial.md:491 src/ch14-01-release-profiles.md:37
@@ -8098,13 +8077,8 @@ msgid ""
 "they can have."
 msgstr ""
 "Maintenant que nous avons exploré le fonctionnement des variables, examinons "
-"les différents types de données qu’elles peuvent avoir. "
-"[comparing-the-guess-to-the-secret-number]: "
-"ch02-00-guessing-game-tutorial.html#comparing-the-guess-to-the-secret-number "
-"[data-types]: ch03-02-data-types.html#data-types "
-"[storing-values-with-variables]: "
-"ch02-00-guessing-game-tutorial.html#storing-values-with-variables "
-"[const-eval]: ../référence/const_eval.html"
+"les différents types de données qu’elles peuvent avoir."
+
 
 #: src/ch03-02-data-types.md:3
 msgid ""
@@ -8566,15 +8540,8 @@ msgstr ""
 "immédiatement au lieu de permettre l’accès mémoire et de continuer. Le "
 "chapitre 9 aborde plus en détail la gestion des erreurs de Rust et comment "
 "vous pouvez écrire du code lisible et sûr qui ne panique pas et ne permet "
-"pas d’accès mémoire invalide. [comparing-the-guess-to-the-secret-number]: "
-"ch02-00-guessing-game-tutorial.html#comparing-the-guess-to-the-secret-number "
-"[twos-complement]: https://en.wikipedia.org/wiki/Two%27s_complement "
-"[control-flow]: ch03-05-control-flow.html#control-flow [strings]: "
-"ch08-02-strings.html#storing-utf-8-encoded-text-with-strings "
-"[stack-and-heap]: ch04-01-what-is-ownership.html#the-stack-and-the-heap "
-"[vectors]: ch08-01-vectors.html [unrecoverable-errors-with-panic]: "
-"ch09-01-unrecoverable-errors-with-panic.html [appendix_b]: "
-"appendix-02-operators.md"
+"pas d’accès mémoire invalide."
+
 
 #: src/ch03-03-how-functions-work.md:3
 msgid ""
@@ -9641,10 +9608,8 @@ msgid ""
 msgstr ""
 "Quand vous serez prêt à continuer, nous parlerons d’un concept en Rust qui "
 "n’existe _pas_ couramment dans les autres langages de programmation : "
-"l’ownership (la possession). [comparing-the-guess-to-the-secret-number]: "
-"ch02-00-guessing-game-tutorial.html#comparing-the-guess-to-the-secret-number "
-"[quitting-after-a-correct-guess]: "
-"ch02-00-guessing-game-tutorial.html#quitting-after-a-correct-guess"
+"l’ownership (la possession)."
+
 
 #: src/ch03-01-variables-and-mutability.md:23
 #: src/ch03-01-variables-and-mutability.md:25
@@ -10342,7 +10307,8 @@ msgstr ""
 "section of Chapter 14. --> Rust possède également un autre type de "
 "commentaire, les commentaires de documentation, que nous aborderons dans la "
 "section [\"Publishing a Crate to Crates.io\"][publishing]<!-- ignore --> du "
-"chapitre 14. [publishing]: ch14-02-publishing-to-crates-io.html"
+"chapitre 14."
+
 
 #: src/ch03-05-control-flow.md:25 src/ch03-05-control-flow.md:65
 msgid "\"condition was true\""
@@ -11912,11 +11878,8 @@ msgstr ""
 "Mais c’est beaucoup trop de ceremonie et de travail pour un concept qui "
 "devrait être courant. Heureusement pour nous, Rust dispose d’une "
 "fonctionnalité pour utiliser une valeur sans transferer la possession : les "
-"références. [data-types]: ch03-02-data-types.html#data-types [ch8]: "
-"ch08-02-strings.html [traits]: ch10-02-traits.html [derivable-traits]: "
-"appendix-03-derivable-traits.html [methods]: "
-"ch05-03-method-syntax.html#methods [paths-module-tree]: "
-"ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html"
+"références."
+
 
 #: src/ch04-02-references-and-borrowing.md:3
 msgid ""
@@ -12811,11 +12774,8 @@ msgstr ""
 "La possession affecte le fonctionnement de nombreuses autres parties de "
 "Rust, nous continuerons donc a parler de ces concepts tout au long du reste "
 "du livre. Passons au chapitre 5 et voyons comment regrouper des données dans "
-"une `struct`. [ch13]: ch13-02-iterators.html [ch6]: "
-"ch06-02-match.html#patterns-that-bind-to-values [strings]: "
-"ch08-02-strings.html#storing-utf-8-encoded-text-with-strings "
-"[deref-coercions]: "
-"ch15-02-deref.html#using-deref-coercions-in-functions-and-methods"
+"une `struct`."
+
 
 #: src/ch04-01-what-is-ownership.md:109 src/ch04-01-what-is-ownership.md:122
 #: src/ch04-01-what-is-ownership.md:167 src/ch04-01-what-is-ownership.md:181
@@ -15643,12 +15603,8 @@ msgstr ""
 "rectangles. Il serait utile de lier ce comportement plus étroitement à notre "
 "struct `Rectangle` car il ne fonctionnera avec aucun autre type. Voyons "
 "comment nous pouvons continuer à refactoriser ce code en transformant la "
-"fonction `area` en une méthode `area` définie sur notre type `Rectangle`. "
-"[the-tuple-type]: ch03-02-data-types.html#the-tuple-type [app-c]: "
-"appendix-03-derivable-traits.md [println]: ../std/macro.println.html [dbg]: "
-"../std/macro.dbg.html [err]: "
-"ch12-06-writing-to-stderr-instead-of-stdout.html [attributes]: "
-"../référence/attributes.html"
+"fonction `area` en une méthode `area` définie sur notre type `Rectangle`."
+
 
 #: src/ch05-03-method-syntax.md:3
 msgid ""
@@ -16038,10 +15994,8 @@ msgid ""
 msgstr ""
 "Mais les structs ne sont pas le seul moyen de créer des types "
 "personnalisés : tournons-nous vers la fonctionnalité enum de Rust pour "
-"ajouter un autre outil à votre boîte à outils. [enums]: ch06-00-enums.html "
-"[trait-objects]: ch18-02-trait-objects.md [public]: "
-"ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#exposing-paths-with-the-pub-keyword "
-"[modules]: ch07-02-defining-modules-to-control-scope-and-privacy.html"
+"ajouter un autre outil à votre boîte à outils."
+
 
 #: src/ch05-01-defining-structs.md:359
 msgid "Ownership of Struct Data"
@@ -16877,9 +16831,8 @@ msgstr ""
 "`match` est une construction de flux de contrôle qui fait exactement cela "
 "lorsqu’elle est utilisée avec des enums : elle exécutera un code différent "
 "selon la variante de l’enum, et ce code peut utiliser les données à "
-"l’intérieur de la valeur correspondante. [IpAddr]: "
-"../std/net/enum.IpAddr.html [option]: ../std/option/enum.Option.html [docs]: "
-"../std/option/enum.Option.html"
+"l’intérieur de la valeur correspondante."
+
 
 #: src/ch06-02-match.md:3
 msgid "<a id=\"the-match-control-flow-operator\"></a>"
@@ -17906,7 +17859,8 @@ msgstr ""
 "la façon dont elles interagissent et expliquerons comment les utiliser pour "
 "gérer la portée. À la fin, vous devriez avoir une compréhension solide du "
 "système de modules et être capable de travailler avec les portées comme un "
-"pro ! [workspaces]: ch14-03-cargo-workspaces.html"
+"pro !"
+
 
 #: src/ch07-01-packages-and-crates.md:3
 msgid "The first parts of the module system we’ll cover are packages and crates."
@@ -18058,9 +18012,8 @@ msgstr ""
 "binaire et une de bibliothèque, toutes deux portant le même nom que le "
 "package. Un package peut avoir plusieurs crates binaires en plaçant des "
 "fichiers dans le répertoire *src/bin* : chaque fichier sera une crate "
-"binaire distincte. [basics]: ch01-02-hello-world.html#rust-program-basics "
-"[modules]: ch07-02-defining-modules-to-control-scope-and-privacy.html "
-"[rand]: ch02-00-guessing-game-tutorial.html#generating-a-random-number"
+"binaire distincte."
+
 
 #: src/ch07-02-defining-modules-to-control-scope-and-privacy.md:3
 msgid "<a id=\"defining-modules-to-control-scope-and-privacy\"></a>"
@@ -19084,10 +19037,8 @@ msgstr ""
 "Il y à une dernière situation impliquant `pub` que nous n’avons pas "
 "couverte, et c’est notre dernière fonctionnalité du système de modules : le "
 "mot-clé `use`. Nous couvrirons d’abord `use` seul, puis nous montrerons "
-"comment combiner `pub` et `use`. [pub]: "
-"ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html#exposing-paths-with-the-pub-keyword "
-"[api-guidelines]: https://rust-lang.github.io/api-guidelines/ [ch12]: "
-"ch12-00-an-io-project.html"
+"comment combiner `pub` et `use`."
+
 
 #: src/ch07-04-bringing-paths-into-scope-with-the-use-keyword.md:1
 msgid "Bringing Paths into Scope with the `use` Keyword"
@@ -19657,10 +19608,8 @@ msgstr ""
 "est aussi parfois utilisé dans le cadre du patron *prelude* : consultez [la "
 "documentation de la bibliothèque "
 "standard](../std/prelude/index.html#other-preludes)<!-- ignore --> pour plus "
-"d’informations sur ce patron. [ch14-pub-use]: "
-"ch14-02-publishing-to-crates-io.html#exporting-a-convenient-public-api "
-"[rand]: ch02-00-guessing-game-tutorial.html#generating-a-random-number "
-"[writing-tests]: ch11-01-writing-tests.html#how-to-write-tests"
+"d’informations sur ce patron."
+
 
 #: src/ch07-05-separating-modules-into-different-files.md:3
 msgid ""
@@ -19842,8 +19791,8 @@ msgid ""
 msgstr ""
 "Dans le prochain chapitre, nous examinerons quelques structures de données "
 "de collections dans la bibliothèque standard que vous pouvez utiliser dans "
-"votre code bien organisé. [paths]: "
-"ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html"
+"votre code bien organisé."
+
 
 #: src/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md:7
 msgid "A path can take two forms:"
@@ -20057,8 +20006,8 @@ msgid ""
 "well as what makes each special."
 msgstr ""
 "Nous verrons comment créer et mettre à jour des vectors, des strings et des "
-"hash maps, ainsi que ce qui rend chacune d’entre elles spéciale. "
-"[collections]: ../std/collections/index.html"
+"hash maps, ainsi que ce qui rend chacune d’entre elles spéciale."
+
 
 #: src/ch08-01-vectors.md:3
 msgid ""
@@ -20574,11 +20523,8 @@ msgstr ""
 
 #: src/ch08-01-vectors.md:333
 msgid "Let’s move on to the next collection type: `String`!"
-msgstr ""
-"Passons au type de collection suivant : `String` ! [data-types]: "
-"ch03-02-data-types.html#data-types [nomicon]: ../nomicon/vec/vec.html "
-"[vec-api]: ../std/vec/struct.Vec.html [deref]: "
-"ch15-02-deref.html#following-the-pointer-to-the-value-with-the-dereference-operator"
+msgstr "Passons au type de collection suivant : `String` !"
+
 
 #: src/ch08-02-strings.md:3
 msgid ""
@@ -21993,10 +21939,8 @@ msgid ""
 msgstr ""
 "Nous abordons des programmes plus complexes dans lesquels les opérations "
 "peuvent échouer, c’est donc le moment idéal pour discuter de la gestion des "
-"erreurs. C’est ce que nous ferons ensuite ! "
-"[validating-references-with-lifetimes]: "
-"ch10-03-lifetime-syntax.html#validating-references-with-lifetimes [access]: "
-"#accessing-values-in-a-hash-map [traits]: ch10-02-traits.html"
+"erreurs. C’est ce que nous ferons ensuite !"
+
 
 #: src/ch08-02-strings.md:182
 msgid "'l'"
@@ -22444,8 +22388,8 @@ msgstr ""
 "[« Utiliser `panic!` ou ne pas utiliser "
 "`panic!` »][to-panic-or-not-to-panic]<!-- ignore --> plus loin dans ce "
 "chapitre. Ensuite, nous verrons comment récupérer d’une erreur en utilisant "
-"`Result`. [to-panic-or-not-to-panic]: "
-"ch09-03-to-panic-or-not-to-panic.html#to-panic-or-not-to-panic"
+"`Result`."
+
 
 #: src/ch09-02-recoverable-errors-with-result.md:3
 msgid ""
@@ -23445,11 +23389,8 @@ msgid ""
 msgstr ""
 "Maintenant que nous avons abordé les détails de l’appel à `panic!` ou du "
 "renvoi de `Result`, revenons au sujet de la façon de décider lequel est "
-"approprié dans quels cas. [handle_failure]: "
-"ch02-00-guessing-game-tutorial.html#handling-potential-failure-with-result "
-"[trait-objects]: "
-"ch18-02-trait-objects.html#using-trait-objects-to-abstract-over-shared-behavior "
-"[termination]: ../std/process/trait.Termination.html"
+"approprié dans quels cas."
+
 
 #: src/ch09-03-to-panic-or-not-to-panic.md:3
 msgid ""
@@ -23966,8 +23907,8 @@ msgstr ""
 "Maintenant que vous avez vu des manières utiles dont la bibliothèque "
 "standard utilise les génériques avec les enums `Option` et `Result`, nous "
 "parlerons de la façon dont les génériques fonctionnent et comment vous "
-"pouvez les utiliser dans votre code. [encoding]: "
-"ch18-03-oo-design-patterns.html#encoding-states-and-behavior-as-types"
+"pouvez les utiliser dans votre code."
+
 
 #: src/ch09-01-unrecoverable-errors-with-panic.md:12
 msgid "Unwinding the Stack or Aborting in Response to a Panic"
@@ -25876,17 +25817,8 @@ msgid ""
 msgstr ""
 "Maintenant que vous connaissez plusieurs façons d’écrire des tests, voyons "
 "ce qui se passe quand nous exécutons nos tests et explorons les différentes "
-"options que nous pouvons utiliser avec `cargo test`. [concatenating]: "
-"ch08-02-strings.html#concatenating-with--or-format [bench]: "
-"../unstable-book/library-features/test.html [ignoring]: "
-"ch11-02-running-tests.html#ignoring-tests-unless-specifically-requested "
-"[subset]: ch11-02-running-tests.html#running-a-subset-of-tests-by-name "
-"[controlling-how-tests-are-run]: "
-"ch11-02-running-tests.html#controlling-how-tests-are-run [derivable-traits]: "
-"appendix-03-derivable-traits.html [doc-comments]: "
-"ch14-02-publishing-to-crates-io.html#documentation-comments-as-tests "
-"[paths-for-referring-to-an-item-in-the-module-tree]: "
-"ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html"
+"options que nous pouvons utiliser avec `cargo test`."
+
 
 #: src/ch11-02-running-tests.md:3
 msgid ""
@@ -25926,8 +25858,8 @@ msgstr ""
 "--help` affiche les options utilisables avec `cargo test`, et exécuter "
 "`cargo test -- --help` affiche les options utilisables après le separateur. "
 "Ces options sont également documentees dans [la section \"Tests\" du livre "
-"_The `rustc` Book_][tests]. [tests]: "
-"https://doc.rust-lang.org/rustc/tests/index.html"
+"_The `rustc` Book_][tests]."
+
 
 #: src/ch11-02-running-tests.md:21
 msgid "Running Tests in Parallel or Consecutively"
@@ -27300,11 +27232,8 @@ msgid ""
 "chapters to work on a project!"
 msgstr ""
 "Combinons les connaissances que vous avez acquises dans ce chapitre et dans "
-"les chapitres précédents pour travailler sur un projet ! [paths]: "
-"ch07-03-paths-for-referring-to-an-item-in-the-module-tree.html "
-"[separating-modules-into-files]: "
-"ch07-05-separating-modules-into-different-files.html [alt-paths]: "
-"ch07-05-separating-modules-into-different-files.html#alternate-file-paths"
+"les chapitres précédents pour travailler sur un projet !"
+
 
 #: src/ch12-00-an-io-project.md:3
 msgid ""
@@ -27666,9 +27595,8 @@ msgstr ""
 "ajouterons de la gestion d’erreurs pour traiter certaines situations "
 "potentiellement erronées, comme lorsque l’utilisateur ne fournit aucun "
 "argument ; pour l’instant, nous ignorerons cette situation et travaillerons "
-"plutôt sur l’ajout de fonctionnalités de lecture de fichiers. [ch13]: "
-"ch13-00-functional-features.html [ch7-idiomatic-use]: "
-"ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#creating-idiomatic-use-paths"
+"plutôt sur l’ajout de fonctionnalités de lecture de fichiers."
+
 
 #: src/ch12-02-reading-a-file.md:3
 msgid ""
@@ -28973,14 +28901,8 @@ msgid ""
 msgstr ""
 "Profitons de cette nouvelle modularité en faisant quelque chose qui aurait "
 "été difficile avec l’ancien code mais qui est facile avec le nouveau : nous "
-"allons écrire des tests ! [ch13]: ch13-00-functional-features.html "
-"[ch9-custom-types]: "
-"ch09-03-to-panic-or-not-to-panic.html#creating-custom-types-for-validation "
-"[ch9-error-guidelines]: "
-"ch09-03-to-panic-or-not-to-panic.html#guidelines-for-error-handling "
-"[ch9-result]: ch09-02-recoverable-errors-with-result.html [ch18]: "
-"ch18-00-oop.html [ch9-question-mark]: "
-"ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator"
+"allons écrire des tests !"
+
 
 #: src/ch12-04-testing-the-librarys-functionality.md:2
 msgid ""
@@ -29538,12 +29460,8 @@ msgstr ""
 "Pour compléter ce projet, nous montrerons brièvement comment travailler avec "
 "les variables d’environnement et comment écrire sur la sortie d’erreur "
 "standard, deux choses utiles lorsque vous écrivez des programmes en ligne de "
-"commande. [validating-references-with-lifetimes]: "
-"ch10-03-lifetime-syntax.html#validating-references-with-lifetimes "
-"[ch11-anatomy]: ch11-01-writing-tests.html#the-anatomy-of-a-test-function "
-"[ch10-lifetimes]: ch10-03-lifetime-syntax.html [ch3-iter]: "
-"ch03-05-control-flow.html#looping-through-a-collection-with-for "
-"[ch13-iterators]: ch13-02-iterators.html"
+"commande."
+
 
 #: src/ch12-05-working-with-environment-variables.md:3
 msgid ""
@@ -31597,8 +31515,8 @@ msgstr ""
 "fonctions ou de types qui utilisent des fermetures. Dans la prochaine "
 "section, nous aborderons les iterateurs. De nombreuses methodes d’iterateurs "
 "prennent des fermetures en arguments, alors gardez ces détails sur les "
-"fermetures à l’esprit pendant que nous continuons ! [unwrap-or-else]: "
-"../std/option/enum.Option.html#method.unwrap_or_else"
+"fermetures à l’esprit pendant que nous continuons !"
+
 
 #: src/ch13-02-iterators.md:3
 msgid ""
@@ -32415,8 +32333,8 @@ msgid ""
 msgstr ""
 "Mais les deux implémentations sont-elles vraiment equivalentes ? L’hypothese "
 "intuitive pourrait être que la boucle de bas niveau sera plus rapide. "
-"Parlons des performances. [impl-trait]: "
-"ch10-02-traits.html#traits-as-parameters"
+"Parlons des performances."
+
 
 #: src/ch13-04-performance.md:3
 msgid "<a id=\"comparing-performance-loops-vs-iterators\"></a>"
@@ -33721,8 +33639,8 @@ msgid ""
 msgstr ""
 "Un retrait _ne supprime pas_ de code. Il ne peut pas, par exemple, supprimer "
 "des secrets accidentellement televerses. Si cela arrive, vous devez "
-"reinitialiser ces secrets immediatement. [spdx]: https://spdx.org/licenses/ "
-"[semver]: https://semver.org/"
+"reinitialiser ces secrets immediatement."
+
 
 #: src/ch14-03-cargo-workspaces.md:3
 msgid ""
@@ -35178,8 +35096,8 @@ msgstr ""
 "l’implémentation du trait `Drop`. Ces deux traits seront encore plus "
 "importants pour les fonctionnalités fournies par les autres types de "
 "pointeurs intelligents que nous aborderons dans le reste de ce chapitre. "
-"Explorons ces deux traits plus en détail. [trait-objects]: "
-"ch18-02-trait-objects.html#using-trait-objects-to-abstract-over-shared-behavior"
+"Explorons ces deux traits plus en détail."
+
 
 #: src/ch15-02-deref.md:3
 msgid ""
@@ -35793,9 +35711,8 @@ msgstr ""
 "immuable initiale soit la seule référence immuable vers ces données, mais "
 "les règles d’emprunt ne le garantissent pas. Par conséquent, Rust ne peut "
 "pas supposer que convertir une référence immuable en une référence mutable "
-"est possible. [impl-trait]: "
-"ch10-02-traits.html#implementing-a-trait-on-a-type [tuple-structs]: "
-"ch05-01-defining-structs.html#creating-different-types-with-tuple-structs"
+"est possible."
+
 
 #: src/ch15-03-drop.md:3
 msgid ""
@@ -36626,8 +36543,8 @@ msgstr ""
 "des incohérences. Mais pouvoir modifier des données est très utile ! Dans la "
 "prochaine section, nous aborderons le patron de mutabilité intérieure et le "
 "type `RefCell<T>` que vous pouvez utiliser conjointement avec un `Rc<T>` "
-"pour contourner cette restriction d’immuabilité. [preventing-ref-cycles]: "
-"ch15-06-reference-cycles.html#preventing-reference-cycles-turning-an-rct-into-a-weakt"
+"pour contourner cette restriction d’immuabilité."
+
 
 #: src/ch15-05-interior-mutability.md:3
 msgid ""
@@ -37533,8 +37450,8 @@ msgstr ""
 "cette flexibilité dans nos structures de données. Notez que `RefCell<T>` ne "
 "fonctionne pas pour le code multi-thread ! `Mutex<T>` est la version sûre "
 "pour les threads de `RefCell<T>`, et nous aborderons `Mutex<T>` au chapitre "
-"16. [wheres-the---operator]: "
-"ch05-03-method-syntax.html#wheres-the---operator"
+"16."
+
 
 #: src/ch15-06-reference-cycles.md:3
 msgid ""
@@ -38233,7 +38150,8 @@ msgid ""
 "new smart pointers."
 msgstr ""
 "Ensuite, nous parlerons de la concurrence en Rust. Vous apprendrez même "
-"quelques nouveaux pointeurs intelligents. [nomicon]: ../nomicon/index.html"
+"quelques nouveaux pointeurs intelligents."
+
 
 #: src/ch15-01-box.md:12
 msgid ""
@@ -39033,8 +38951,8 @@ msgid ""
 msgstr ""
 "Maintenant que nous avons couvert ce que sont les threads et les méthodes "
 "fournies par l’API des threads, examinons quelques situations dans "
-"lesquelles nous pouvons utiliser les threads. [capture]: "
-"ch13-01-closures.html#capturing-references-or-moving-ownership"
+"lesquelles nous pouvons utiliser les threads."
+
 
 #: src/ch16-02-message-passing.md:3
 msgid "<a id=\"using-message-passing-to-transfer-data-between-threads\"></a>"
@@ -40208,8 +40126,8 @@ msgid ""
 "and how we can use them with custom types."
 msgstr ""
 "Nous terminerons ce chapitre en parlant des traits `Send` et `Sync` et de la "
-"façon dont nous pouvons les utiliser avec des types personnalisés. [atomic]: "
-"../std/sync/atomic/index.html"
+"façon dont nous pouvons les utiliser avec des types personnalisés."
+
 
 #: src/ch16-04-extensible-concurrency-sync-and-send.md:3
 msgid ""
@@ -40428,9 +40346,8 @@ msgstr ""
 "assuré qu’il fonctionnera sans problème sur plusieurs threads, sans les "
 "types de bogues difficiles à traquer qui sont courants dans d’autres "
 "langages. La programmation concurrente n’est plus un concept à craindre : "
-"allez de l’avant et rendez vos programmes concurrents, sans crainte ! "
-"[shared-access]: ch16-03-shared-state.html#shared-access-to-mutext "
-"[nomicon]: ../nomicon/index.html"
+"allez de l’avant et rendez vos programmes concurrents, sans crainte !"
+
 
 #: src/ch16-00-concurrency.md:42
 msgid "Here are the topics we’ll cover in this chapter:"
@@ -41338,11 +41255,8 @@ msgstr ""
 "référence][dyn-compatibility]<!-- ignore -->. Cependant, nous avons obtenu "
 "une flexibilité supplémentaire dans le code que nous avons écrit dans "
 "l’encart 18-5 et que nous avons pu prendre en charge dans l’encart 18-9, "
-"donc c’est un compromis à considérer. [performance-of-code-using-generics]: "
-"ch10-01-syntax.html#performance-of-code-using-generics [dynamically-sized]: "
-"ch20-03-advanced-types.html#dynamically-sized-types-and-the-sized-trait "
-"[dyn-compatibility]: "
-"https://doc.rust-lang.org/référence/items/traits.html#dyn-compatibility"
+"donc c’est un compromis à considérer."
+
 
 #: src/ch18-03-oo-design-patterns.md:3
 msgid ""
@@ -42388,9 +42302,8 @@ msgstr ""
 "Ensuite, nous examinerons les motifs, qui sont une autre fonctionnalité de "
 "Rust permettant beaucoup de flexibilité. Nous les avons examinés brièvement "
 "tout au long du livre mais n’avons pas encore vu toutes leurs capacités. "
-"Allons-y ! [more-info-than-rustc]: "
-"ch09-03-to-panic-or-not-to-panic.html#cases-in-which-you-have-more-information-than-the-compiler "
-"[macros]: ch20-05-macros.html#macros"
+"Allons-y !"
+
 
 #: src/ch18-01-what-is-oo.md:160
 msgid "Polymorphism"
@@ -43093,8 +43006,8 @@ msgstr ""
 "motifs ne fonctionnent pas de la même façon à chaque endroit où nous pouvons "
 "les utiliser. À certains endroits, les motifs doivent être irréfutables ; "
 "dans d’autres circonstances, ils peuvent être réfutables. Nous allons "
-"discuter de ces deux concepts maintenant. [ignoring-values-in-a-pattern]: "
-"ch19-03-pattern-syntax.html#ignoring-values-in-a-pattern"
+"discuter de ces deux concepts maintenant."
+
 
 #: src/ch19-02-refutability.md:3
 msgid ""
@@ -46043,15 +45956,8 @@ msgid ""
 msgstr ""
 "Pour une exploration beaucoup plus approfondie de la manière de travailler "
 "efficacement avec le Rust unsafe, lisez le guide officiel de Rust pour "
-"`unsafe`, [le Rustonomicon][nomicon]. [dangling-references]: "
-"ch04-02-references-and-borrowing.html#dangling-references [ABI]: "
-"../référence/items/external-blocks.html#abi [constants]: "
-"ch03-01-variables-and-mutability.html#declaring-constants [send-and-sync]: "
-"ch16-04-extensible-concurrency-sync-and-send.html [the-slice-type]: "
-"ch04-03-slices.html#the-slice-type [unions]: ../référence/items/unions.html "
-"[miri]: https://github.com/rust-lang/miri [éditions]: "
-"appendix-05-éditions.html [nightly]: appendix-07-nightly-rust.html "
-"[nomicon]: https://doc.rust-lang.org/nomicon/"
+"`unsafe`, [le Rustonomicon][nomicon]."
+
 
 #: src/ch20-02-advanced-traits.md:10
 msgid ""
@@ -47106,14 +47012,8 @@ msgid ""
 msgstr ""
 "Ce patron newtype est aussi utile même quand les traits ne sont pas "
 "impliqués. Changeons de sujet et examinons quelques manières avancées "
-"d’interagir avec le système de types de Rust. [newtype]: "
-"ch20-02-advanced-traits.html#implementing-external-traits-with-the-newtype-pattern "
-"[implementing-a-trait-on-a-type]: "
-"ch10-02-traits.html#implementing-a-trait-on-a-type [traits]: "
-"ch10-02-traits.html [smart-pointer-deref]: "
-"ch15-02-deref.html#treating-smart-pointers-like-regular-references "
-"[tuple-structs]: "
-"ch05-01-defining-structs.html#creating-different-types-with-tuple-structs"
+"d’interagir avec le système de types de Rust."
+
 
 #: src/ch20-03-advanced-types.md:3
 msgid ""
@@ -47691,17 +47591,8 @@ msgstr ""
 
 #: src/ch20-03-advanced-types.md:443
 msgid "Next, we’ll talk about functions and closures!"
-msgstr ""
-"Ensuite, nous allons parler des fonctions et des fermetures ! "
-"[encapsulation-that-hides-implementation-details]: "
-"ch18-01-what-is-oo.html#encapsulation-that-hides-implementation-details "
-"[string-slices]: ch04-03-slices.html#string-slices "
-"[the-match-control-flow-construct]: "
-"ch06-02-match.html#the-match-control-flow-construct "
-"[using-trait-objects-to-abstract-over-shared-behavior]: "
-"ch18-02-trait-objects.html#using-trait-objects-to-abstract-over-shared-behavior "
-"[newtype]: "
-"ch20-02-advanced-traits.html#implementing-external-traits-with-the-newtype-pattern"
+msgstr "Ensuite, nous allons parler des fonctions et des fermetures !"
+
 
 #: src/ch20-04-advanced-functions-and-closures.md:3
 msgid ""
@@ -48013,12 +47904,8 @@ msgstr ""
 
 #: src/ch20-04-advanced-functions-and-closures.md:248
 msgid "Next, let’s look at macros!"
-msgstr ""
-"Ensuite, regardons les macros ! [advanced-traits]: "
-"ch20-02-advanced-traits.html#advanced-traits [enum-values]: "
-"ch06-01-defining-an-enum.html#enum-values [closure-types]: "
-"ch13-01-closures.html#closure-type-inference-and-annotation [future-types]: "
-"ch17-03-more-futures.html [trait-objects]: ch18-02-trait-objects.html"
+msgstr "Ensuite, regardons les macros !"
+
 
 #: src/ch20-05-macros.md:3
 msgid ""
@@ -49052,13 +48939,8 @@ msgid ""
 "and do one more project!"
 msgstr ""
 "Ensuite, nous mettrons en pratique tout ce que nous avons discuté tout au "
-"long du livre et réaliserons un dernier projet ! [ref]: "
-"../référence/macros-by-example.html [tlborm]: "
-"https://veykril.github.io/tlborm/ [syn]: https://crates.io/crates/syn "
-"[quote]: https://crates.io/crates/quote [syn-docs]: "
-"https://docs.rs/syn/2.0/syn/struct.DeriveInput.html [quote-docs]: "
-"https://docs.rs/quote [decl]: "
-"#declarative-macros-with-macro_rules-for-general-metaprogramming"
+"long du livre et réaliserons un dernier projet !"
+
 
 #: src/ch20-01-unsafe-rust.md:37
 msgid "Dereference a raw pointer."
@@ -50937,9 +50819,8 @@ msgstr ""
 "s’exécuter. De plus, nous n’avons pas besoin d’écrire du code qui vérifie le "
 "comportement à l’exécution, car nous l’avons déjà vérifié à la compilation. "
 "Cela améliore les performances sans avoir à renoncer à la flexibilité des "
-"génériques. [trait-objects]: "
-"ch18-02-trait-objects.html#using-trait-objects-to-abstract-over-shared-behavior "
-"[methods]: ch05-03-method-syntax.html#method-syntax"
+"génériques."
+
 
 #: src/ch10-03-lifetime-syntax.md:3
 msgid ""
@@ -52414,11 +52295,8 @@ msgstr ""
 "besoin que dans des cas très avancés ; pour ceux-là, vous devriez lire la "
 "[Référence Rust][référence]. Mais ensuite, vous apprendrez à écrire des "
 "tests en Rust pour vous assurer que votre code fonctionne comme il le "
-"devrait. [references-and-borrowing]: "
-"ch04-02-references-and-borrowing.html#references-and-borrowing "
-"[string-slices-as-parameters]: "
-"ch04-03-slices.html#string-slices-as-parameters [référence]: "
-"../référence/trait-bounds.html"
+"devrait."
+
 
 #: src/ch10-00-generics.md:165
 msgid "Identify duplicate code."
@@ -53652,11 +53530,8 @@ msgstr ""
 "d’autres, tandis que dans d’autres cas, le site le plus rapide varie d’une "
 "exécution à l’autre. Plus important encore, vous avez appris les bases du "
 "travail avec les futures, et nous pouvons maintenant approfondir ce que nous "
-"pouvons faire avec l’async. [impl-trait]: "
-"ch10-02-traits.html#traits-as-parameters [iterators-lazy]: "
-"ch13-02-iterators.html [thread-spawn]: "
-"ch16-01-threads.html#creating-a-new-thread-with-spawn [cli-args]: "
-"ch12-01-accepting-command-line-arguments.html"
+"pouvons faire avec l’async."
+
 
 #: src/ch17-02-concurrency-with-async.md:3
 msgid "<a id=\"concurrency-with-async\"></a>"
@@ -54235,24 +54110,21 @@ msgid ""
 "working with threads. The same basic dynamics apply to async blocks, so the "
 "`move` keyword works with async blocks just as it does with closures."
 msgstr ""
-"section in Chapter 13, you learned how to use the `move` keyword with "
-"closures, and, as discussed in the [\"Using `move` Closures with "
-"Threads\"][move-threads]<!-- ignore --> section in Chapter 16, we often need "
-"to move data into closures when working with threads. The same basic "
-"dynamics apply to async blocks, so the `move` keyword works with async "
-"blocks just as it does with closures. --> Actuellement, le bloc async où "
-"nous envoyons les messages ne fait qu’_emprunter_ `tx` car l’envoi d’un "
-"message ne nécessite pas la possession, mais si nous pouvions _déplacer_ "
-"`tx` dans ce bloc async, il serait droppé une fois que ce bloc se terminé. "
-"Dans la section [« Capturer des références ou déplacer la "
-"possession »][capture-or-move]<!-- ignore --> du chapitre 13, vous avez "
-"appris à utiliser le mot-clé `move` avec les closures, et comme discuté dans "
-"la section [« Utiliser les closures `move` avec les "
-"threads »][move-threads]<!-- ignore --> du chapitre 16, nous devons souvent "
-"déplacer des données dans les closures quand nous travaillons avec les "
-"threads. Les mêmes dynamiques fondamentales s’appliquent aux blocs async, "
-"donc le mot-clé `move` fonctionne avec les blocs async comme il le fait avec "
-"les closures."
+"Actuellement, le bloc async où nous envoyons les messages ne fait "
+"qu’_emprunter_ `tx` car l’envoi d’un message ne nécessite pas la possession, "
+"mais si nous pouvions _déplacer_ `tx` dans ce bloc async, il serait droppé "
+"une fois que ce bloc se terminé. Dans la section [« Capturer des références "
+"ou déplacer la "
+"possession »](ch13-01-closures.html#capturing-references-or-moving-ownership)<!-- "
+"ignore --> du chapitre 13, vous avez appris à utiliser le mot-clé `move` "
+"avec les closures, et comme discuté dans la section [« Utiliser les closures "
+"`move` avec les "
+"threads »](ch16-01-threads.html#using-move-closures-with-threads)<!-- ignore "
+"--> du chapitre 16, nous devons souvent déplacer des données dans les "
+"closures quand nous travaillons avec les threads. Les mêmes dynamiques "
+"fondamentales s’appliquent aux blocs async, donc le mot-clé `move` "
+"fonctionne avec les blocs async comme il le fait avec les closures."
+
 
 #: src/ch17-02-concurrency-with-async.md:473
 msgid ""
@@ -54352,13 +54224,8 @@ msgstr ""
 "données entre futures, comment le code dans un bloc async s’exécute "
 "séquentiellement, comment déplacer la possession dans un bloc async, et "
 "comment joindre plusieurs futures. Voyons maintenant comment et pourquoi "
-"indiquer au runtime qu’il peut passer à une autre tâche. [thread-spawn]: "
-"ch16-01-threads.html#creating-a-new-thread-with-spawn [join-handles]: "
-"ch16-01-threads.html#waiting-for-all-threads-to-finish "
-"[message-passing-threads]: ch16-02-message-passing.html [if-let]: "
-"ch06-03-if-let.html [capture-or-move]: "
-"ch13-01-closures.html#capturing-references-or-moving-ownership "
-"[move-threads]: ch16-01-threads.html#using-move-closures-with-threads"
+"indiquer au runtime qu’il peut passer à une autre tâche."
+
 
 #: src/ch17-03-more-futures.md:4
 msgid "<a id=\"yielding\"></a>"
@@ -54794,8 +54661,8 @@ msgid ""
 msgstr ""
 "Nous avons maintenant vu plusieurs façons de travailler avec plusieurs "
 "futures en même temps. Ensuite, nous verrons comment nous pouvons travailler "
-"avec plusieurs futures en séquence au fil du temps avec les _streams_. "
-"[async-program]: ch17-01-futures-and-syntax.html#our-first-async-program"
+"avec plusieurs futures en séquence au fil du temps avec les _streams_."
+
 
 #: src/ch17-04-streams.md:3
 msgid "<a id=\"streams\"></a>"
@@ -54953,10 +54820,8 @@ msgid ""
 msgstr ""
 "Avec tous ces éléments assemblés, ce code fonctionne comme nous le voulons ! "
 "De plus, maintenant que nous avons `StreamExt` dans la portée, nous pouvons "
-"utiliser toutes ses méthodes utilitaires, tout comme avec les itérateurs. "
-"[17-02-messages]: ch17-02-concurrency-with-async.html#message-passing "
-"[iterator-trait]: "
-"ch13-02-iterators.html#the-iterator-trait-and-the-next-method"
+"utiliser toutes ses méthodes utilitaires, tout comme avec les itérateurs."
+
 
 #: src/ch17-05-traits-for-async.md:3
 msgid "<a id=\"digging-into-the-traits-for-async\"></a>"
@@ -55853,16 +55718,8 @@ msgid ""
 msgstr ""
 "C’est tout ce que nous allons couvrir pour les détails de bas niveau de ces "
 "traits. Pour conclure, voyons comment les futures (y compris les streams), "
-"les tâches et les threads s’articulent ensemble ! [message-passing]: "
-"ch17-02-concurrency-with-async.md#sending-data-between-two-tasks-using-message-passing "
-"[ch-18]: ch18-00-oop.html [async-book]: "
-"https://rust-lang.github.io/async-book/ [under-the-hood]: "
-"https://rust-lang.github.io/async-book/02_execution/01_chapter.html "
-"[pinning]: https://rust-lang.github.io/async-book/04_pinning/01_chapter.html "
-"[first-async]: ch17-01-futures-and-syntax.html#our-first-async-program "
-"[any-number-futures]: "
-"ch17-03-more-futures.html#working-with-any-number-of-futures [streams]: "
-"ch17-04-streams.html"
+"les tâches et les threads s’articulent ensemble !"
+
 
 #: src/ch17-06-futures-tasks-threads.md:1
 msgid "Putting It All Together: Futures, Tasks, and Threads"
@@ -56075,11 +55932,8 @@ msgstr ""
 "Ensuite, nous parlerons des façons idiomatiques de modéliser les problèmes "
 "et de structurer les solutions à mesure que vos programmes Rust grandissent. "
 "De plus, nous discuterons de la relation entre les idiomes de Rust et ceux "
-"que vous pourriez connaître de la programmation orientée objet. [ch16]: "
-"http://localhost:3000/ch16-00-concurrency.html [combining-futures]: "
-"ch17-03-more-futures.html#building-our-own-async-abstractions [streams]: "
-"ch17-04-streams.html#composing-streams [ch21]: "
-"ch21-00-final-project-a-web-server.html"
+"que vous pourriez connaître de la programmation orientée objet."
+
 
 #: src/ch17-01-futures-and-syntax.md:223
 msgid "<a id =\"determining-a-single-pages-title\"></a>"
@@ -58899,13 +58753,8 @@ msgstr ""
 "Cependant, `while let` (et `if let` et `match`) ne libère pas les valeurs "
 "temporaires avant la fin du bloc associé. Dans l’encart 21-21, le verrou "
 "reste détenu pendant toute la durée de l’appel à `job()`, ce qui signifie "
-"que les autres instances de `Worker` ne peuvent pas recevoir de tâches. "
-"[type-aliases]: ch20-03-advanced-types.html#type-synonyms-and-type-aliases "
-"[integer-types]: ch03-02-data-types.html#integer-types "
-"[moving-out-of-closures]: "
-"ch13-01-closures.html#moving-captured-values-out-of-closures [builder]: "
-"../std/thread/struct.Builder.html [builder-spawn]: "
-"../std/thread/struct.Builder.html#method.spawn"
+"que les autres instances de `Worker` ne peuvent pas recevoir de tâches."
+
 
 #: src/ch21-03-graceful-shutdown-and-cleanup.md:3
 msgid ""
