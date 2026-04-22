@@ -20,8 +20,8 @@ msgid ""
 "Let’s start your Rust journey! There’s a lot to learn, but every journey "
 "starts somewhere. In this chapter, we’ll discuss:"
 msgstr ""
-"Commençons votre aventure avec Rust ! Il y a beaucoup à apprendre, mais "
-"chaque voyage commence quelque part. Dans ce chapitre, nous aborderons :"
+"Commençons votre aventure avec Rust ! Il y a beaucoup à apprendre, mais "
+"chaque voyage commence quelque part. Dans ce chapitre, nous aborderons :"
 
 #: src/ch01-00-getting-started.md:6
 msgid "Installing Rust on Linux, macOS, and Windows"
@@ -36,3 +36,630 @@ msgid "Using `cargo`, Rust’s package manager and build system"
 msgstr ""
 "L’utilisation de `cargo`, le gestionnaire de paquets et système de "
 "compilation de Rust"
+
+#: src/SUMMARY.md:1 src/title-page.md:1
+msgid "The Rust Programming Language"
+msgstr "Le langage de programmation Rust"
+
+#: src/title-page.md:3
+msgid ""
+"_by Steve Klabnik, Carol Nichols, and Chris Krycho, with contributions from "
+"the Rust Community_"
+msgstr ""
+"_par Steve Klabnik, Carol Nichols et Chris Krycho, avec les contributions de "
+"la communauté Rust_"
+
+#: src/title-page.md:6
+msgid ""
+"This version of the text assumes you’re using Rust 1.90.0 (released "
+"2025-09-18) or later with `edition = \"2024\"` in the _Cargo.toml_ file of "
+"all projects to configure them to use Rust 2024 Edition idioms. See the "
+"[“Installation” section of Chapter 1](ch01-01-installation.html)<!-- ignore "
+"--> for instructions on installing or updating Rust, and see [Appendix "
+"E](appendix-05-editions.html)<!-- ignore --> for information on editions."
+msgstr ""
+"Cette version du texte suppose que vous utilisez Rust 1.90.0 (publié le "
+"18/09/2025) ou une version ultérieure avec `edition = \"2024\"` dans le "
+"fichier _Cargo.toml_ de tous les projets afin de les configurer pour "
+"utiliser les conventions de l’édition 2024 de Rust. Consultez la [section "
+"« Installation » du chapitre 1](ch01-01-installation.html)<!-- ignore --> "
+"pour les instructions d’installation ou de mise à jour de Rust, et consultez "
+"l’[annexe E](appendix-05-editions.html)<!-- ignore --> pour des informations "
+"sur les éditions."
+
+#: src/title-page.md:13
+msgid ""
+"The HTML format is available online at "
+"[https://doc.rust-lang.org/stable/book/](https://doc.rust-lang.org/stable/book/) "
+"and offline with installations of Rust made with `rustup`; run `rustup doc "
+"--book` to open."
+msgstr ""
+"Le format HTML est disponible en ligne à l’adresse "
+"[https://doc.rust-lang.org/stable/book/](https://doc.rust-lang.org/stable/book/) "
+"et hors ligne avec les installations de Rust effectuées avec `rustup` ; "
+"exécutez `rustup doc --book` pour l’ouvrir."
+
+#: src/title-page.md:18
+msgid ""
+"Several community [translations](appendix-06-translation.html) are also "
+"available."
+msgstr ""
+"Plusieurs [traductions](appendix-06-translation.html) communautaires sont "
+"également disponibles."
+
+#: src/title-page.md:20
+msgid ""
+"This text is available in [paperback and ebook format from No Starch "
+"Press](https://nostarch.com/rust-programming-language-3rd-edition)."
+msgstr ""
+"Ce texte est disponible en [format papier et numérique chez No Starch "
+"Press](https://nostarch.com/rust-programming-language-3rd-edition)."
+
+#: src/title-page.md:28
+msgid ""
+"**🚨 Want a more interactive learning experience? Try out a different version "
+"of the Rust Book, featuring: quizzes, highlighting, visualizations, and "
+"more**: <https://rust-book.cs.brown.edu>"
+msgstr ""
+"**🚨 Vous souhaitez une expérience d’apprentissage plus interactive ? "
+"Essayez une version différente du Rust Book, avec : des quiz, de la mise en "
+"surbrillance, des visualisations, et bien plus** : "
+"<https://rust-book.cs.brown.edu>"
+
+#: src/foreword.md:1
+msgid "Foreword"
+msgstr "Avant-propos"
+
+#: src/foreword.md:3
+msgid ""
+"The Rust programming language has come a long way in a few short years, from "
+"its creation and incubation by a small and nascent community of enthusiasts, "
+"to becoming one of the most loved and in-demand programming languages in the "
+"world. Looking back, it was inevitable that the power and promise of Rust "
+"would turn heads and gain a foothold in systems programming. What was not "
+"inevitable was the global growth in interest and innovation that permeated "
+"through open source communities and catalyzed wide-scale adoption across "
+"industries."
+msgstr ""
+"Le langage de programmation Rust a parcouru un long chemin en quelques "
+"courtes années, depuis sa création et son incubation par une petite "
+"communauté naissante de passionnés, jusqu’à devenir l’un des langages de "
+"programmation les plus appréciés et les plus demandés au monde. Avec le "
+"recul, il était inévitable que la puissance et les promesses de Rust "
+"attirent l’attention et gagnent du terrain dans la programmation système. Ce "
+"qui n’était pas inévitable, c’est la croissance mondiale de l’intérêt et de "
+"l’innovation qui a imprégné les communautés open source et catalysé une "
+"adoption à grande échelle dans tous les secteurs."
+
+#: src/foreword.md:11
+msgid ""
+"At this point in time, it is easy to point to the wonderful features that "
+"Rust has to offer to explain this explosion in interest and adoption. Who "
+"doesn’t want memory safety, _and_ fast performance, _and_ a friendly "
+"compiler, _and_ great tooling, among a host of other wonderful features? The "
+"Rust language you see today combines years of research in systems "
+"programming with the practical wisdom of a vibrant and passionate community. "
+"This language was designed with purpose and crafted with care, offering "
+"developers a tool that makes it easier to write safe, fast, and reliable "
+"code."
+msgstr ""
+"À ce stade, il est facile de pointer les merveilleuses fonctionnalités que "
+"Rust a à offrir pour expliquer cette explosion d’intérêt et d’adoption. Qui "
+"ne voudrait pas de la sûreté de la mémoire, _et_ de performances rapides, "
+"_et_ d’un compilateur convivial, _et_ d’excellents outils, parmi une foule "
+"d’autres fonctionnalités remarquables ? Le langage Rust que vous voyez "
+"aujourd’hui combine des années de recherche en programmation système avec la "
+"sagesse pratique d’une communauté dynamique et passionnée. Ce langage a été "
+"conçu avec un objectif et élaboré avec soin, offrant aux développeurs un "
+"outil qui facilite l’écriture de code sûr, rapide et fiable."
+
+#: src/foreword.md:20
+msgid ""
+"But what makes Rust truly special is its roots in empowering you, the user, "
+"to achieve your goals. This is a language that wants you to succeed, and the "
+"principle of empowerment runs through the core of the community that builds, "
+"maintains, and advocates for this language. Since the previous edition of "
+"this definitive text, Rust has further developed into a truly global and "
+"trusted language. The Rust Project is now robustly supported by the Rust "
+"Foundation, which also invests in key initiatives to ensure that Rust is "
+"secure, stable, and sustainable."
+msgstr ""
+"Mais ce qui rend Rust véritablement spécial, ce sont ses racines dans "
+"l’autonomisation de vous, l’utilisateur, pour atteindre vos objectifs. C’est "
+"un langage qui veut que vous réussissiez, et le principe d’autonomisation "
+"traverse le cœur de la communauté qui construit, maintient et défend ce "
+"langage. Depuis la précédente édition de ce texte de référence, Rust s’est "
+"encore développé pour devenir un langage véritablement mondial et de "
+"confiance. Le projet Rust est désormais solidement soutenu par la Rust "
+"Foundation, qui investit également dans des initiatives clés pour garantir "
+"que Rust est sécurisé, stable et pérenne."
+
+#: src/foreword.md:29
+msgid ""
+"This edition of _The Rust Programming Language_ is a comprehensive update, "
+"reflecting the language’s evolution over the years and providing valuable "
+"new information. But it is not just a guide to syntax and libraries—it’s an "
+"invitation to join a community that values quality, performance, and "
+"thoughtful design. Whether you’re a seasoned developer looking to explore "
+"Rust for the first time or an experienced Rustacean looking to refine your "
+"skills, this edition offers something for everyone."
+msgstr ""
+"Cette édition du _Langage de programmation Rust_ est une mise à jour "
+"complète, reflétant l’évolution du langage au fil des années et fournissant "
+"de précieuses nouvelles informations. Mais ce n’est pas seulement un guide "
+"sur la syntaxe et les bibliothèques — c’est une invitation à rejoindre une "
+"communauté qui valorise la qualité, la performance et la conception "
+"réfléchie. Que vous soyez un développeur chevronné cherchant à explorer Rust "
+"pour la première fois ou un Rustacean expérimenté cherchant à perfectionner "
+"vos compétences, cette édition offre quelque chose pour chacun."
+
+#: src/foreword.md:37
+msgid ""
+"The Rust journey has been one of collaboration, learning, and iteration. The "
+"growth of the language and its ecosystem is a direct reflection of the "
+"vibrant, diverse community behind it. The contributions of thousands of "
+"developers, from core language designers to casual contributors, are what "
+"make Rust such a unique and powerful tool. By picking up this book, you’re "
+"not just learning a new programming language—you’re joining a movement to "
+"make software better, safer, and more enjoyable to work with."
+msgstr ""
+"Le parcours de Rust a été fait de collaboration, d’apprentissage et "
+"d’itération. La croissance du langage et de son écosystème est le reflet "
+"direct de la communauté dynamique et diversifiée qui le soutient. Les "
+"contributions de milliers de développeurs, des concepteurs du langage aux "
+"contributeurs occasionnels, sont ce qui fait de Rust un outil si unique et "
+"puissant. En prenant ce livre, vous n’apprenez pas seulement un nouveau "
+"langage de programmation — vous rejoignez un mouvement pour rendre les "
+"logiciels meilleurs, plus sûrs et plus agréables à utiliser."
+
+#: src/foreword.md:45
+msgid "Welcome to the Rust community!"
+msgstr "Bienvenue dans la communauté Rust !"
+
+#: src/foreword.md:47
+msgid "Bec Rumbul, Executive Director of the Rust Foundation"
+msgstr "Bec Rumbul, directrice exécutive de la Rust Foundation"
+
+#: src/SUMMARY.md:3
+msgid "The Rust Programming Language Foreword Introduction"
+msgstr "Le langage de programmation Rust Avant-propos Introduction"
+
+#: src/SUMMARY.md:8 src/ch01-01-installation.md:1
+msgid "Installation"
+msgstr "Installation"
+
+#: src/SUMMARY.md:9 src/ch01-02-hello-world.md:1
+msgid "Hello, World!"
+msgstr "Hello, World!"
+
+#: src/SUMMARY.md:10 src/ch01-03-hello-cargo.md:1
+msgid "Hello, Cargo!"
+msgstr "Hello, Cargo!"
+
+#: src/SUMMARY.md:12 src/ch02-00-guessing-game-tutorial.md:1
+msgid "Programming a Guessing Game"
+msgstr "Programmer un jeu de devinettes"
+
+#: src/SUMMARY.md:14 src/ch03-00-common-programming-concepts.md:1
+msgid "Common Programming Concepts"
+msgstr "Les concepts courants de programmation"
+
+#: src/SUMMARY.md:15 src/ch03-01-variables-and-mutability.md:1
+msgid "Variables and Mutability"
+msgstr "Les variables et la mutabilité"
+
+#: src/SUMMARY.md:16 src/ch03-02-data-types.md:1
+msgid "Data Types"
+msgstr "Les types de données"
+
+#: src/SUMMARY.md:17 src/ch03-03-how-functions-work.md:1
+msgid "Functions"
+msgstr "Les fonctions"
+
+#: src/SUMMARY.md:18 src/ch03-04-comments.md:1
+msgid "Comments"
+msgstr "Les commentaires"
+
+#: src/SUMMARY.md:19 src/ch03-05-control-flow.md:1
+msgid "Control Flow"
+msgstr "Les structures de contrôle"
+
+#: src/SUMMARY.md:21 src/ch04-00-understanding-ownership.md:1
+msgid "Understanding Ownership"
+msgstr "Comprendre l’ownership"
+
+#: src/SUMMARY.md:22
+msgid "What is Ownership?"
+msgstr "Qu’est-ce que l’ownership ?"
+
+#: src/SUMMARY.md:23 src/ch04-02-references-and-borrowing.md:1
+msgid "References and Borrowing"
+msgstr "Les références et l’emprunt"
+
+#: src/SUMMARY.md:24 src/ch04-03-slices.md:1
+msgid "The Slice Type"
+msgstr "Le type slice"
+
+#: src/SUMMARY.md:26 src/ch05-00-structs.md:1
+msgid "Using Structs to Structure Related Data"
+msgstr "Utiliser les structs pour structurer des données apparentées"
+
+#: src/SUMMARY.md:27 src/ch05-01-defining-structs.md:1
+msgid "Defining and Instantiating Structs"
+msgstr "Définir et instancier des structs"
+
+#: src/SUMMARY.md:28 src/ch05-02-example-structs.md:1
+msgid "An Example Program Using Structs"
+msgstr "Un exemple de programme utilisant des structs"
+
+#: src/SUMMARY.md:29 src/ch05-03-method-syntax.md:1
+msgid "Methods"
+msgstr "Les méthodes"
+
+#: src/SUMMARY.md:31 src/ch06-00-enums.md:1
+msgid "Enums and Pattern Matching"
+msgstr "Les enums et le filtrage par motif"
+
+#: src/SUMMARY.md:32 src/ch06-01-defining-an-enum.md:1
+msgid "Defining an Enum"
+msgstr "Définir une enum"
+
+#: src/SUMMARY.md:33 src/ch06-02-match.md:5
+msgid "The `match` Control Flow Construct"
+msgstr "La structure de contrôle `match`"
+
+#: src/SUMMARY.md:34 src/ch06-03-if-let.md:1
+msgid "Concise Control Flow with `if let` and `let...else`"
+msgstr "Un contrôle de flux concis avec `if let` et `let...else`"
+
+#: src/SUMMARY.md:36
+#: src/ch07-00-managing-growing-projects-with-packages-crates-and-modules.md:5
+msgid "Packages, Crates, and Modules"
+msgstr "Les packages, les crates et les modules"
+
+#: src/SUMMARY.md:37 src/ch07-01-packages-and-crates.md:1
+msgid "Packages and Crates"
+msgstr "Les packages et les crates"
+
+#: src/SUMMARY.md:38
+#: src/ch07-02-defining-modules-to-control-scope-and-privacy.md:5
+msgid "Control Scope and Privacy with Modules"
+msgstr "Contrôler la portée et la visibilité avec les modules"
+
+#: src/SUMMARY.md:39
+#: src/ch07-03-paths-for-referring-to-an-item-in-the-module-tree.md:1
+msgid "Paths for Referring to an Item in the Module Tree"
+msgstr "Les chemins pour désigner un élément dans l’arborescence des modules"
+
+#: src/SUMMARY.md:40
+msgid "Bringing Paths Into Scope with the `use` Keyword"
+msgstr "Importer des chemins dans la portée avec le mot-clé `use`"
+
+#: src/SUMMARY.md:41 src/ch07-05-separating-modules-into-different-files.md:1
+msgid "Separating Modules into Different Files"
+msgstr "Séparer les modules dans différents fichiers"
+
+#: src/SUMMARY.md:43 src/ch08-00-common-collections.md:1
+msgid "Common Collections"
+msgstr "Les collections courantes"
+
+#: src/SUMMARY.md:44 src/ch08-01-vectors.md:1
+msgid "Storing Lists of Values with Vectors"
+msgstr "Stocker des listes de valeurs avec les vecteurs"
+
+#: src/SUMMARY.md:45 src/ch08-02-strings.md:1
+msgid "Storing UTF-8 Encoded Text with Strings"
+msgstr "Stocker du texte encodé en UTF-8 avec les String"
+
+#: src/SUMMARY.md:46 src/ch08-03-hash-maps.md:1
+msgid "Storing Keys with Associated Values in Hash Maps"
+msgstr "Stocker des clés associées à des valeurs dans des tables de hachage"
+
+#: src/SUMMARY.md:48 src/ch09-00-error-handling.md:1
+msgid "Error Handling"
+msgstr "La gestion des erreurs"
+
+#: src/SUMMARY.md:49 src/ch09-01-unrecoverable-errors-with-panic.md:1
+msgid "Unrecoverable Errors with `panic!`"
+msgstr "Les erreurs irrécupérables avec `panic!`"
+
+#: src/SUMMARY.md:50 src/ch09-02-recoverable-errors-with-result.md:1
+msgid "Recoverable Errors with `Result`"
+msgstr "Les erreurs récupérables avec `Result`"
+
+#: src/SUMMARY.md:51 src/ch09-03-to-panic-or-not-to-panic.md:1
+msgid "To `panic!` or Not to `panic!`"
+msgstr "`panic!` ou ne pas `panic!`"
+
+#: src/SUMMARY.md:53 src/ch10-00-generics.md:1
+msgid "Generic Types, Traits, and Lifetimes"
+msgstr "Les types génériques, les traits et les durées de vie"
+
+#: src/SUMMARY.md:54 src/ch10-01-syntax.md:1
+msgid "Generic Data Types"
+msgstr "Les types de données génériques"
+
+#: src/SUMMARY.md:55 src/ch10-02-traits.md:5
+msgid "Defining Shared Behavior with Traits"
+msgstr "Définir un comportement partagé avec les traits"
+
+#: src/SUMMARY.md:56 src/ch10-03-lifetime-syntax.md:1
+msgid "Validating References with Lifetimes"
+msgstr "Valider les références avec les durées de vie"
+
+#: src/SUMMARY.md:58 src/ch11-00-testing.md:1
+msgid "Writing Automated Tests"
+msgstr "Écrire des tests automatisés"
+
+#: src/SUMMARY.md:59 src/ch11-01-writing-tests.md:1
+msgid "How to Write Tests"
+msgstr "Comment écrire des tests"
+
+#: src/SUMMARY.md:60 src/ch11-02-running-tests.md:1
+msgid "Controlling How Tests Are Run"
+msgstr "Contrôler l’exécution des tests"
+
+#: src/SUMMARY.md:61 src/ch11-03-test-organization.md:1
+msgid "Test Organization"
+msgstr "L’organisation des tests"
+
+#: src/SUMMARY.md:63 src/ch12-00-an-io-project.md:1
+msgid "An I/O Project: Building a Command Line Program"
+msgstr "Un projet d’E/S : construire un programme en ligne de commande"
+
+#: src/SUMMARY.md:64 src/ch12-01-accepting-command-line-arguments.md:1
+msgid "Accepting Command Line Arguments"
+msgstr "Accepter des arguments en ligne de commande"
+
+#: src/SUMMARY.md:65 src/ch12-02-reading-a-file.md:1
+msgid "Reading a File"
+msgstr "Lire un fichier"
+
+#: src/SUMMARY.md:66 src/ch12-03-improving-error-handling-and-modularity.md:1
+msgid "Refactoring to Improve Modularity and Error Handling"
+msgstr "Refactoriser pour améliorer la modularité et la gestion des erreurs"
+
+#: src/SUMMARY.md:67
+msgid "Adding Functionality with Test Driven Development"
+msgstr "Ajouter des fonctionnalités avec le développement piloté par les tests"
+
+#: src/SUMMARY.md:68 src/ch12-05-working-with-environment-variables.md:1
+msgid "Working with Environment Variables"
+msgstr "Travailler avec les variables d’environnement"
+
+#: src/SUMMARY.md:69 src/ch12-06-writing-to-stderr-instead-of-stdout.md:5
+msgid "Redirecting Errors to Standard Error"
+msgstr "Rediriger les erreurs vers la sortie d’erreur standard"
+
+#: src/SUMMARY.md:71 src/ch13-00-functional-features.md:1
+msgid "Functional Language Features: Iterators and Closures"
+msgstr "Les fonctionnalités de langage fonctionnel : les itérateurs et les closures"
+
+#: src/SUMMARY.md:72 src/ch13-01-closures.md:6
+msgid "Closures"
+msgstr "Les closures"
+
+#: src/SUMMARY.md:73 src/ch13-02-iterators.md:1
+msgid "Processing a Series of Items with Iterators"
+msgstr "Traiter une série d’éléments avec les itérateurs"
+
+#: src/SUMMARY.md:74 src/ch13-03-improving-our-io-project.md:1
+msgid "Improving Our I/O Project"
+msgstr "Améliorer notre projet d’E/S"
+
+#: src/SUMMARY.md:75 src/ch13-04-performance.md:5
+msgid "Performance in Loops vs. Iterators"
+msgstr "Performances : boucles vs. itérateurs"
+
+#: src/SUMMARY.md:77
+msgid "More about Cargo and Crates.io"
+msgstr "En savoir plus sur Cargo et Crates.io"
+
+#: src/SUMMARY.md:78 src/ch14-01-release-profiles.md:1
+msgid "Customizing Builds with Release Profiles"
+msgstr "Personnaliser les compilations avec les profils de publication"
+
+#: src/SUMMARY.md:79 src/ch14-02-publishing-to-crates-io.md:1
+msgid "Publishing a Crate to Crates.io"
+msgstr "Publier une crate sur Crates.io"
+
+#: src/SUMMARY.md:80 src/ch14-03-cargo-workspaces.md:1
+msgid "Cargo Workspaces"
+msgstr "Les espaces de travail Cargo"
+
+#: src/SUMMARY.md:81 src/ch14-04-installing-binaries.md:5
+msgid "Installing Binaries with `cargo install`"
+msgstr "Installer des binaires avec `cargo install`"
+
+#: src/SUMMARY.md:82 src/ch14-05-extending-cargo.md:1
+msgid "Extending Cargo with Custom Commands"
+msgstr "Étendre Cargo avec des commandes personnalisées"
+
+#: src/SUMMARY.md:84 src/ch15-00-smart-pointers.md:1
+msgid "Smart Pointers"
+msgstr "Les pointeurs intelligents"
+
+#: src/SUMMARY.md:85 src/ch15-01-box.md:1
+msgid "Using `Box<T>` to Point to Data on the Heap"
+msgstr "Utiliser `Box<T>` pour pointer vers des données sur le tas"
+
+#: src/SUMMARY.md:86 src/ch15-02-deref.md:6
+msgid "Treating Smart Pointers Like Regular References"
+msgstr "Traiter les pointeurs intelligents comme des références classiques"
+
+#: src/SUMMARY.md:87 src/ch15-03-drop.md:1
+msgid "Running Code on Cleanup with the `Drop` Trait"
+msgstr "Exécuter du code au nettoyage avec le trait `Drop`"
+
+#: src/SUMMARY.md:88
+msgid "`Rc<T>`, the Reference Counted Smart Pointer"
+msgstr "`Rc<T>`, le pointeur intelligent à compteur de références"
+
+#: src/SUMMARY.md:89 src/ch15-05-interior-mutability.md:1
+msgid "`RefCell<T>` and the Interior Mutability Pattern"
+msgstr "`RefCell<T>` et le patron de mutabilité intérieure"
+
+#: src/SUMMARY.md:90 src/ch15-06-reference-cycles.md:1
+msgid "Reference Cycles Can Leak Memory"
+msgstr "Les cycles de références peuvent provoquer des fuites de mémoire"
+
+#: src/SUMMARY.md:92 src/ch16-00-concurrency.md:1
+msgid "Fearless Concurrency"
+msgstr "La concurrence sans crainte"
+
+#: src/SUMMARY.md:93 src/ch16-01-threads.md:1
+msgid "Using Threads to Run Code Simultaneously"
+msgstr "Utiliser les tâches pour exécuter du code simultanément"
+
+#: src/SUMMARY.md:94 src/ch16-02-message-passing.md:5
+msgid "Transfer Data Between Threads with Message Passing"
+msgstr "Transférer des données entre les tâches avec le passage de messages"
+
+#: src/SUMMARY.md:95 src/ch16-03-shared-state.md:1
+msgid "Shared-State Concurrency"
+msgstr "La concurrence à état partagé"
+
+#: src/SUMMARY.md:96 src/ch16-04-extensible-concurrency-sync-and-send.md:6
+msgid "Extensible Concurrency with `Send` and `Sync`"
+msgstr "La concurrence extensible avec `Send` et `Sync`"
+
+#: src/SUMMARY.md:98 src/ch17-00-async-await.md:1
+msgid ""
+"Fundamentals of Asynchronous Programming: Async, Await, Futures, and Streams"
+msgstr "Les fondamentaux de la programmation asynchrone : Async, Await, Futures et Streams"
+
+#: src/SUMMARY.md:99 src/ch17-01-futures-and-syntax.md:1
+msgid "Futures and the Async Syntax"
+msgstr "Les futures et la syntaxe async"
+
+#: src/SUMMARY.md:100 src/ch17-02-concurrency-with-async.md:5
+msgid "Applying Concurrency with Async"
+msgstr "Appliquer la concurrence avec async"
+
+#: src/SUMMARY.md:101
+msgid "Working With Any Number of Futures"
+msgstr "Travailler avec un nombre quelconque de futures"
+
+#: src/SUMMARY.md:102 src/ch17-04-streams.md:5
+msgid "Streams: Futures in Sequence"
+msgstr "Les streams : des futures en séquence"
+
+#: src/SUMMARY.md:103 src/ch17-05-traits-for-async.md:5
+msgid "A Closer Look at the Traits for Async"
+msgstr "Un regard approfondi sur les traits pour l’async"
+
+#: src/SUMMARY.md:104
+msgid "Futures, Tasks, and Threads"
+msgstr "Les futures, les tâches et les tâches de fond"
+
+#: src/SUMMARY.md:106
+msgid "Object Oriented Programming Features"
+msgstr "Les fonctionnalités de la programmation orientée objet"
+
+#: src/SUMMARY.md:107 src/ch18-01-what-is-oo.md:1
+msgid "Characteristics of Object-Oriented Languages"
+msgstr "Les caractéristiques des langages orientés objet"
+
+#: src/SUMMARY.md:108 src/ch18-02-trait-objects.md:5
+msgid "Using Trait Objects to Abstract over Shared Behavior"
+msgstr "Utiliser des objets trait pour abstraire un comportement commun"
+
+#: src/SUMMARY.md:109 src/ch18-03-oo-design-patterns.md:1
+msgid "Implementing an Object-Oriented Design Pattern"
+msgstr "Implémenter un patron de conception orienté objet"
+
+#: src/SUMMARY.md:111 src/ch19-00-patterns.md:1
+msgid "Patterns and Matching"
+msgstr "Les motifs et le filtrage"
+
+#: src/SUMMARY.md:112 src/ch19-01-all-the-places-for-patterns.md:1
+msgid "All the Places Patterns Can Be Used"
+msgstr "Tous les endroits où les motifs peuvent être utilisés"
+
+#: src/SUMMARY.md:113 src/ch19-02-refutability.md:1
+msgid "Refutability: Whether a Pattern Might Fail to Match"
+msgstr "La réfutabilité : quand un motif pourrait ne pas correspondre"
+
+#: src/SUMMARY.md:114 src/ch19-03-pattern-syntax.md:1
+msgid "Pattern Syntax"
+msgstr "La syntaxe des motifs"
+
+#: src/SUMMARY.md:116 src/ch20-00-advanced-features.md:1
+msgid "Advanced Features"
+msgstr "Les fonctionnalités avancées"
+
+#: src/SUMMARY.md:117 src/ch20-01-unsafe-rust.md:1
+msgid "Unsafe Rust"
+msgstr "Le Rust unsafe"
+
+#: src/SUMMARY.md:118 src/ch20-02-advanced-traits.md:1
+msgid "Advanced Traits"
+msgstr "Les traits avancés"
+
+#: src/SUMMARY.md:119 src/ch20-03-advanced-types.md:1
+msgid "Advanced Types"
+msgstr "Les types avancés"
+
+#: src/SUMMARY.md:120 src/ch20-04-advanced-functions-and-closures.md:1
+msgid "Advanced Functions and Closures"
+msgstr "Les fonctions et les closures avancées"
+
+#: src/SUMMARY.md:121 src/ch20-05-macros.md:1
+msgid "Macros"
+msgstr "Les macros"
+
+#: src/SUMMARY.md:123 src/ch21-00-final-project-a-web-server.md:1
+msgid "Final Project: Building a Multithreaded Web Server"
+msgstr "Projet final : construire un serveur web multitâche"
+
+#: src/SUMMARY.md:124 src/ch21-01-single-threaded.md:1
+msgid "Building a Single-Threaded Web Server"
+msgstr "Construire un serveur web monotâche"
+
+#: src/SUMMARY.md:125
+msgid "From Single-Threaded to Multithreaded Server"
+msgstr "Du serveur monotâche au serveur multitâche"
+
+#: src/SUMMARY.md:126 src/ch21-03-graceful-shutdown-and-cleanup.md:1
+msgid "Graceful Shutdown and Cleanup"
+msgstr "Arrêt gracieux et nettoyage"
+
+#: src/SUMMARY.md:128 src/appendix-00.md:1
+msgid "Appendix"
+msgstr "Annexes"
+
+#: src/SUMMARY.md:129
+msgid "A - Keywords"
+msgstr "A - Les mots-clés"
+
+#: src/SUMMARY.md:130
+msgid "B - Operators and Symbols"
+msgstr "B - Les opérateurs et les symboles"
+
+#: src/SUMMARY.md:131
+msgid "C - Derivable Traits"
+msgstr "C - Les traits dérivables"
+
+#: src/SUMMARY.md:132
+msgid "D - Useful Development Tools"
+msgstr "D - Les outils de développement utiles"
+
+#: src/SUMMARY.md:133
+msgid "E - Editions"
+msgstr "E - Les éditions"
+
+#: src/SUMMARY.md:134
+msgid "F - Translations of the Book"
+msgstr "F - Les traductions du livre"
+
+#: src/SUMMARY.md:135 src/appendix-07-nightly-rust.md:1
+msgid "G - How Rust is Made and “Nightly Rust”"
+msgstr "G - Comment Rust est conçu et « Rust Nightly »"
+
+#: src/appendix-00.md:3
+msgid ""
+"The following sections contain reference material you may find useful in "
+"your Rust journey."
+msgstr ""
+"Les sections suivantes contiennent des informations de référence qui "
+"pourraient vous être utiles dans votre apprentissage de Rust."
