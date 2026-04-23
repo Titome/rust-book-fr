@@ -1,107 +1,136 @@
-# The Rust Programming Language
+# The Rust Programming Language — Traduction française
 
-![Build Status](https://github.com/rust-lang/book/workflows/CI/badge.svg)
+[![Deploy FR to GitHub Pages](https://github.com/Titome/rust-book-fr/actions/workflows/deploy.yml/badge.svg)](https://github.com/Titome/rust-book-fr/actions/workflows/deploy.yml)
+[![CI](https://github.com/Titome/rust-book-fr/workflows/CI/badge.svg)](https://github.com/Titome/rust-book-fr/actions/workflows/main.yml)
 
-This repository contains the source of "The Rust Programming Language" book.
+Traduction française de _The Rust Programming Language_ (le livre officiel, alias « the book »), maintenue comme fork de [`rust-lang/book`][upstream].
 
-[The book is available in dead-tree form from No Starch Press][nostarch].
+**→ [Lire la version FR en ligne](https://titome.github.io/rust-book-fr/)**
 
-[nostarch]: https://nostarch.com/rust-programming-language-2nd-edition
+La traduction anglaise originale reste disponible chez `rust-lang` :
+[stable][stable-en] · [beta][beta-en] · [nightly][nightly-en] · [livre papier][nostarch].
 
-You can also read the book for free online. Please see the book as shipped with
-the latest [stable], [beta], or [nightly] Rust releases. Be aware that issues
-in those versions may have been fixed in this repository already, as those
-releases are updated less frequently.
+[upstream]: https://github.com/rust-lang/book
+[stable-en]: https://doc.rust-lang.org/stable/book/
+[beta-en]: https://doc.rust-lang.org/beta/book/
+[nightly-en]: https://doc.rust-lang.org/nightly/book/
+[nostarch]: https://nostarch.com/rust-programming-language-3rd-edition
 
-[stable]: https://doc.rust-lang.org/stable/book/
-[beta]: https://doc.rust-lang.org/beta/book/
-[nightly]: https://doc.rust-lang.org/nightly/book/
+## Comment ce fork fonctionne
 
-See the [releases] to download just the code of all the code listings that appear in the book.
+L'arborescence `src/` reste **pristine upstream** — jamais modifiée. La traduction française vit dans `po/fr.po` (format gettext) et est substituée au moment du build par le préprocesseur [`mdbook-i18n-helpers`][mdbook-i18n-helpers]. Les légendes de figures et textes alternatifs d'images, qui ne sont pas extraits comme msgids par `mdbook-i18n-helpers`, vivent dans `po/figures-fr.toml` et sont substitués par un préprocesseur maison, `mdbook-trpl-figures-i18n`.
 
-[releases]: https://github.com/rust-lang/book/releases
+[mdbook-i18n-helpers]: https://github.com/google/mdbook-i18n-helpers
 
-## Requirements
+Pourquoi ce workflow plutôt que des fichiers `src/*.md` bilingues ? Parce que les pulls upstream sont transparents : si `rust-lang/book` modifie un paragraphe, `git merge upstream/main` applique le changement sur `src/` (qui est pristine), puis `msgmerge` marque l'entrée correspondante dans `po/fr.po` comme `fuzzy`, signalant explicitement que la traduction FR a besoin d'être révisée. Rien ne se désynchronise silencieusement.
 
-Building the book requires [mdBook], ideally the same version that
-rust-lang/rust uses in [this file][rust-mdbook]. To get it:
+## Pré-requis
 
-[mdBook]: https://github.com/rust-lang/mdBook
-[rust-mdbook]: https://github.com/rust-lang/rust/blob/HEAD/src/tools/rustbook/Cargo.toml
+- [Rust 1.90][rust-toolchain] (pinné via `rust-toolchain`)
+- [mdBook 0.5.1][mdbook] — la même version que CI
+- [`mdbook-i18n-helpers`][mdbook-i18n-helpers] — requis seulement pour le build FR
 
-```bash
-$ cargo install mdbook --locked --version <version_num>
+[rust-toolchain]: ./rust-toolchain
+[mdbook]: https://github.com/rust-lang/mdBook
+
+```sh
+cargo install mdbook --locked --version 0.5.1
+cargo install mdbook-i18n-helpers --locked    # uniquement pour le build FR
 ```
 
-## Building
+## Build
 
-To build the book, type:
+### Version française
 
-```bash
-$ mdbook build
+```sh
+MDBOOK_BOOK__LANGUAGE=fr mdbook build
 ```
 
-The output will be in the `book` subdirectory. To check it out, open it in
-your web browser.
+Le rendu HTML est dans `book/`. Ouvre `book/index.html` dans ton navigateur.
 
-_Firefox:_
+### Version anglaise (fallback pristine upstream)
 
-```bash
-$ firefox book/index.html                       # Linux
-$ open -a "Firefox" book/index.html             # OS X
-$ Start-Process "firefox.exe" .\book\index.html # Windows (PowerShell)
-$ start firefox.exe .\book\index.html           # Windows (Cmd)
+```sh
+mdbook build
 ```
 
-_Chrome:_
+`[preprocessor.gettext]` est marqué `optional = true` dans `book.toml`, donc le build EN fonctionne même si `mdbook-i18n-helpers` n'est pas installé.
 
-```bash
-$ google-chrome book/index.html                 # Linux
-$ open -a "Google Chrome" book/index.html       # OS X
-$ Start-Process "chrome.exe" .\book\index.html  # Windows (PowerShell)
-$ start chrome.exe .\book\index.html            # Windows (Cmd)
+### Serve avec rechargement auto
+
+```sh
+MDBOOK_BOOK__LANGUAGE=fr mdbook serve --open
 ```
 
-To run the tests:
+## Tests
 
-```bash
-$ cd packages/trpl
-$ mdbook test --library-path packages/trpl/target/debug/deps
+Les exemples de code du livre sont testés via `mdbook test`. La crate `trpl` (façade vers `tokio` & co. utilisée par les lecteurs) doit être pré-compilée pour que `mdbook test` trouve ses dépendances :
+
+```sh
+cd packages/trpl && cargo build && cd ../..
+mdbook test --library-path packages/trpl/target/debug/deps                           # EN
+MDBOOK_BOOK__LANGUAGE=fr mdbook test --library-path packages/trpl/target/debug/deps  # FR
 ```
 
-## Contributing
+Les préprocesseurs maison (`mdbook-trpl-note`, `mdbook-trpl-listing`, `mdbook-trpl-figures-i18n`, …) sont également testés :
 
-We'd love your help! Please see [CONTRIBUTING.md][contrib] to learn about the
-kinds of contributions we're looking for.
+```sh
+cargo test --manifest-path packages/mdbook-trpl/Cargo.toml
+```
 
-[contrib]: https://github.com/rust-lang/book/blob/main/CONTRIBUTING.md
+## Workflow de maintenance : sync avec upstream
 
-Because the book is [printed][nostarch], and because we want
-to keep the online version of the book close to the print version when
-possible, it may take longer than you're used to for us to address your issue
-or pull request.
+Quand `rust-lang/book` évolue :
 
-So far, we've been doing a larger revision to coincide with [Rust Editions](https://doc.rust-lang.org/edition-guide/). Between those larger
-revisions, we will only be correcting errors. If your issue or pull request
-isn't strictly fixing an error, it might sit until the next time that we're
-working on a large revision: expect on the order of months or years. Thank you
-for your patience!
+```sh
+# 1. Pull les changements upstream
+git fetch upstream
+git merge upstream/main                          # résoudre les conflits éventuels sur src/
 
-### Translations
+# 2. Régénérer le POT depuis le nouveau src/
+MDBOOK_OUTPUT__XGETTEXT__POT_FILE=messages.pot mdbook build -d /tmp/po-extract
+mv /tmp/po-extract/xgettext/messages.pot po/messages.pot
+rm -rf /tmp/po-extract
 
-We'd love help translating the book! See the [Translations] label to join in
-efforts that are currently in progress. Open a new issue to start working on
-a new language! We're waiting on [mdbook support] for multiple languages
-before we merge any in, but feel free to start!
+# 3. Merger les nouveaux msgids dans po/fr.po
+msgmerge --update po/fr.po po/messages.pot      # marque les entrées modifiées 'fuzzy'
 
-[Translations]: https://github.com/rust-lang/book/issues?q=is%3Aopen+is%3Aissue+label%3ATranslations
-[mdbook support]: https://github.com/rust-lang/mdBook/issues/5
+# 4. Réviser po/fr.po : traduire les nouvelles entrées, relire les 'fuzzy'
+#    (chercher `, fuzzy` dans le fichier pour les trouver)
+$EDITOR po/fr.po
 
-## Spellchecking
+# 5. Build/test
+cd packages/trpl && cargo build && cd ../..
+MDBOOK_BOOK__LANGUAGE=fr mdbook test --library-path packages/trpl/target/debug/deps
 
-To scan source files for spelling errors, you can use the `spellcheck.sh`
-script available in the `ci` directory. It needs a dictionary of valid words,
-which is provided in `ci/dictionary.txt`. If the script produces a false
-positive (say, you used the word `BTreeMap` which the script considers invalid),
-you need to add this word to `ci/dictionary.txt` (keep the sorted order for
-consistency).
+# 6. Commit + push
+git add . && git commit -m "Sync upstream + update FR translations"
+git push
+```
+
+Les légendes de figures (`po/figures-fr.toml`) sont à mettre à jour manuellement si upstream ajoute/modifie des `<figcaption>` ou `<img alt="...">`.
+
+## Organisation du repo
+
+- `src/` — pristine upstream, **ne pas éditer**.
+- `po/fr.po` — traductions FR (5 089 msgids) au format gettext standard.
+- `po/messages.pot` — template extrait depuis `src/` par `mdbook-i18n-helpers`.
+- `po/figures-fr.toml` — traductions des `<figcaption>` et attributs `alt=` non extraits comme msgids.
+- `packages/mdbook-trpl/` — préprocesseurs maison (`note`, `listing`, `figures-i18n`, `figure`, `heading`).
+- `packages/trpl/` — crate façade dépendue par les exemples du livre.
+- `listings/` — exemples Cargo complets inclus dans la prose via directives mdbook.
+- `book.toml` — config mdbook, preprocessors wiring, redirects.
+- `.github/workflows/deploy.yml` — build FR + `mdbook test` + déploiement Pages.
+- `.github/workflows/main.yml` — CI héritée upstream (tests + lints EN, inchangée).
+
+## Contributions
+
+Si tu repères une coquille, une traduction maladroite, ou une section désynchronisée d'upstream, une issue ou PR est bienvenue. Merci de préciser la section concernée (chapitre + paragraphe) pour faciliter la revue.
+
+La contribution upstream (vers `rust-lang/book` en anglais) suit un [processus séparé][upstream-contrib].
+
+[upstream-contrib]: https://github.com/rust-lang/book/blob/main/CONTRIBUTING.md
+
+## Licence
+
+Comme upstream, double-licence MIT ou Apache 2.0 (voir `LICENSE-MIT` et `LICENSE-APACHE`).
