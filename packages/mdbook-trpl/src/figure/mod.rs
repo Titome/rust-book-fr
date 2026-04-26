@@ -40,7 +40,7 @@ pub struct TrplFigure;
 
 impl TrplFigure {
     pub fn supports_renderer(&self, renderer: &str) -> bool {
-        renderer == "html" || renderer == "markdown" || renderer == "test"
+        renderer == "html" || renderer == "epub" || renderer == "markdown" || renderer == "test"
     }
 }
 

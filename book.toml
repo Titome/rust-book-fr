@@ -10,6 +10,13 @@ additional-css = ["ferris.css", "theme/2018-edition.css", "theme/semantic-notes.
 additional-js = ["ferris.js"]
 git-repository-url = "https://github.com/rust-lang/book"
 
+# EPUB renderer. `optional = true` keeps the upstream English CI happy when
+# mdbook-epub is not installed. Reuses the HTML theme stylesheets so that
+# <Listing> figures and `> Note:` sections are styled in the EPUB too.
+[output.epub]
+optional = true
+additional-css = ["theme/semantic-notes.css", "theme/listing.css"]
+
 [output.html.search]
 use-boolean-and = true
 
