@@ -18,7 +18,11 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  MDBOOK_VERSION: 0.5.1
+  # 0.5.2 (et non 0.5.1 comme le CI lint) car mdbook-epub 0.5.2 vérifie
+  # strictement la version : compilé contre mdbook 0.5.2, il refuse de tourner
+  # sous le binaire 0.5.1 (« Incompatible mdbook version »). 0.5.2 est la seule
+  # version 0.5.x de mdbook-epub publiée, d'où l'alignement du binaire mdbook.
+  MDBOOK_VERSION: 0.5.2
 
 jobs:
   build:
