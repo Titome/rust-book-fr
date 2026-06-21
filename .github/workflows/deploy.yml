@@ -48,6 +48,12 @@ jobs:
       - name: Install mdbook-i18n-helpers
         run: cargo install mdbook-i18n-helpers --locked
 
+      # Renderer EPUB pour produire une version téléchargeable du livre FR.
+      # Version épinglée pour la reproductibilité ; 0.5.x est compatible avec
+      # le protocole renderer de mdbook 0.5.1.
+      - name: Install mdbook-epub
+        run: cargo install mdbook-epub --locked --version 0.5.2
+
       - name: Report versions
         run: |
           rustup --version
@@ -75,10 +81,16 @@ jobs:
           MDBOOK_OUTPUT__HTML__SITE_URL: /rust-book-fr/
         run: mdbook build
 
+      # Avec deux renderers configurés (html + epub), mdbook imbrique la sortie
+      # sous book/html et book/epub. On place l'EPUB à la racine du site HTML
+      # pour qu'il soit téléchargeable, puis on ne publie que book/html.
+      - name: Place EPUB at site root
+        run: cp book/epub/*.epub book/html/rust-book-fr.epub
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: book
+          path: book/html
 
   deploy:
     name: Deploy to GitHub Pages

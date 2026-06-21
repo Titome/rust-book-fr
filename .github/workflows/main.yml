@@ -101,5 +101,10 @@ jobs:
       run: |
         curl -sSLo linkcheck.sh \
           https://raw.githubusercontent.com/rust-lang/rust/HEAD/src/tools/linkchecker/linkcheck.sh
+        # Le renderer EPUB configuré dans book.toml fait que mdbook a plusieurs
+        # backends et imbrique donc la sortie HTML sous book/html au lieu de
+        # book/. linkcheck.sh suppose le HTML directement dans book/, on
+        # redirige donc le chemin qu'il copie vers book/html.
+        sed -i 's#"$book_path/book"#"$book_path/book/html"#' linkcheck.sh
         # Cannot use --all here because of the generated redirect pages aren't available.
         sh linkcheck.sh book
