@@ -11071,7 +11071,7 @@ msgstr ""
 
 #: src/ch04-01-what-is-ownership.md:92
 msgid "Each value in Rust has an _owner_."
-msgstr "Chaque valeur en Rust à un _proprietaire_ (owner)."
+msgstr "Chaque valeur en Rust a un _propriétaire_ (owner)."
 
 #: src/ch04-01-what-is-ownership.md:93
 msgid "There can only be one owner at a time."
