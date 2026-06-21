@@ -50,9 +50,14 @@ jobs:
 
       # Renderer EPUB pour produire une version téléchargeable du livre FR.
       # Version épinglée pour la reproductibilité ; 0.5.x est compatible avec
-      # le protocole renderer de mdbook 0.5.1.
+      # le protocole renderer de mdbook 0.5.1. mdbook-epub 0.5.2 exige
+      # rustc >= 1.91, on le compile donc avec une toolchain `stable` dédiée
+      # pour ne pas toucher au pin 1.90 utilisé par `mdbook test` et le build.
+      # Le binaire produit est autonome, peu importe le compilateur utilisé.
       - name: Install mdbook-epub
-        run: cargo install mdbook-epub --locked --version 0.5.2
+        run: |
+          rustup toolchain install stable --profile minimal
+          cargo +stable install mdbook-epub --locked --version 0.5.2
 
       - name: Report versions
         run: |
